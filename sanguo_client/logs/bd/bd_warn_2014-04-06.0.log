@@ -1,0 +1,3 @@
+2014-04-06 23:17:50,860 [main] ERROR com.game.sanguo.util.UserConfig - 缺乏用户配置文件，创建一个
+2014-04-06 23:17:50,863 [main] ERROR com.game.sanguo.util.ResourceConfig - 缺乏资源配置文件，创建一个
+2014-04-06 23:17:50,863 [main] ERROR com.game.sanguo.util.ItemConfig - 缺乏物品配置文件，创建一个

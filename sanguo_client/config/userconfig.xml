@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<users>
+		<user>
+			<userName>564195410@qq.com</userName>
+			<password>h156788</password>
+			<areaId>8</areaId>
+			<reLoginTime desc="断线重新登录时间间隔,以分钟记，120分即2小时">120</reLoginTime>
+			<configure>
+				<!--sortType :byName 按名字排序，byTime 按时间排序-->
+				<scanResource desc="自动扫描资源" waitTime="500" sortType="byTime">
+					<gold desc="金矿">1</gold>
+					<treasure desc="元宝山">1</treasure>
+					<market desc="黑市">1</market>
+					<solider desc="兵营">1</solider>
+				</scanResource>
+				<searchResource desc="自动收资源，需要VIP1以上">1</searchResource>
+				<autoSell desc="自动贩卖仓库装备，卖非装备到武将身上的，非粉色（黄，紫会卖）,强化等级为0">
+					<sell desc="是否开启，如果0则不会卖">0</sell>
+					<level desc="装备等级,低于此等级的才卖">90</level>
+				</autoSell>
+			</configure>
+		</user>
+	</users>
+<!-- 	<users> -->
+<!-- 		<user> -->
+<!-- 			<userName>564195410@qq.com</userName> -->
+<!-- 			<password>h156788</password> -->
+<!-- 			<areaId>8</areaId> -->
+<!-- 			<configure> -->
+<!-- 			</configure> -->
+<!-- 		</user> -->
+<!-- 	</users> -->
+</configuration>
