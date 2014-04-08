@@ -1,12 +1,12 @@
-package com.bd.game;
+package com.game.sanguo.ui;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.game.sanguo.domain.CityInfo;
-import com.game.sanguo.domain.SearchResult;
+import com.game.sanguo.base.domain.CityInfo;
+import com.game.sanguo.base.domain.SearchResult;
 
 public class ClientSearchResult extends SearchResult {
 	private List<CityInfo> marketList = new ArrayList();

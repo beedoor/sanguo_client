@@ -9,9 +9,9 @@
 			<configure>
 				<!--sortType :byName 按名字排序，byTime 按时间排序-->
 				<scanResource desc="自动扫描资源" waitTime="500" sortType="byTime">
-					<gold desc="金矿">1</gold>
-					<treasure desc="元宝山">1</treasure>
-					<market desc="黑市">1</market>
+					<gold desc="金矿">0</gold>
+					<treasure desc="元宝山">0</treasure>
+					<market desc="黑市">0</market>
 					<solider desc="兵营">1</solider>
 				</scanResource>
 				<searchResource desc="自动收资源，需要VIP1以上">1</searchResource>

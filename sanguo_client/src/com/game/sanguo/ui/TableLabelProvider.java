@@ -1,4 +1,4 @@
-package com.bd.game;
+package com.game.sanguo.ui;
 
 import org.eclipse.jface.viewers.IBaseLabelProvider;
 import org.eclipse.jface.viewers.ITableLabelProvider;

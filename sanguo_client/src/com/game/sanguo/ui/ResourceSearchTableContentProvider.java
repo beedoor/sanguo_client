@@ -1,13 +1,26 @@
-package com.bd.game;
+package com.game.sanguo.ui;
 
 import java.util.List;
 
 import org.eclipse.jface.viewers.IStructuredContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
-import com.game.sanguo.domain.CityInfo;
+public class ResourceSearchTableContentProvider implements
+		IStructuredContentProvider {
 
-public class ResourceSearchTableContentProvider implements IStructuredContentProvider {
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void inputChanged(Viewer paramViewer, Object paramObject1,
+			Object paramObject2) {
+		// TODO Auto-generated method stub
+
+	}
+
 	@Override
 	public Object[] getElements(Object inputElement) {
 		if (inputElement instanceof List) {
@@ -16,18 +29,4 @@ public class ResourceSearchTableContentProvider implements IStructuredContentPro
 			return new Object[0];
 		}
 	}
-
-	@Override
-	public void dispose() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void inputChanged(Viewer paramViewer, Object paramObject1,
-			Object paramObject2) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 }

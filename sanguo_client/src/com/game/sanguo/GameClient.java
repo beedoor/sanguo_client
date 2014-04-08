@@ -1,6 +1,5 @@
+package com.game.sanguo;
 
-
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.eclipse.core.databinding.DataBindingContext;
@@ -38,30 +37,29 @@ import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
 
-import com.bd.game.ClientSearchResult;
-import com.bd.game.LogAppender;
-import com.bd.game.LoginDialog;
-import com.bd.game.ResourceSearchTableContentProvider;
-import com.bd.game.ResourceSearchTableLabelProvider;
-import com.bd.game.TableLabelProvider;
-import com.game.sanguo.domain.PlayerHerosInfo;
-import com.game.sanguo.domain.PlayerItemsInfo;
-import com.game.sanguo.domain.UserBean;
-import com.game.sanguo.task.CitySearchAndGoldTask;
-import com.game.sanguo.task.ContinuousLoginDaysRewardTask;
-import com.game.sanguo.task.GameHelper;
-import com.game.sanguo.task.GameNotifyTask;
-import com.game.sanguo.task.GetWordCityInfoTask;
-import com.game.sanguo.task.LoginTask;
-import com.game.sanguo.task.MsgItemSellTask;
-import com.game.sanguo.util.ItemConfig;
-import com.game.sanguo.util.ResourceConfig;
-import com.game.sanguo.util.UserConfig;
+import com.game.sanguo.base.domain.PlayerHerosInfo;
+import com.game.sanguo.base.domain.PlayerItemsInfo;
+import com.game.sanguo.base.domain.UserBean;
+import com.game.sanguo.base.task.CitySearchAndGoldTask;
+import com.game.sanguo.base.task.ContinuousLoginDaysRewardTask;
+import com.game.sanguo.base.task.GameHelper;
+import com.game.sanguo.base.task.GameNotifyTask;
+import com.game.sanguo.base.task.GetWordCityInfoTask;
+import com.game.sanguo.base.task.LoginTask;
+import com.game.sanguo.base.task.MsgItemSellTask;
+import com.game.sanguo.base.util.ItemConfig;
+import com.game.sanguo.base.util.ResourceConfig;
+import com.game.sanguo.base.util.UserConfig;
+import com.game.sanguo.ui.ClientSearchResult;
+import com.game.sanguo.ui.LoginDialog;
+import com.game.sanguo.ui.ResourceSearchTableContentProvider;
+import com.game.sanguo.ui.ResourceSearchTableLabelProvider;
+import com.game.sanguo.ui.TableLabelProvider;
+
 
 public class GameClient extends ApplicationWindow {
 	private Action action;
 	private UserBean userBean;
-
 	UserConfig userConfig;
 	ResourceConfig resourceConfig;
 	ItemConfig itemConfig;
@@ -86,7 +84,6 @@ public class GameClient extends ApplicationWindow {
 	ClientSearchResult searchResult = null;
 	private Table table_5;
 
-	LogAppender logger =null;
 	@Override
 	public boolean close() {
 		GameHelper.terminal();
@@ -424,7 +421,6 @@ public class GameClient extends ApplicationWindow {
 	}
 
 	private void initLog(final StyledText styledText) {
-		logger = new LogAppender(styledText);
 	}
 
 	private void initEquTable() {
@@ -480,7 +476,7 @@ public class GameClient extends ApplicationWindow {
 			public void run() {
 				super.run();
 				LoginDialog loginDialog = new LoginDialog(userBean,
-						GameClient.this.getParentShell());
+						getParentShell());
 				int ok = loginDialog.open();
 				if (ok == Dialog.OK) {
 					// 登录
@@ -537,7 +533,6 @@ public class GameClient extends ApplicationWindow {
 
 	/**
 	 * Launch the application.
-	 * 
 	 * @param args
 	 */
 	public static void main(String args[]) {
@@ -630,4 +625,5 @@ public class GameClient extends ApplicationWindow {
 
 		return null;
 	}
+
 }

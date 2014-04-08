@@ -1,7 +1,7 @@
-package com.bd.game;
+package com.game.sanguo.ui;
 
-import com.game.sanguo.domain.CityInfo;
-import com.game.sanguo.util.GameUtil;
+import com.game.sanguo.base.domain.CityInfo;
+import com.game.sanguo.base.util.GameUtil;
 
 public class ResourceSearchTableLabelProvider extends TableLabelProvider {
 	@Override
@@ -11,7 +11,8 @@ public class ResourceSearchTableLabelProvider extends TableLabelProvider {
 		case 0:
 			return itemInfo.getId() + "";
 		case 1:
-			return itemInfo.getOccupierName() == null?"空资源":itemInfo.getOccupierName();
+			return isNull(itemInfo.getOccupierName()) ? "空资源" : itemInfo
+					.getOccupierName();
 		case 2:
 			return itemInfo.getOccupierHeroCount() + "";
 		case 3:
@@ -19,5 +20,14 @@ public class ResourceSearchTableLabelProvider extends TableLabelProvider {
 		default:
 			return "";
 		}
+	}
+	
+	private boolean isNull(String s)
+	{
+		if(s == null || s.equals("null"))
+		{
+			return true;
+		}
+		return false;
 	}
 }
