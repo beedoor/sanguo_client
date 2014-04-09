@@ -19,6 +19,7 @@ import com.game.sanguo.base.domain.GameAreaInfo;
 import com.game.sanguo.base.domain.HeroItem;
 import com.game.sanguo.base.domain.LoginByEmailInfo;
 import com.game.sanguo.base.domain.LoginGameInfo;
+import com.game.sanguo.base.domain.PackItem;
 import com.game.sanguo.base.domain.PlayerCitysInfo;
 import com.game.sanguo.base.domain.PlayerHerosInfo;
 import com.game.sanguo.base.domain.PlayerItemsInfo;
@@ -234,6 +235,10 @@ public class LoginTask extends GameTask {
 			HeroItem heroItem = userBean.getItemConfig().decodeHero(userBean.decodeHeroSrcIdByUseId(playerItemsInfo.getHeroUseId()));
 			if (equipmentItem != null) {
 				playerItemsInfo.setItemName(equipmentItem.getName());
+			}else
+			{
+				PackItem packItem = userBean.getItemConfig().decodePack(playerItemsInfo.getSourceId());
+				playerItemsInfo.setItemName(packItem.getProps_name());
 			}
 			if (heroItem != null) {
 				playerItemsInfo.setHeroName(heroItem.getName());
