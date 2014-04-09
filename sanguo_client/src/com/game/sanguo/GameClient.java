@@ -46,6 +46,7 @@ import com.game.sanguo.base.task.CitySearchAndGoldTask;
 import com.game.sanguo.base.task.ContinuousLoginDaysRewardTask;
 import com.game.sanguo.base.task.GameHelper;
 import com.game.sanguo.base.task.GameNotifyTask;
+import com.game.sanguo.base.task.GameTask;
 import com.game.sanguo.base.task.GetWordCityInfoTask;
 import com.game.sanguo.base.task.LoginTask;
 import com.game.sanguo.base.task.MsgItemSellTask;
@@ -62,8 +63,11 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.core.databinding.beans.PojoProperties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class GameClient extends ApplicationWindow {
+	protected static Logger logger = LoggerFactory.getLogger(GameClient.class);
 	private Action action;
 	private UserBean userBean;
 	UserConfig userConfig;
@@ -593,6 +597,7 @@ public class GameClient extends ApplicationWindow {
 						getParentShell());
 				int ok = loginDialog.open();
 				if (ok == Dialog.OK) {
+					logger.info(userBean.toString());
 					// 登录
 					GameHelper.submit(new LoginTask(userBean));
 

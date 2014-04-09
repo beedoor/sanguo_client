@@ -5,6 +5,7 @@ import java.util.Date;
 import com.game.sanguo.base.util.GameUtil;
 
 public class PlayerItemsInfo {
+	private Long playerId=0L;
 	private Date createDate;
 	private String ext;
 	private Long frozenLevel = 0L;
@@ -24,6 +25,14 @@ public class PlayerItemsInfo {
 	private String itemName;
 	private String heroName;
 	
+	public Long getPlayerId() {
+		return playerId;
+	}
+
+	public void setPlayerId(String playerId) {
+		this.playerId = Long.parseLong(playerId);
+	}
+
 	public String getItemName() {
 		return itemName;
 	}

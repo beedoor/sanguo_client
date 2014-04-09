@@ -7,7 +7,12 @@ import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
@@ -160,55 +165,89 @@ public class LoginTask extends GameTask {
 	 */
 	private LoginGameInfo decoeLoginGameInfo(InputStream inputStream) {
 		LoginGameInfo loginGameInfo = null;
-		try {
-			BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
-			String s1 = null;
-			List<String> s5ArrayList = new ArrayList<String>(), s6ArrayList = new ArrayList<String>(), s7ArrayList = new ArrayList<String>();
-			List<PlayerCitysInfo> playerCitysInfoList = new ArrayList<PlayerCitysInfo>();
-			List<PlayerHerosInfo> playerHerosInfoList = new ArrayList<PlayerHerosInfo>();
-			List<PlayerItemsInfo> playerItemsInfoList = new ArrayList<PlayerItemsInfo>();
-			while ((s1 = br.readLine()) != null) {
-				if (s1.startsWith("dwr")) {
-					loginGameInfo = initBeanInfo(LoginGameInfo.class, s1);
-					break;
-				}
-				if (s1.startsWith("s5[0]")) {
-					decodeArrayPrex(s5ArrayList, s1);
-				} else if (s1.startsWith("s6[0]")) {
-					decodeArrayPrex(s6ArrayList, s1);
-				} else if (s1.startsWith("s7[0]")) {
-					decodeArrayPrex(s7ArrayList, s1);
-				} else {
-					String[] sContentPrex = s1.split("[.]");
-					if (sContentPrex.length <= 1) {
-						continue;
-					}
-					if (s5ArrayList.contains(sContentPrex[0])) {
-						s1 = s1.replaceAll(String.format("%s[.]", sContentPrex[0]), "");
-						playerCitysInfoList.add(initBeanInfo(PlayerCitysInfo.class, s1, ';', '='));
-					}
-					if (s6ArrayList.contains(sContentPrex[0])) {
-						s1 = s1.replaceAll(String.format("%s[.]", sContentPrex[0]), "");
-						playerHerosInfoList.add(initBeanInfo(PlayerHerosInfo.class, s1, ';', '='));
-					}
-					if (s7ArrayList.contains(sContentPrex[0])) {
-						s1 = s1.replaceAll(String.format("%s[.]", sContentPrex[0]), "");
-						playerItemsInfoList.add(initBeanInfo(PlayerItemsInfo.class, s1, ';', '='));
-					}
-				}
-			}
-			if (loginGameInfo != null) {
-				loginGameInfo.setPlayerCitysInfoList(playerCitysInfoList);
-				loginGameInfo.setPlayerHerosInfoList(playerHerosInfoList);
-				loginGameInfo.setPlayerItemsInfoList(playerItemsInfoList);
-			}
-			addOtherInfo(playerCitysInfoList, playerHerosInfoList, playerItemsInfoList);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        try
+        {
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+            List<PlayerCitysInfo> playerCitysInfoList = new ArrayList<PlayerCitysInfo>();
+            List<PlayerHerosInfo> playerHerosInfoList = new ArrayList<PlayerHerosInfo>();
+            List<PlayerItemsInfo> playerItemsInfoList = new ArrayList<PlayerItemsInfo>();
+            Pattern itemsPattern = Pattern.compile("(s[\\d]{1,})\\[[\\d]{1,}\\]=");
+            Pattern itemsContentPattern = Pattern.compile("(s[\\d]{1,})[.]");
+            Map<String,List<String>> itemChildMap = new HashMap<String,List<String>>();
+            Map<String,String>  itemContentMap = new HashMap<String,String> ();
+            for(String s1 = null; (s1 = br.readLine()) != null;)
+                if(s1.startsWith("dwr"))
+                {
+                    loginGameInfo = (LoginGameInfo)initBeanInfo(LoginGameInfo.class, s1);
+                } else
+                {
+                    Matcher m = itemsContentPattern.matcher(s1);
+                    if(m.find())
+                    {
+                        String itemName = m.group(1);
+                        String contentStr = m.replaceAll("");
+                        itemContentMap.put(itemName, contentStr);
+                    }
+                    m = itemsPattern.matcher(s1);
+                    if(m.find())
+                    {
+                        String keyName = m.group(1);
+                        List<String> sList = new ArrayList<String>();
+                        itemChildMap.put(keyName, sList);
+                        String tempStr = m.replaceAll("");
+                        String strArray[] = tempStr.split(";");
+                        String as[];
+                        int j = (as = strArray).length;
+                        for(int i = 0; i < j; i++)
+                        {
+                            String s = as[i];
+                            sList.add(s);
+                        }
+                    }
+                }
 
-		return loginGameInfo;
+            if(itemChildMap.containsKey(loginGameInfo.getPlayerCitys()))
+            {
+                String content;
+                for(Iterator<String> iterator = ((List<String>)itemChildMap.get(loginGameInfo.getPlayerCitys())).iterator(); iterator.hasNext(); playerCitysInfoList.add((PlayerCitysInfo)initBeanInfo(PlayerCitysInfo.class, content, ';', '=')))
+                {
+                    String itemName = (String)iterator.next();
+                    content = (String)itemContentMap.get(itemName);
+                }
+
+            }
+            if(itemChildMap.containsKey(loginGameInfo.getPlayerHeros()))
+            {
+                String content;
+                for(Iterator<String> iterator1 = ((List<String>)itemChildMap.get(loginGameInfo.getPlayerHeros())).iterator(); iterator1.hasNext(); playerHerosInfoList.add((PlayerHerosInfo)initBeanInfo(PlayerHerosInfo.class, content, ';', '=')))
+                {
+                    String itemName = (String)iterator1.next();
+                    content = (String)itemContentMap.get(itemName);
+                }
+            }
+            if(itemChildMap.containsKey(loginGameInfo.getPlayerItems()))
+            {
+                String content;
+                for(Iterator<String> iterator2 = ((List<String>)itemChildMap.get(loginGameInfo.getPlayerItems())).iterator(); iterator2.hasNext(); playerItemsInfoList.add((PlayerItemsInfo)initBeanInfo(PlayerItemsInfo.class, content, ';', '=')))
+                {
+                    String itemName = (String)iterator2.next();
+                    content = (String)itemContentMap.get(itemName);
+                }
+
+            }
+            if(loginGameInfo != null)
+            {
+                loginGameInfo.setPlayerCitysInfoList(playerCitysInfoList);
+                loginGameInfo.setPlayerHerosInfoList(playerHerosInfoList);
+                loginGameInfo.setPlayerItemsInfoList(playerItemsInfoList);
+            }
+            addOtherInfo(playerCitysInfoList, playerHerosInfoList, playerItemsInfoList);
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+        return loginGameInfo;
 	}
 
 	private void addOtherInfo(List<PlayerCitysInfo> playerCitysInfoList, List<PlayerHerosInfo> playerHerosInfoList, List<PlayerItemsInfo> playerItemsInfoList) {
@@ -243,17 +282,6 @@ public class LoginTask extends GameTask {
 			if (heroItem != null) {
 				playerItemsInfo.setHeroName(heroItem.getName());
 			}
-		}
-	}
-
-	private void decodeArrayPrex(List<String> sArrayList, String s) {
-		String[] sArray = s.split(";");
-		for (String sPrex : sArray) {
-			String[] sPrexArray = sPrex.split("=");
-			if (sPrexArray.length != 2) {
-				continue;
-			}
-			sArrayList.add(sPrexArray[1]);
 		}
 	}
 

@@ -20,6 +20,14 @@ public class SearchItem {
 	private Long strengthenLevel=0L;
 	private Long type=0L;
 	private Date updateDate=null;
+	private Long playerId=0L;
+	public Long getPlayerId() {
+		return playerId;
+	}
+
+	public void setPlayerId(String playerId) {
+		this.playerId = Long.parseLong(playerId);
+	}
 	public Date getCreateDate() {
 		return createDate;
 	}

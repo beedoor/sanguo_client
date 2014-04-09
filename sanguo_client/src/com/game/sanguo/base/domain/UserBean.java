@@ -31,6 +31,7 @@ public class UserBean {
 	
 	private Map<Long,Long> itemIdToSrcIdMap = new HashMap<Long,Long>();
 	private Map<Long,Long> heroIdToSrcIdMap = new HashMap<Long,Long>();
+	private String areaName;
 	
 	
 	private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(
@@ -42,6 +43,16 @@ public class UserBean {
 	}
  
  
+	public String getAreaName() {
+		return areaName;
+	}
+
+
+	public void setAreaName(String areaName) {
+		this.areaName = areaName;
+	}
+
+
 	public void removePropertyChangeListener(String propertyName,
 			PropertyChangeListener listener) {
 		propertyChangeSupport.removePropertyChangeListener(propertyName,
@@ -157,6 +168,10 @@ public class UserBean {
 		return String.format("http://%s", gameAreaInfoMap.get(areaId).getUrl());
 	}
 	public void putGameAreaInfo(GameAreaInfo gameAreaInfo) {
+		if(gameAreaInfo.getName().equals(areaName))
+		{
+			this.areaId = gameAreaInfo.getId();
+		}
 		gameAreaInfoMap.put(gameAreaInfo.getId(), gameAreaInfo);
 	}
 
@@ -232,12 +247,22 @@ public class UserBean {
 		this.userID = userID;
 	}
 
+
 	@Override
 	public String toString() {
-		return "UserBean [numberId=" + numberId + ", batchId=" + batchId + ", sessionId=" + sessionId + ", chatSessionId=" + chatSessionId + ", userName=" + userName + ", password=" + password
-				+ ", userID=" + userID + ", checkId=" + checkId + ", areaId=" + areaId + ", reLoginTime=" + reLoginTime + ", clientInfo=" + clientInfo + ", loginGameInfo=" + loginGameInfo
-				+ ", isSuspend=" + isSuspend + ", gameAreaInfoMap=" + gameAreaInfoMap + ", configure=" + configure + "]";
+		return "UserBean [numberId=" + numberId + ", batchId=" + batchId
+				+ ", sessionId=" + sessionId + ", chatSessionId="
+				+ chatSessionId + ", userName=" + userName + ", password="
+				+ password + ", userID=" + userID + ", checkId=" + checkId
+				+ ", areaId=" + areaId + ", reLoginTime=" + reLoginTime
+				+ ", clientInfo=" + clientInfo + ", loginGameInfo="
+				+ loginGameInfo + ", isSuspend=" + isSuspend
+				+ ", gameAreaInfoMap=" + gameAreaInfoMap + ", configure="
+				+ configure + ", itemConfig=" + itemConfig
+				+ ", itemIdToSrcIdMap=" + itemIdToSrcIdMap
+				+ ", heroIdToSrcIdMap=" + heroIdToSrcIdMap + ", areaName="
+				+ areaName + ", propertyChangeSupport=" + propertyChangeSupport
+				+ "]";
 	}
-
 	
 }

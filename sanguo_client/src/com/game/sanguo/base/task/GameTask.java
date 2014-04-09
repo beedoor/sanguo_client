@@ -161,6 +161,7 @@ public abstract class GameTask implements Runnable {
 				setDateField(classType, classInstance, filedInfo);
 			}
 		} catch (Throwable e) {
+			logger.error("解析返回对象失败", e);
 		}
 		return classInstance;
 	}
@@ -176,8 +177,7 @@ public abstract class GameTask implements Runnable {
 				m.invoke(classInstance, filedInfo.second);
 			}
 		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("解析返回对象失败", e);
 		}
 	}
 
@@ -186,7 +186,7 @@ public abstract class GameTask implements Runnable {
 			Method m = classType.getDeclaredMethod(methodName, new Class[] { String.class });
 			return m;
 		} catch (Throwable e) {
-			e.printStackTrace();
+			logger.error("解析返回对象失败", e);
 		}
 		return null;
 	}

@@ -46,12 +46,12 @@ public class LoginDialog extends Dialog {
 		Group grpD = new Group(container, SWT.NONE);
 		grpD.setText("loginInfo");
 		GridData gd_grpD = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
-		gd_grpD.heightHint = 221;
-		gd_grpD.widthHint = 430;
+		gd_grpD.heightHint = 188;
+		gd_grpD.widthHint = 411;
 		grpD.setLayoutData(gd_grpD);
 		
 		Composite composite = new Composite(grpD, SWT.NONE);
-		composite.setBounds(0, 30, 434, 164);
+		composite.setBounds(31, 30, 347, 164);
 		
 		Label lblNewLabel = new Label(composite, SWT.NONE);
 		lblNewLabel.setBounds(50, 28, 70, 17);
@@ -65,15 +65,17 @@ public class LoginDialog extends Dialog {
 		lblNewLabel_2.setBounds(50, 118, 70, 17);
 		lblNewLabel_2.setText("area");
 		
-		text = new Text(composite, SWT.BORDER | SWT.READ_ONLY);
-		text.setBounds(245, 28, 150, 27);
+		text = new Text(composite, SWT.BORDER);
+		text.setBounds(168, 28, 150, 27);
 		
-		text_1 = new Text(composite, SWT.BORDER | SWT.READ_ONLY | SWT.PASSWORD);
-		text_1.setBounds(245, 63, 150, 27);
+		text_1 = new Text(composite, SWT.BORDER | SWT.PASSWORD);
+		text_1.setBounds(168, 63, 150, 27);
 		
 		ComboViewer comboViewer = new ComboViewer(composite, SWT.NONE);
 		combo = comboViewer.getCombo();
-		combo.setBounds(245, 106, 150, 29);
+		combo.setItems(new String[] {"新野", "长安", "洛阳", "官渡", "易京", "潼关", "北平", "汉中", "西凉", "襄阳", "赤壁", "长沙", "成都", "云南", "江州", "建业", "会稽", "下邳", "合肥", "谯城", "徐州", "陈留"});
+		combo.setBounds(168, 106, 150, 29);
+		
 
 		return container;
 	}
@@ -108,8 +110,8 @@ public class LoginDialog extends Dialog {
 		bindingContext.bindValue(observeTextText_1ObserveWidget, passwordUserBeanObserveValue, null, null);
 		//
 		IObservableValue observeTextComboObserveWidget = WidgetProperties.text().observe(combo);
-		IObservableValue userIDUserBeanObserveValue = BeanProperties.value("userID").observe(userBean);
-		bindingContext.bindValue(observeTextComboObserveWidget, userIDUserBeanObserveValue, null, null);
+		IObservableValue areaNameUserBeanObserveValue = BeanProperties.value("areaName").observe(userBean);
+		bindingContext.bindValue(observeTextComboObserveWidget, areaNameUserBeanObserveValue, null, null);
 		//
 		return bindingContext;
 	}
