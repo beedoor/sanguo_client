@@ -74,7 +74,6 @@ public abstract class GameTask implements Runnable {
 		try {
 			tu.sleep(unit);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

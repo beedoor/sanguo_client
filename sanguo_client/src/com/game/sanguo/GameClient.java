@@ -65,6 +65,7 @@ import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.core.databinding.beans.PojoProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.eclipse.swt.widgets.Combo;
 
 public class GameClient extends ApplicationWindow {
 	protected static Logger logger = LoggerFactory.getLogger(GameClient.class);
@@ -97,6 +98,8 @@ public class GameClient extends ApplicationWindow {
 	private Button btnCheckButton_2;
 	private Button btnCheckButton_1;
 	private Button btnCheckButton_3;
+	private Combo combo;
+	private Text text_3;
 
 	@Override
 	public boolean close() {
@@ -160,25 +163,39 @@ public class GameClient extends ApplicationWindow {
 		grpBaseinfo.setBounds(0, 0, 306, 127);
 
 		Label lblName = new Label(grpBaseinfo, SWT.NONE);
-		lblName.setBounds(10, 22, 70, 17);
+		lblName.setBounds(10, 22, 39, 17);
 		lblName.setText("name");
 
 		Label lblNewLabel = new Label(grpBaseinfo, SWT.NONE);
-		lblNewLabel.setBounds(10, 59, 70, 17);
+		lblNewLabel.setBounds(129, 22, 27, 17);
 		lblNewLabel.setText("gold");
 
 		Label lblGem = new Label(grpBaseinfo, SWT.NONE);
-		lblGem.setBounds(10, 100, 70, 17);
+		lblGem.setBounds(218, 22, 31, 17);
 		lblGem.setText("gem");
 
 		text = new Text(grpBaseinfo, SWT.BORDER | SWT.READ_ONLY);
-		text.setBounds(129, 22, 130, 27);
+		text.setBounds(55, 19, 63, 17);
 
 		text_1 = new Text(grpBaseinfo, SWT.BORDER | SWT.READ_ONLY);
-		text_1.setBounds(129, 59, 130, 27);
+		text_1.setBounds(162, 19, 50, 17);
 
 		text_2 = new Text(grpBaseinfo, SWT.BORDER | SWT.READ_ONLY);
-		text_2.setBounds(129, 100, 130, 27);
+		text_2.setBounds(243, 19, 53, 17);
+
+		final Button btnCheckButton_4 = new Button(grpBaseinfo, SWT.CHECK);
+		btnCheckButton_4.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				userBean.getConfigure().getSellConfig()
+						.setSell(btnCheckButton_4.getSelection() ? 1L : 0L);
+			}
+		});
+		btnCheckButton_4.setBounds(10, 77, 39, 16);
+		btnCheckButton_4.setText("sell");
+
+		text_3 = new Text(grpBaseinfo, SWT.BORDER);
+		text_3.setBounds(55, 76, 63, 18);
 
 		Group grpExtendInfo = new Group(composite_1, SWT.NONE);
 		grpExtendInfo.setText("extend info");
@@ -273,7 +290,8 @@ public class GameClient extends ApplicationWindow {
 		tblclmnNewColumn_6.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				SearchResultSorter.sort(searchResult.getTreasureList(), "byName");
+				SearchResultSorter.sort(searchResult.getTreasureList(),
+						"byName");
 				measureViewer.setInput(searchResult.getTreasureList());
 			}
 		});
@@ -283,7 +301,7 @@ public class GameClient extends ApplicationWindow {
 		TableViewerColumn tableViewerColumn_8 = new TableViewerColumn(
 				measureViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_8 = tableViewerColumn_8.getColumn();
-		
+
 		tblclmnNewColumn_8.setWidth(50);
 		tblclmnNewColumn_8.setText("heros");
 
@@ -293,7 +311,8 @@ public class GameClient extends ApplicationWindow {
 		tblclmnNewColumn_15.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				SearchResultSorter.sort(searchResult.getTreasureList(), "byTime");
+				SearchResultSorter.sort(searchResult.getTreasureList(),
+						"byTime");
 				measureViewer.setInput(searchResult.getTreasureList());
 			}
 		});
@@ -453,49 +472,64 @@ public class GameClient extends ApplicationWindow {
 			}
 		});
 
-		btnNewButton.setBounds(291, 10, 91, 29);
+		btnNewButton.setBounds(319, 10, 63, 29);
 		btnNewButton.setText("scan");
-		
+
 		btnCheckButton = new Button(grpResource, SWT.CHECK);
 		btnCheckButton.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				userBean.getConfigure().getScanResource().setTreasure(btnCheckButton.getSelection()?1L:0L);
+				userBean.getConfigure().getScanResource()
+						.setTreasure(btnCheckButton.getSelection() ? 1L : 0L);
 			}
-			
+
 		});
-		btnCheckButton.setBounds(21, 23, 63, 16);
-		btnCheckButton.setText("measure");
-		
+		btnCheckButton.setBounds(21, 23, 39, 16);
+		btnCheckButton.setText("ybs");
+
 		btnCheckButton_1 = new Button(grpResource, SWT.CHECK);
 		btnCheckButton_1.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				userBean.getConfigure().getScanResource().setMarket(btnCheckButton.getSelection()?1L:0L);
+				userBean.getConfigure().getScanResource()
+						.setMarket(btnCheckButton.getSelection() ? 1L : 0L);
 			}
 		});
-		btnCheckButton_1.setBounds(146, 23, 57, 16);
-		btnCheckButton_1.setText("market");
-		
+		btnCheckButton_1.setBounds(105, 23, 29, 16);
+		btnCheckButton_1.setText("hs");
+
 		btnCheckButton_2 = new Button(grpResource, SWT.CHECK);
 		btnCheckButton_2.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				userBean.getConfigure().getScanResource().setGold(btnCheckButton.getSelection()?1L:0L);
+				userBean.getConfigure().getScanResource()
+						.setGold(btnCheckButton.getSelection() ? 1L : 0L);
 			}
 		});
-		btnCheckButton_2.setBounds(90, 23, 45, 16);
-		btnCheckButton_2.setText("gold");
-		
+		btnCheckButton_2.setBounds(66, 23, 33, 16);
+		btnCheckButton_2.setText("jk");
+
 		btnCheckButton_3 = new Button(grpResource, SWT.CHECK);
 		btnCheckButton_3.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				userBean.getConfigure().getScanResource().setSolider(btnCheckButton.getSelection()?1L:0L);
+				userBean.getConfigure().getScanResource()
+						.setSolider(btnCheckButton.getSelection() ? 1L : 0L);
 			}
 		});
-		btnCheckButton_3.setBounds(204, 23, 63, 16);
-		btnCheckButton_3.setText("solider");
+		btnCheckButton_3.setBounds(140, 23, 39, 16);
+		btnCheckButton_3.setText("by");
+
+		Label lblNewLabel_1 = new Label(grpResource, SWT.NONE);
+		lblNewLabel_1.setBounds(185, 27, 39, 12);
+		lblNewLabel_1.setText("intern");
+
+		combo = new Combo(grpResource, SWT.NONE);
+		combo.setToolTipText("扫描间隔：1000为一秒，500为半秒");
+		combo.setItems(new String[] { "1000", "500" });
+		combo.setBounds(238, 19, 63, 20);
+		combo.setText("1000");
+		combo.select(0);
 
 		TabItem tbtmNewItem = new TabItem(tabFolder, SWT.NONE);
 		tbtmNewItem.setText("log");
@@ -546,11 +580,9 @@ public class GameClient extends ApplicationWindow {
 				case 1:
 					return itemInfo.getHeroName();
 				case 2:
-					if(itemInfo.getType()==2)
-					{
-						return itemInfo.getNum()+" 个";
-					}else
-					{
+					if (itemInfo.getType() == 2) {
+						return itemInfo.getNum() + " 个";
+					} else {
 						return itemInfo.getStrengthenLevel() + " 级";
 					}
 				default:
@@ -558,7 +590,8 @@ public class GameClient extends ApplicationWindow {
 				}
 			}
 		});
-		equiItemViewer.setContentProvider(new ResourceSearchTableContentProvider());
+		equiItemViewer
+				.setContentProvider(new ResourceSearchTableContentProvider());
 	}
 
 	private void initHeroTable() {
@@ -580,7 +613,8 @@ public class GameClient extends ApplicationWindow {
 			}
 
 		});
-		heroItemViewer.setContentProvider(new ResourceSearchTableContentProvider());
+		heroItemViewer
+				.setContentProvider(new ResourceSearchTableContentProvider());
 	}
 
 	/**
@@ -611,8 +645,8 @@ public class GameClient extends ApplicationWindow {
 							new ContinuousLoginDaysRewardTask(userBean), 24,
 							TimeUnit.HOURS);
 					// 扫描宝山，黑市，兵营，金矿资源定时任务
-//					GameHelper.submit(new GetWordCityInfoTask(userBean,
-//							resourceConfig, searchResult));
+					// GameHelper.submit(new GetWordCityInfoTask(userBean,
+					// resourceConfig, searchResult));
 					// 卖东西定时任务
 					GameHelper.scheduleAtFixedRate(new MsgItemSellTask(
 							userBean, itemConfig), 24, TimeUnit.HOURS);
@@ -652,6 +686,7 @@ public class GameClient extends ApplicationWindow {
 
 	/**
 	 * Launch the application.
+	 * 
 	 * @param args
 	 */
 	public static void main(String args[]) {
@@ -688,34 +723,33 @@ public class GameClient extends ApplicationWindow {
 	protected Point getInitialSize() {
 		return new Point(750, 700);
 	}
+
 	protected DataBindingContext initDataBindings() {
 		IObservableValue loginGameInfonameUserBeanObserveValue = BeansObservables
 				.observeValue(userBean, "loginGameInfo");
 		loginGameInfonameUserBeanObserveValue
-				.addChangeListener(new IChangeListener() {
-					@Override
-					public void handleChange(ChangeEvent arg0) {
-						text.setText(userBean.getLoginGameInfo().getName());
-						text_1.setText(userBean.getLoginGameInfo().getGold()
-								+ "");
-						text_2.setText(userBean.getLoginGameInfo().getGem()
-								+ "");
-
-						heroItemViewer.setInput(userBean.getLoginGameInfo()
-								.getPlayerHerosInfoList());
-						equiItemViewer.setInput(userBean.getLoginGameInfo()
-								.getPlayerItemsInfoList());
-					}
-				});
-
+		.addChangeListener(new IChangeListener() {
+			@Override
+			public void handleChange(ChangeEvent arg0) {
+				text.setText(userBean.getLoginGameInfo().getName());
+				text_1.setText(userBean.getLoginGameInfo().getGold()
+				+ "");
+				text_2.setText(userBean.getLoginGameInfo().getGem()
+				+ "");
+				heroItemViewer.setInput(userBean.getLoginGameInfo()
+				.getPlayerHerosInfoList());
+				equiItemViewer.setInput(userBean.getLoginGameInfo()
+				.getPlayerItemsInfoList());
+			}
+		});
 		IObservableValue marketListBeanObserveValue = BeansObservables
-				.observeValue(searchResult, "marketList");
+		.observeValue(searchResult, "marketList");
 		IObservableValue goldListBeanObserveValue = BeansObservables
-				.observeValue(searchResult, "goldList");
+		.observeValue(searchResult, "goldList");
 		IObservableValue soliderListBeanObserveValue = BeansObservables
-				.observeValue(searchResult, "soliderList");
+		.observeValue(searchResult, "soliderList");
 		IObservableValue treasureListBeanObserveValue = BeansObservables
-				.observeValue(searchResult, "treasureList");
+		.observeValue(searchResult, "treasureList");
 		treasureListBeanObserveValue.addChangeListener(new IChangeListener() {
 			@Override
 			public void handleChange(ChangeEvent arg0) {
@@ -725,22 +759,40 @@ public class GameClient extends ApplicationWindow {
 		marketListBeanObserveValue.addChangeListener(new IChangeListener() {
 			@Override
 			public void handleChange(ChangeEvent arg0) {
+
 				marketViewer.setInput(searchResult.getMarketList());
 			}
 		});
 		goldListBeanObserveValue.addChangeListener(new IChangeListener() {
 			@Override
 			public void handleChange(ChangeEvent arg0) {
+
 				goldViewer.setInput(searchResult.getGoldList());
 			}
 		});
 		soliderListBeanObserveValue.addChangeListener(new IChangeListener() {
 			@Override
 			public void handleChange(ChangeEvent arg0) {
+
 				soliderViewer.setInput(searchResult.getSoliderList());
 			}
 		});
-		return null;
-
+		DataBindingContext bindingContext = new DataBindingContext();
+		//
+		IObservableValue observeTextComboObserveWidget = WidgetProperties
+				.text().observe(combo);
+		IObservableValue configurescanResourcewaitTimeUserBeanObserveValue = PojoProperties
+				.value("configure.scanResource.waitTime").observe(userBean);
+		bindingContext.bindValue(observeTextComboObserveWidget,
+				configurescanResourcewaitTimeUserBeanObserveValue, null, null);
+		//
+		IObservableValue observeTextText_3ObserveWidget = WidgetProperties
+				.text(SWT.Modify).observe(text_3);
+		IObservableValue configuresellConfiglevelUserBeanObserveValue = PojoProperties
+				.value("configure.sellConfig.level").observe(userBean);
+		bindingContext.bindValue(observeTextText_3ObserveWidget,
+				configuresellConfiglevelUserBeanObserveValue, null, null);
+		//
+		return bindingContext;
 	}
 }

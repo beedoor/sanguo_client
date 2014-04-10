@@ -277,7 +277,10 @@ public class LoginTask extends GameTask {
 			}else
 			{
 				PackItem packItem = userBean.getItemConfig().decodePack(playerItemsInfo.getSourceId());
-				playerItemsInfo.setItemName(packItem.getProps_name());
+				if(null != packItem)
+				{
+					playerItemsInfo.setItemName(packItem.getProps_name());
+				}
 			}
 			if (heroItem != null) {
 				playerItemsInfo.setHeroName(heroItem.getName());

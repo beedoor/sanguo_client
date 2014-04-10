@@ -6,7 +6,7 @@ public class ScanResource {
 	Long treasure=0L;
 	Long market=0L;
 	Long solider=0L;
-	Long waitTime=0L;
+	Long waitTime=1000L;
 	String 	sortType;
 	public Long getGold() {
 		return gold;

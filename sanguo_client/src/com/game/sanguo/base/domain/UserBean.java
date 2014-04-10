@@ -31,7 +31,7 @@ public class UserBean {
 	
 	private Map<Long,Long> itemIdToSrcIdMap = new HashMap<Long,Long>();
 	private Map<Long,Long> heroIdToSrcIdMap = new HashMap<Long,Long>();
-	private String areaName;
+	private String areaName="西凉";
 	
 	
 	private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(

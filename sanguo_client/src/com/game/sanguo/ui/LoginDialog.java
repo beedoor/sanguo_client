@@ -75,6 +75,8 @@ public class LoginDialog extends Dialog {
 		combo = comboViewer.getCombo();
 		combo.setItems(new String[] {"新野", "长安", "洛阳", "官渡", "易京", "潼关", "北平", "汉中", "西凉", "襄阳", "赤壁", "长沙", "成都", "云南", "江州", "建业", "会稽", "下邳", "合肥", "谯城", "徐州", "陈留"});
 		combo.setBounds(168, 106, 150, 29);
+		combo.setText("西凉");
+		combo.select(8);
 		
 
 		return container;
