@@ -8,7 +8,8 @@ public class SearchResult {
 	private List<CityInfo> goldList = new ArrayList<CityInfo>();
 	private List<CityInfo> soliderList = new ArrayList<CityInfo>();
 	private List<CityInfo> treasureList = new ArrayList<CityInfo>();
-
+	private List<CityInfo> allResourceList = new ArrayList<CityInfo>();
+	
 	private String sortType;
 	
 	public SearchResult(String sortType) {
@@ -19,7 +20,14 @@ public class SearchResult {
 	public List<CityInfo> getMarketList() {
 		return marketList;
 	}
-
+	public void addAllResourceList(CityInfo cityInfo) {
+		List<CityInfo> tmpMarketList = new ArrayList<CityInfo>();
+		tmpMarketList.addAll(allResourceList);
+		tmpMarketList.add(cityInfo);
+		SearchResultSorter.sort(tmpMarketList,sortType);
+		allResourceList = tmpMarketList;
+	}
+	
 	public void addMarketInfo(CityInfo cityInfo) {
 		List<CityInfo> tmpMarketList = new ArrayList<CityInfo>();
 		tmpMarketList.addAll(marketList);
@@ -63,7 +71,9 @@ public class SearchResult {
 	public List<CityInfo> getTreasureList() {
 		return treasureList;
 	}
-
+	public List<CityInfo> getAllResourceList() {
+		return allResourceList;
+	}
 	public void clearGoldList() {
 		this.goldList = new ArrayList<CityInfo>();
 	}
@@ -79,5 +89,7 @@ public class SearchResult {
 	public void clearSoliderList() {
 		soliderList = new ArrayList<CityInfo>();
 	}
-
+	public void clearAllResourceList() {
+		allResourceList = new ArrayList<CityInfo>();
+	}
 }

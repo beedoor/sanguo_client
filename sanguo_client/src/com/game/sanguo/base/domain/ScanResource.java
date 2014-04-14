@@ -1,13 +1,21 @@
 package com.game.sanguo.base.domain;
 
 public class ScanResource {
-
 	Long gold=0L;
 	Long treasure=0L;
 	Long market=0L;
 	Long solider=0L;
 	Long waitTime=1000L;
 	String 	sortType;
+	ScanResourceData allResourceConfig = new ScanResourceData();
+	
+	
+	public ScanResourceData getAllResourceConfig() {
+		return allResourceConfig;
+	}
+	public void setAllResourceConfig(ScanResourceData allResourceConfig) {
+		this.allResourceConfig = allResourceConfig;
+	}
 	public Long getGold() {
 		return gold;
 	}
@@ -48,6 +56,9 @@ public class ScanResource {
 	}
 	@Override
 	public String toString() {
-		return "ScanResource [gold=" + gold + ", treasure=" + treasure + ", market=" + market + ", solider=" + solider + ", waitTime=" + waitTime + ", sortType=" + sortType + "]";
+		return "ScanResource [gold=" + gold + ", treasure=" + treasure
+				+ ", market=" + market + ", solider=" + solider + ", waitTime="
+				+ waitTime + ", sortType=" + sortType + ", allResourceConfig="
+				+ allResourceConfig + "]";
 	}
 }

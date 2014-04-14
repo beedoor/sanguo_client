@@ -36,6 +36,7 @@ public class GetWordCityInfoTask extends GameTask {
 
 	public void doAction() {
 		try {
+			logger.info(userBean.getConfigure().toString());
 			ScanResource scan = userBean.getConfigure().getScanResource();
 			if (scan.getTreasure() == 1) {
 				logger.info("开始计算元宝山资源信息");

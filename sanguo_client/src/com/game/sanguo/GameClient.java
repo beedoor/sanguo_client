@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.BeansObservables;
+import org.eclipse.core.databinding.beans.PojoProperties;
 import org.eclipse.core.databinding.observable.ChangeEvent;
 import org.eclipse.core.databinding.observable.IChangeListener;
 import org.eclipse.core.databinding.observable.Realm;
@@ -11,8 +12,8 @@ import org.eclipse.core.databinding.observable.value.IObservableValue;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.StatusLineManager;
-import org.eclipse.jface.action.ToolBarManager;
 import org.eclipse.jface.databinding.swt.SWTObservables;
+import org.eclipse.jface.databinding.swt.WidgetProperties;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.text.TextViewer;
 import org.eclipse.jface.viewers.TableViewer;
@@ -23,9 +24,12 @@ import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
@@ -37,7 +41,10 @@ import org.eclipse.swt.widgets.TabItem;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.swt.widgets.Text;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import com.game.sanguo.base.domain.CityInfo;
 import com.game.sanguo.base.domain.PlayerHerosInfo;
 import com.game.sanguo.base.domain.PlayerItemsInfo;
 import com.game.sanguo.base.domain.SearchResultSorter;
@@ -46,10 +53,11 @@ import com.game.sanguo.base.task.CitySearchAndGoldTask;
 import com.game.sanguo.base.task.ContinuousLoginDaysRewardTask;
 import com.game.sanguo.base.task.GameHelper;
 import com.game.sanguo.base.task.GameNotifyTask;
-import com.game.sanguo.base.task.GameTask;
+import com.game.sanguo.base.task.GetTimeZoneTask;
 import com.game.sanguo.base.task.GetWordCityInfoTask;
 import com.game.sanguo.base.task.LoginTask;
 import com.game.sanguo.base.task.MsgItemSellTask;
+import com.game.sanguo.base.util.GameUtil;
 import com.game.sanguo.base.util.ItemConfig;
 import com.game.sanguo.base.util.ResourceConfig;
 import com.game.sanguo.base.util.UserConfig;
@@ -58,14 +66,6 @@ import com.game.sanguo.ui.LoginDialog;
 import com.game.sanguo.ui.ResourceSearchTableContentProvider;
 import com.game.sanguo.ui.ResourceSearchTableLabelProvider;
 import com.game.sanguo.ui.TableLabelProvider;
-
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.jface.databinding.swt.WidgetProperties;
-import org.eclipse.core.databinding.beans.PojoProperties;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.eclipse.swt.widgets.Combo;
 
 public class GameClient extends ApplicationWindow {
 	protected static Logger logger = LoggerFactory.getLogger(GameClient.class);
@@ -91,6 +91,7 @@ public class GameClient extends ApplicationWindow {
 	TableViewer marketViewer;
 	TableViewer goldViewer;
 	TableViewer soliderViewer;
+	TableViewer allResourceTableViewer ;
 
 	ClientSearchResult searchResult = null;
 	private Table table_5;
@@ -100,6 +101,9 @@ public class GameClient extends ApplicationWindow {
 	private Button btnCheckButton_3;
 	private Combo combo;
 	private Text text_3;
+	private Text text_4;
+	private Text text_5;
+	private Table table_6;
 
 	@Override
 	public boolean close() {
@@ -171,7 +175,7 @@ public class GameClient extends ApplicationWindow {
 		lblNewLabel.setText("gold");
 
 		Label lblGem = new Label(grpBaseinfo, SWT.NONE);
-		lblGem.setBounds(218, 22, 31, 17);
+		lblGem.setBounds(218, 22, 19, 17);
 		lblGem.setText("gem");
 
 		text = new Text(grpBaseinfo, SWT.BORDER | SWT.READ_ONLY);
@@ -191,11 +195,39 @@ public class GameClient extends ApplicationWindow {
 						.setSell(btnCheckButton_4.getSelection() ? 1L : 0L);
 			}
 		});
-		btnCheckButton_4.setBounds(10, 77, 39, 16);
+		btnCheckButton_4.setBounds(139, 45, 39, 16);
 		btnCheckButton_4.setText("sell");
 
 		text_3 = new Text(grpBaseinfo, SWT.BORDER);
-		text_3.setBounds(55, 76, 63, 18);
+		text_3.setBounds(184, 45, 63, 18);
+		
+		Group grpAllresource = new Group(grpBaseinfo, SWT.NONE);
+		grpAllresource.setText("allresource");
+		grpAllresource.setBounds(10, 45, 108, 72);
+		
+		final Button btnCheckButton_5 = new Button(grpAllresource, SWT.CHECK);
+		btnCheckButton_5.setBounds(20, 20, 63, 16);
+		btnCheckButton_5.setText("IsOpen");
+		btnCheckButton_5.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				userBean.getConfigure().getScanResource().getAllResourceConfig().setIsAllScanOpen(btnCheckButton_5.getSelection() ? 1L : 0L);
+			}
+		});
+		
+		Label lblNewLabel_2 = new Label(grpAllresource, SWT.NONE);
+		lblNewLabel_2.setBounds(10, 50, 6, 12);
+		lblNewLabel_2.setText("X");
+		
+		Label lblNewLabel_3 = new Label(grpAllresource, SWT.NONE);
+		lblNewLabel_3.setBounds(62, 50, 6, 12);
+		lblNewLabel_3.setText("Y");
+		
+		text_4 = new Text(grpAllresource, SWT.BORDER);
+		text_4.setBounds(73, 44, 25, 18);
+		
+		text_5 = new Text(grpAllresource, SWT.BORDER);
+		text_5.setBounds(30, 44, 26, 18);
 
 		Group grpExtendInfo = new Group(composite_1, SWT.NONE);
 		grpExtendInfo.setText("extend info");
@@ -462,6 +494,40 @@ public class GameClient extends ApplicationWindow {
 		});
 		tblclmnNewColumn_21.setWidth(100);
 		tblclmnNewColumn_21.setText("endtime");
+		
+		TabItem tbtmAllitem = new TabItem(tabFolder_2, SWT.NONE);
+		tbtmAllitem.setText("allItem");
+		
+		allResourceTableViewer = new TableViewer(tabFolder_2, SWT.BORDER | SWT.FULL_SELECTION);
+		table_6 = allResourceTableViewer.getTable();
+		table_6.setLinesVisible(true);
+		table_6.setHeaderVisible(true);
+		tbtmAllitem.setControl(table_6);
+		
+		TableViewerColumn tableViewerColumn_22 = new TableViewerColumn(allResourceTableViewer, SWT.NONE);
+		TableColumn tblclmnNewColumn_22 = tableViewerColumn_22.getColumn();
+		tblclmnNewColumn_22.setWidth(50);
+		tblclmnNewColumn_22.setText("area");
+		
+		TableViewerColumn tableViewerColumn_23 = new TableViewerColumn(allResourceTableViewer, SWT.NONE);
+		TableColumn tblclmnNewColumn_23 = tableViewerColumn_23.getColumn();
+		tblclmnNewColumn_23.setWidth(50);
+		tblclmnNewColumn_23.setText("type");
+		
+		TableViewerColumn tableViewerColumn_24 = new TableViewerColumn(allResourceTableViewer, SWT.NONE);
+		TableColumn tblclmnNewColumn_24 = tableViewerColumn_24.getColumn();
+		tblclmnNewColumn_24.setWidth(80);
+		tblclmnNewColumn_24.setText("occu");
+		
+		TableViewerColumn tableViewerColumn_25 = new TableViewerColumn(allResourceTableViewer, SWT.NONE);
+		TableColumn tblclmnNewColumn_25 = tableViewerColumn_25.getColumn();
+		tblclmnNewColumn_25.setWidth(50);
+		tblclmnNewColumn_25.setText("union");
+		
+		TableViewerColumn tableViewerColumn_26 = new TableViewerColumn(allResourceTableViewer, SWT.NONE);
+		TableColumn tblclmnNewColumn_26 = tableViewerColumn_26.getColumn();
+		tblclmnNewColumn_26.setWidth(130);
+		tblclmnNewColumn_26.setText("occuTime");
 
 		Button btnNewButton = new Button(grpResource, SWT.NONE);
 		btnNewButton.addMouseListener(new MouseAdapter() {
@@ -469,6 +535,11 @@ public class GameClient extends ApplicationWindow {
 			public void mouseDown(MouseEvent e) {
 				GameHelper.submit(new GetWordCityInfoTask(userBean,
 						resourceConfig, searchResult));
+				// 扫描全图信息
+				if(userBean.getConfigure().getScanResource().getAllResourceConfig().getIsAllScanOpen() ==1)
+				{
+					GameHelper.submit(new GetTimeZoneTask(userBean,searchResult));
+				}
 			}
 		});
 
@@ -492,7 +563,7 @@ public class GameClient extends ApplicationWindow {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				userBean.getConfigure().getScanResource()
-						.setMarket(btnCheckButton.getSelection() ? 1L : 0L);
+						.setMarket(btnCheckButton_1.getSelection() ? 1L : 0L);
 			}
 		});
 		btnCheckButton_1.setBounds(105, 23, 29, 16);
@@ -503,7 +574,7 @@ public class GameClient extends ApplicationWindow {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				userBean.getConfigure().getScanResource()
-						.setGold(btnCheckButton.getSelection() ? 1L : 0L);
+						.setGold(btnCheckButton_2.getSelection() ? 1L : 0L);
 			}
 		});
 		btnCheckButton_2.setBounds(66, 23, 33, 16);
@@ -514,7 +585,7 @@ public class GameClient extends ApplicationWindow {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				userBean.getConfigure().getScanResource()
-						.setSolider(btnCheckButton.getSelection() ? 1L : 0L);
+						.setSolider(btnCheckButton_3.getSelection() ? 1L : 0L);
 			}
 		});
 		btnCheckButton_3.setBounds(140, 23, 39, 16);
@@ -551,6 +622,46 @@ public class GameClient extends ApplicationWindow {
 		initHeroTable();
 		initEquTable();
 
+		
+		allResourceTableViewer.setLabelProvider(new ResourceSearchTableLabelProvider(){
+			@Override
+			public String getColumnText(Object arg0, int columnIndex) {
+				CityInfo itemInfo = (CityInfo) arg0;
+				switch (columnIndex) {
+				case 0:
+					return itemInfo.getId() + "";
+				case 1:
+					return decodeResourceType(itemInfo.getTypeAsInt());
+				case 2:
+					return isNull(itemInfo.getOccupierName()) ? "空资源" : itemInfo
+							.getOccupierName();
+				case 3:
+					return isNull(itemInfo.getUnionName()) ? "" : itemInfo
+							.getUnionName();
+				case 4:
+					return GameUtil.parseDate(itemInfo.getOccupyTime());
+				default:
+					return "";
+				}
+			}
+			private String decodeResourceType(long typeAsInt) {
+				if (typeAsInt == 6) {
+					return "兵营";
+				} else if (typeAsInt == 5) {
+					return "点将";
+				} else if (typeAsInt == 4) {
+					return "黑市";
+				} else if (typeAsInt == 3) {
+					return "元宝山";
+				} else if (typeAsInt == 2) {
+					return "金矿";
+				}
+				return "";
+			}
+		});
+		allResourceTableViewer
+				.setContentProvider(new ResourceSearchTableContentProvider());
+		
 		soliderViewer.setLabelProvider(new ResourceSearchTableLabelProvider());
 		soliderViewer
 				.setContentProvider(new ResourceSearchTableContentProvider());
@@ -638,8 +749,7 @@ public class GameClient extends ApplicationWindow {
 					// 维持会话的获取通知信息惹任务
 					GameHelper.scheduleAtFixedRate(
 							new GameNotifyTask(userBean), 10, TimeUnit.SECONDS);
-					// 扫描全图信息
-					// exec.submit(new GetTimeZoneTask(userBean));
+					
 					// 领取每日登录奖励
 					GameHelper.scheduleAtFixedRate(
 							new ContinuousLoginDaysRewardTask(userBean), 24,
@@ -723,8 +833,11 @@ public class GameClient extends ApplicationWindow {
 	protected Point getInitialSize() {
 		return new Point(750, 700);
 	}
-
+	public Table getTable_6() {
+		return table_6;
+	}
 	protected DataBindingContext initDataBindings() {
+		DataBindingContext bindingContext = new DataBindingContext();
 		IObservableValue loginGameInfonameUserBeanObserveValue = BeansObservables
 				.observeValue(userBean, "loginGameInfo");
 		loginGameInfonameUserBeanObserveValue
@@ -740,6 +853,14 @@ public class GameClient extends ApplicationWindow {
 				.getPlayerHerosInfoList());
 				equiItemViewer.setInput(userBean.getLoginGameInfo()
 				.getPlayerItemsInfoList());
+			}
+		});
+		IObservableValue allResourceInfoBeanObserveValue = BeansObservables
+				.observeValue(searchResult, "allResourceList");
+		allResourceInfoBeanObserveValue.addChangeListener(new IChangeListener() {
+			@Override
+			public void handleChange(ChangeEvent arg0) {
+				allResourceTableViewer.setInput(searchResult.getAllResourceList());
 			}
 		});
 		IObservableValue marketListBeanObserveValue = BeansObservables
@@ -777,7 +898,6 @@ public class GameClient extends ApplicationWindow {
 				soliderViewer.setInput(searchResult.getSoliderList());
 			}
 		});
-		DataBindingContext bindingContext = new DataBindingContext();
 		//
 		IObservableValue observeTextComboObserveWidget = WidgetProperties
 				.text().observe(combo);
@@ -792,6 +912,15 @@ public class GameClient extends ApplicationWindow {
 				.value("configure.sellConfig.level").observe(userBean);
 		bindingContext.bindValue(observeTextText_3ObserveWidget,
 				configuresellConfiglevelUserBeanObserveValue, null, null);
+		
+		//
+		IObservableValue observeTextText_5ObserveWidget = WidgetProperties.text(SWT.Modify).observe(text_5);
+		IObservableValue configurescanResourceallResourceConfigxPosEndUserBeanObserveValue = PojoProperties.value("configure.scanResource.allResourceConfig.xPosEnd").observe(userBean);
+		bindingContext.bindValue(observeTextText_5ObserveWidget, configurescanResourceallResourceConfigxPosEndUserBeanObserveValue, null, null);
+		//
+		IObservableValue observeTextText_4ObserveWidget = WidgetProperties.text(SWT.Modify).observe(text_4);
+		IObservableValue configurescanResourceallResourceConfigyPosEndUserBeanObserveValue = PojoProperties.value("configure.scanResource.allResourceConfig.yPosEnd").observe(userBean);
+		bindingContext.bindValue(observeTextText_4ObserveWidget, configurescanResourceallResourceConfigyPosEndUserBeanObserveValue, null, null);
 		//
 		return bindingContext;
 	}

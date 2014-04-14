@@ -74,14 +74,14 @@ public class UserConfig {
 		digester.addCallMethod("configuration/users/user/areaId", "setAreaId",0,new Class[]{Long.class});
 		//设置扫描间隔
 //		digester.addSetProperties("configuration/users/user/configure/scanResource","waitTime","waitTime");
-		digester.addCallMethod("configuration/users/user/configure/scanResource/gold","setGold",0,new Class[]{Long.class});
-		digester.addCallMethod("configuration/users/user/configure/scanResource/treasure","setTreasure",0,new Class[]{Long.class});
-		digester.addCallMethod("configuration/users/user/configure/scanResource/market","setMarket",0,new Class[]{Long.class});
-		digester.addCallMethod("configuration/users/user/configure/scanResource/solider","setSolider",0,new Class[]{Long.class});
+//		digester.addCallMethod("configuration/users/user/configure/scanResource/gold","setGold",0,new Class[]{Long.class});
+//		digester.addCallMethod("configuration/users/user/configure/scanResource/treasure","setTreasure",0,new Class[]{Long.class});
+//		digester.addCallMethod("configuration/users/user/configure/scanResource/market","setMarket",0,new Class[]{Long.class});
+//		digester.addCallMethod("configuration/users/user/configure/scanResource/solider","setSolider",0,new Class[]{Long.class});
 		
-		digester.addCallMethod("configuration/users/user/configure/searchResource","setSearchResource",0,new Class[]{Long.class});
-		digester.addCallMethod("configuration/users/user/configure/autoSell/sell","setSell",0,new Class[]{Long.class});
-		digester.addCallMethod("configuration/users/user/configure/autoSell/level","setLevel",0,new Class[]{Long.class});
+//		digester.addCallMethod("configuration/users/user/configure/searchResource","setSearchResource",0,new Class[]{Long.class});
+//		digester.addCallMethod("configuration/users/user/configure/autoSell/sell","setSell",0,new Class[]{Long.class});
+//		digester.addCallMethod("configuration/users/user/configure/autoSell/level","setLevel",0,new Class[]{Long.class});
 		
 		digester.addSetNext("configuration/users/user/configure","setConfigure");
 		digester.addSetNext("configuration/users/user/configure/scanResource","setScanResource");

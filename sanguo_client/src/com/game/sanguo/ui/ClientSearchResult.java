@@ -2,37 +2,15 @@ package com.game.sanguo.ui;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
-import java.util.ArrayList;
 import java.util.List;
 
 import com.game.sanguo.base.domain.CityInfo;
 import com.game.sanguo.base.domain.SearchResult;
 
 public class ClientSearchResult extends SearchResult {
-	private List<CityInfo> marketList = new ArrayList();
-	private List<CityInfo> goldList = new ArrayList();
-	private List<CityInfo> soliderList = new ArrayList();
-	private List<CityInfo> treasureList = new ArrayList();
-	
 	
 	public ClientSearchResult(String sortType) {
 		super(sortType);
-	}
-
-	public void setMarketList(List<CityInfo> marketList) {
-		this.marketList = marketList;
-	}
-
-	public void setGoldList(List<CityInfo> goldList) {
-		this.goldList = goldList;
-	}
-
-	public void setSoliderList(List<CityInfo> soliderList) {
-		this.soliderList = soliderList;
-	}
-
-	public void setTreasureList(List<CityInfo> treasureList) {
-		this.treasureList = treasureList;
 	}
 
 	private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(
@@ -82,7 +60,12 @@ public class ClientSearchResult extends SearchResult {
 		super.addTreasureInfo(cityInfo);
 		firePropertyChange("treasureList",cityInfoList, getTreasureList());
 	}
-
+	@Override
+	public void addAllResourceList(CityInfo cityInfo) {
+		List<CityInfo> cityInfoList = getAllResourceList();
+		super.addAllResourceList(cityInfo);
+		firePropertyChange("allResourceList",cityInfoList, getAllResourceList());
+	}
 	@Override
 	public void clearGoldList() {
 		super.clearGoldList();
@@ -106,7 +89,11 @@ public class ClientSearchResult extends SearchResult {
 		super.clearTreasureList();
 		firePropertyChange("treasureList", null, getTreasureList());
 	}
-
+	@Override
+	public void clearAllResourceList() {
+		super.clearAllResourceList();
+		firePropertyChange("allResourceList", null, getAllResourceList());
+	}
 	@Override
 	public List<CityInfo> getGoldList() {
 		// TODO Auto-generated method stub
@@ -130,4 +117,8 @@ public class ClientSearchResult extends SearchResult {
 		// TODO Auto-generated method stub
 		return super.getTreasureList();
 	}
+	public List<CityInfo> getAllResourceList() {
+		return super.getAllResourceList();
+	}
+	
 }

@@ -22,7 +22,7 @@ public class ResourceSearchTableLabelProvider extends TableLabelProvider {
 		}
 	}
 	
-	private boolean isNull(String s)
+	protected boolean isNull(String s)
 	{
 		if(s == null || s.equals("null"))
 		{
