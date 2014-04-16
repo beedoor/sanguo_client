@@ -54,6 +54,7 @@ public class ScanResource {
 	public void setSolider(Long solider) {
 		this.solider = solider;
 	}
+	
 	@Override
 	public String toString() {
 		return "ScanResource [gold=" + gold + ", treasure=" + treasure

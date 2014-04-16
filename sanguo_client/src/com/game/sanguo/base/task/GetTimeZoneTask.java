@@ -1,17 +1,10 @@
 package com.game.sanguo.base.task;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -20,10 +13,6 @@ import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
 
 import com.game.sanguo.base.domain.CityInfo;
-import com.game.sanguo.base.domain.LoginGameInfo;
-import com.game.sanguo.base.domain.PlayerCitysInfo;
-import com.game.sanguo.base.domain.PlayerHerosInfo;
-import com.game.sanguo.base.domain.PlayerItemsInfo;
 import com.game.sanguo.base.domain.SearchResult;
 import com.game.sanguo.base.domain.UserBean;
 
@@ -41,6 +30,11 @@ public class GetTimeZoneTask extends GameTask {
 	}
 
 	public void doAction() {
+		searchResult.clearAllResourceList();
+		searchResult.clearGoldList();
+		searchResult.clearMarketList();
+		searchResult.clearSoliderList();
+		searchResult.clearTreasureList();
 		long xPosEnd = userBean.getConfigure().getScanResource()
 				.getAllResourceConfig().getxPosEnd();
 		long yPosEnd = userBean.getConfigure().getScanResource()
@@ -123,6 +117,19 @@ public class GetTimeZoneTask extends GameTask {
 				if (m.find()) {
 					String contentStr = m.replaceAll("");
 					CityInfo cityInfo = (CityInfo) initBeanInfo(CityInfo.class, contentStr, ';', '=');
+					if(cityInfo.getTypeAsInt() == 2)
+					{
+						searchResult.addGoIdnfo(cityInfo);
+					}else if(cityInfo.getTypeAsInt() == 3)
+					{
+						searchResult.addTreasureInfo(cityInfo);
+					}else if(cityInfo.getTypeAsInt() == 4)
+					{
+						searchResult.addMarketInfo(cityInfo);
+					}else if(cityInfo.getTypeAsInt() == 6)
+					{
+						searchResult.addSoliderInfo(cityInfo);
+					} 
 					if(cityInfo.getTypeAsInt() == 2 || cityInfo.getTypeAsInt() == 3 || cityInfo.getTypeAsInt() == 4 || cityInfo.getTypeAsInt() == 6)
 					{
 						searchResult.addAllResourceList(cityInfo);

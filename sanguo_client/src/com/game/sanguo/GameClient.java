@@ -148,6 +148,10 @@ public class GameClient extends ApplicationWindow {
 	 */
 	@Override
 	protected Control createContents(Composite parent) {
+		return doCreateComponent(parent);
+	}
+
+	private Control doCreateComponent(Composite parent) {
 		Composite container = new Composite(parent, SWT.NONE);
 
 		Composite composite = new Composite(container, SWT.NONE);
