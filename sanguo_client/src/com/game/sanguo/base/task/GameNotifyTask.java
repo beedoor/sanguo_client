@@ -3,34 +3,30 @@
  */
 package com.game.sanguo.base.task;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
 
 import com.game.sanguo.base.domain.UserBean;
+import com.game.sanguo.base.util.PipleLineTask;
 
 /**
  * @author beedoor
  * 
  */
 public class GameNotifyTask extends GameTask {
-	public GameNotifyTask(UserBean userBean) {
-		super();
+	public GameNotifyTask(UserBean userBean,PipleLineTask pipleLineTask) {
+		super(pipleLineTask);
 		this.userBean = userBean;
 	}
 
-	public static void main(String[] args) {
-		System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(System.currentTimeMillis())));
-	}
-
-	public void doAction() {
+	public boolean doAction() {
 		try {
 			msgTypeGameWorld();
+			return true;
 		} catch (Throwable e) {
 			logger.error("获取通知信息异常", e);
 		}
+		return false;
 	}
 
 	private void msgTypeGameWorld() {

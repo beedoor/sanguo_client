@@ -1,7787 +1,1274 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<resources>
-	<resource>
-		<type>treasure</type>
-		<areaId>18937</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>18947</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>22288</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>18728</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>20828</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>19226</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>19308</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>19644</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>20155</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>25165</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>23218</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>18867</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>23229</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>19053</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>19042</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>19030</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>20119</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>22358</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>23240</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>19564</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>25317</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>19900</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>19864</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>19841</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>24018</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>25341</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>20456</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>20490</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>23983</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>25050</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>21001</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>21326</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>21222</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>22104</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>24320</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>21733</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>22973</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>23356</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>21919</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>21942</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>22510</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>23379</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>22800</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>22869</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>23716</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>25467</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>26105</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>24760</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>24922</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>26093</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>25977</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>31593</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>31046</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>31024</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>30999</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>30814</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>31185</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>31255</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>31291</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>31314</areaId>
-	</resource>
-	<resource>
-		<type>treasure</type>
-		<areaId>31417</areaId>
-	</resource>
-	
-		<resource>
-		<type>market</type>
-		<areaId>18704</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18716</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20804</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20805</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21489</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21500</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22289</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23171</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24133</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27614</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28959</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28970</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18541</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18729</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19285</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19701</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20178</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20212</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20816</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21477</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24121</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25225</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26348</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26383</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26384</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27637</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28947</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30386</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18600</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18680</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18912</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18913</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19297</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20166</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20167</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21524</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22312</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24110</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25176</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25235</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26336</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26395</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26396</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27591</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28937</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30375</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18670</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19726</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20236</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20839</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21535</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22325</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23125</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24180</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26407</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28925</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29006</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30363</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30443</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18774</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18993</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18994</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19215</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19320</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20248</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21442</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22230</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24087</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24191</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25154</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25155</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26313</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27566</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27567</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30351</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30352</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30456</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18844</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>18879</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19330</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20259</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20735</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20863</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21430</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23101</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23228</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25142</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26303</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27555</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27556</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28900</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29028</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30467</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30468</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19064</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19343</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20120</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20271</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20874</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21419</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22208</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30328</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30478</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30479</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19100</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19123</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19147</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19158</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19169</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19771</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20108</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20886</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21581</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23078</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25293</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26278</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26453</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19424</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19412</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19413</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20098</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20293</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21394</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22382</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23067</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25107</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26464</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26465</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19482</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19506</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19539</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21383</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22393</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24249</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26256</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27509</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30294</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19910</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19911</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19852</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19830</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20676</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21373</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22161</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24262</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25328</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26244</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27497</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30281</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30282</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30525</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19934</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>19969</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20004</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20665</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21627</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21628</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22150</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23032</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23298</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25073</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26499</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27486</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28831</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29097</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30536</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30537</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31800</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20479</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20455</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20443</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20432</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20398</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20385</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20374</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20363</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20351</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20653</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20944</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22139</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22429</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23995</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25060</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25351</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26220</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28820</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28821</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31788</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20491</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20502</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20537</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20549</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20561</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20571</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20583</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20630</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21337</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22441</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23008</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24295</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25362</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25363</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26522</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27462</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27463</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30247</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21094</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21082</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21071</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21072</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21037</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21024</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21014</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21002</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>20979</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21662</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22115</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22997</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24308</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25038</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25039</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25375</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28796</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30572</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31767</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21141</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21163</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21174</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21187</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21198</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21209</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21232</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21257</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21280</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21290</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21315</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21674</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22462</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23344</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25026</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26187</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31754</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21790</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21779</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21756</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22474</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25014</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26558</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27811</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28773</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29155</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31743</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21884</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21965</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>21999</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22000</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22012</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22035</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24341</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25003</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25410</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31730</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22706</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22707</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22683</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22672</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22660</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22661</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22649</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22625</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22532</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22533</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22521</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22498</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26581</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27835</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28750</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28751</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29179</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30617</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22742</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22787</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22788</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22846</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22880</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22892</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22904</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22916</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22927</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>22938</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26591</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29191</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30629</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30630</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23634</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23564</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23565</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23542</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23529</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23496</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23448</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23426</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23413</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23403</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24969</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25444</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26128</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26129</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26603</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27381</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27856</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28727</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30642</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23669</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23692</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23762</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23819</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23831</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23832</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23844</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>23878</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24389</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26117</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27371</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27868</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28715</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29214</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30153</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30154</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30652</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24608</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24596</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24574</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24516</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24493</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24457</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24434</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24435</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24422</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24423</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24399</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27880</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31672</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24701</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24712</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24724</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24736</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24747</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24782</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24795</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24828</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24840</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24852</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24886</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24911</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>24921</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27892</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30131</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25723</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25641</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25629</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25606</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25595</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25561</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25525</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25503</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26649</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29250</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25803</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25815</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25849</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25908</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25920</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25930</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25931</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25955</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>25988</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28668</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31638</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26930</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26872</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26824</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26801</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26790</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26778</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26744</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26674</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27312</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27927</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28658</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29272</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30711</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31626</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>26999</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27010</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27022</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27057</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27069</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27092</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27104</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27115</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27126</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27138</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27161</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27162</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27174</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27197</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27208</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27209</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27219</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27231</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27232</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27242</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28646</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28274</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28263</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28252</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28240</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28216</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28205</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28193</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28136</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28125</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28077</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28042</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28031</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27996</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>27984</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29296</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30073</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31604</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28287</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28297</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28321</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28322</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28333</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28344</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28380</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28402</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28425</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28448</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28471</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28484</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28496</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28541</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28542</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28587</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28588</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28599</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28600</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28611</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>28623</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29307</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30746</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29654</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29620</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29609</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29596</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29562</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29528</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29515</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29504</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29493</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29457</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29399</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29376</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29342</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29318</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30758</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31580</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31581</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29677</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29712</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29713</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29747</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29770</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29771</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29805</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29806</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29829</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29851</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29910</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29945</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>29968</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30015</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30025</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31569</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31151</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31115</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31105</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31092</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31093</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31081</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31057</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31058</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30942</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30930</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30883</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30850</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30825</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>30792</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31163</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31174</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31209</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31233</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31267</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31278</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31324</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31337</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31360</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31372</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31465</areaId>
-	</resource>
-	<resource>
-		<type>market</type>
-		<areaId>31488</areaId>
-	</resource>
-
-		<resource>
-		<type>solider</type>
-		<areaId>18948</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19262</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20190</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20201</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20793</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22277</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23158</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23159</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25201</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26360</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26371</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28958</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30398</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18542</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18554</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18692</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18693</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18924</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18925</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18959</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19668</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20781</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21511</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22266</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23182</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24122</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25189</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25224</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26349</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28982</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30420</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18611</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18599</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18972</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19238</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20224</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20769</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20827</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21464</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21465</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22313</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24111</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24167</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24168</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25236</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27590</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27648</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28994</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30374</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30430</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18635</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18900</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18901</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18982</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18983</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19227</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20235</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20838</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21452</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21453</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21534</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22324</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23124</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23206</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24099</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25166</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25246</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26325</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26406</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29005</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18809</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18785</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18763</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19319</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19737</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19738</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20247</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20850</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21546</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23112</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23113</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23217</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26314</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26418</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27671</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27672</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>18866</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19006</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19620</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19621</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20131</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20862</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21557</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21558</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22346</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24203</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26429</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27683</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28901</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19076</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19609</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20875</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21418</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22209</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23089</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23090</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24063</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25131</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27544</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27694</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27695</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28890</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29039</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29040</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30327</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19112</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19122</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19135</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19157</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20282</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20885</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22371</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24052</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24225</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24226</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25294</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26279</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26454</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27532</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27533</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28878</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28879</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29051</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30490</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19458</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19459</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19447</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19435</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19425</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19377</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19378</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19366</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20700</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21395</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22383</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23066</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23263</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25304</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26267</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27520</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29064</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30305</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30501</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19470</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19481</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19517</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19528</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19540</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19552</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19795</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20086</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20689</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20909</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22172</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24029</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24250</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25096</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25097</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26255</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26476</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27508</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27730</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29075</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30293</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19922</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19899</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19887</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19865</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19842</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20677</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21615</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22162</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23042</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24017</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26245</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27740</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27741</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28842</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28843</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19968</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19980</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>19992</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20016</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20026</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20039</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20049</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20062</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20328</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20329</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20932</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21360</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21361</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22151</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23031</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28832</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30269</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20478</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20468</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20421</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20397</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20386</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20375</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20362</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20352</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20340</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21348</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23309</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23994</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24283</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26511</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27764</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27765</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29109</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20514</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20526</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20536</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20560</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20572</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20594</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20641</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20642</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20954</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21336</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23322</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24296</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25049</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26208</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26209</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28809</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30248</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30560</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31777</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31778</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21118</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21105</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21036</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>20967</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22452</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22996</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23334</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23971</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23972</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26533</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27450</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27451</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28797</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30571</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21151</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21199</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21245</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21291</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22103</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22463</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22985</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23960</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26545</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26546</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27440</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28784</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28785</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30224</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30584</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31755</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21859</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21801</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21767</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21743</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21744</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21732</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21697</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21685</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22092</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22475</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23355</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24330</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25015</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25398</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26174</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26557</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30211</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30595</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21883</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21895</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21896</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21953</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21964</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21977</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>21989</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22011</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22034</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22046</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22047</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22057</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22058</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22080</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22081</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22962</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22963</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23367</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23368</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23936</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23937</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24342</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25002</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26569</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27822</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29167</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29168</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30606</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22684</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22626</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22615</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22602</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22603</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22591</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22568</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23380</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24354</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24992</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25420</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27404</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27834</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29180</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30189</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30190</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22741</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22754</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22811</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22822</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22834</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22835</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22845</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22858</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22881</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22893</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22915</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>22939</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23391</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23392</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23914</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27846</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28738</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31709</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23623</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23612</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23587</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23576</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23518</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23507</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23483</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23438</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23901</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23902</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24378</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24968</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26604</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27857</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30166</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23646</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23658</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23670</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23681</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23715</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23761</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23855</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23866</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>23890</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25456</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26116</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24632</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24620</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24597</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24586</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24503</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24481</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24470</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24446</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24411</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24944</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25468</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29225</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29226</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30142</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30664</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31673</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24666</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24678</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24679</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24737</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24817</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24841</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24853</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24875</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24899</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>24933</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26639</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28693</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29237</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30132</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30676</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25770</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25757</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25758</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25722</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25687</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25676</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25665</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25642</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25619</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25607</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25571</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25549</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25538</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25502</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25490</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26650</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27903</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29249</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31650</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31651</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25780</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25827</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25838</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25850</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25861</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25862</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25873</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25885</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25907</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25919</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25942</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>25989</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26012</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26023</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26024</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26661</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27323</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29260</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30107</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30700</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26975</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26953</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26941</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26918</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26905</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26894</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26882</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26847</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26802</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26779</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26767</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26755</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26756</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26673</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26987</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>26988</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27000</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27034</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27046</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27058</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27093</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27139</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27173</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27184</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27243</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27255</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27266</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27267</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27277</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27939</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29284</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30084</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30085</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30721</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31614</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31615</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28206</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28183</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28148</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28112</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28090</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28066</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28054</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28019</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28020</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28008</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28009</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27997</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27973</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27974</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27961</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>27951</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28634</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30733</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30734</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31603</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28310</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28332</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28345</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28355</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28367</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28437</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28483</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28518</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28529</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28530</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28553</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28554</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28564</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28565</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28576</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28612</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>28622</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29308</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30061</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29666</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29667</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29643</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29619</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29597</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29574</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29561</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29538</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29539</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29527</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29503</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29492</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29480</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29445</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29434</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29435</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29422</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29423</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29387</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29388</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29377</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29319</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29724</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29735</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29759</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29760</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29793</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29840</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29876</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29886</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29909</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29921</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>29992</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30014</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30026</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30037</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30769</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31150</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31139</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31070</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31034</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31012</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30941</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30895</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30884</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30873</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30860</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30791</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>30779</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31186</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31198</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31208</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31243</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31256</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31279</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31290</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31301</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31302</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31336</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31348</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31349</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31382</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31383</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31395</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31475</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31487</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31499</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31510</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31511</areaId>
-	</resource>
-	<resource>
-		<type>solider</type>
-		<areaId>31545</areaId>
-	</resource>
-	
-		<resource>
-		<type>gold</type>
-		<areaId>18565</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18566</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18578</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18705</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18717</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19261</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19272</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19273</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19678</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19679</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19690</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19691</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20189</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20202</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20792</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21488</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21499</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23170</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24134</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24145</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24146</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25200</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25213</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26372</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27613</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27624</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27625</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28971</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30409</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30410</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18553</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18589</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19250</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19284</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19667</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19702</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20177</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20780</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21512</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22300</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22301</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23147</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23148</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23181</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25188</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27602</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28948</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28981</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30421</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18622</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18623</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18612</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18739</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18740</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18971</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19239</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19656</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19657</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20223</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20768</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21523</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23137</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23193</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23194</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25177</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26337</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27649</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28936</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18634</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18646</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18647</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18657</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18669</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18750</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19309</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19645</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20156</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20757</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20758</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22243</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23205</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24100</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25247</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26324</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27578</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27579</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27660</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27661</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28924</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18810</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18798</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18786</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18890</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19214</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19632</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19633</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20143</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20746</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21441</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22231</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24088</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24192</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25259</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26417</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28912</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28913</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30455</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18820</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18821</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18831</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18832</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18843</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18854</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>18878</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19005</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19203</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19204</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19331</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19748</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19749</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20132</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20260</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20734</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22219</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22220</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24075</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24076</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26302</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26430</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29029</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30339</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30340</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19087</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19065</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19041</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19029</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19018</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19192</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19610</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19759</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20270</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20723</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21569</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21570</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22359</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23239</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24064</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24214</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24215</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25282</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26290</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26291</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26441</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27545</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28889</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19111</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19134</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19180</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19354</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19355</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19598</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19599</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19772</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20109</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20711</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21406</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21407</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21582</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22196</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22197</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22370</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24053</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25119</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29052</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30316</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30317</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30489</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19448</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19400</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19390</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19367</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19586</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19783</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20294</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20896</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21592</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22184</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23264</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24042</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24237</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26266</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27521</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27719</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28867</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30306</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30502</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19493</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19505</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19516</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19529</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19551</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19563</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19575</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19796</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20085</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20305</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20688</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20908</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21603</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22173</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22394</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23055</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23275</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23276</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25316</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27729</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28854</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28855</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29076</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30513</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30514</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19888</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19875</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19876</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19817</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20073</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20317</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20318</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20921</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21372</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22404</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22405</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23286</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24261</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26487</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29086</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29087</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19945</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19957</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19958</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19981</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>19991</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20038</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20061</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20664</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22416</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24273</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25340</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26232</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26233</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26500</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27752</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27753</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29098</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20467</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20444</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20433</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20420</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20410</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20943</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21639</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21640</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22428</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23020</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23021</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24284</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25061</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26221</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26512</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27474</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30258</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30259</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30547</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31789</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20525</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20548</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20584</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20595</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20606</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20618</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20619</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20629</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20955</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21650</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21651</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22126</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22127</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22440</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23321</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23984</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26523</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27777</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28808</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29121</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29122</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21129</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21130</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21117</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21095</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21083</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21059</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21060</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21047</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21025</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20989</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>20978</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21661</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22114</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22451</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23333</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24307</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25374</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26198</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27787</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27788</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29134</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30235</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30236</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31766</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21140</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21152</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21164</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21186</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21210</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21221</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21233</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21256</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21267</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21268</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21279</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21302</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21303</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21314</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21673</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22984</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25027</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25386</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26186</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27439</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27799</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29144</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29145</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30223</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30583</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21871</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21848</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21836</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21837</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21825</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21826</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21813</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21814</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21778</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21768</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21755</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21720</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21721</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21709</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21710</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21686</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22093</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22974</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23947</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23948</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24331</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25399</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26175</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27428</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27429</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27810</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28774</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30212</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30594</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31742</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21907</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21931</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21941</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21954</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21976</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>21988</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22022</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22023</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22069</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22070</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22486</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22487</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25409</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26162</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26163</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26570</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27416</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27823</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28762</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30200</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30605</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31731</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22695</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22696</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22673</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22648</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22637</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22614</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22590</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22579</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22580</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22544</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22545</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22522</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22509</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22499</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22950</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22951</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23925</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23926</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24353</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24991</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26150</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26151</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27405</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30618</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31719</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31720</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22719</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22729</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22730</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22764</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22765</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22777</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22857</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22870</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22903</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>22928</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23913</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24980</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24981</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25432</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25433</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26139</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26140</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27393</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28739</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29192</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30178</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23622</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23611</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23599</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23600</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23588</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23553</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23541</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23519</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23495</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23484</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23471</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23472</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23461</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23449</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23402</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24377</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25445</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27382</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28726</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29202</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29203</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30165</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30641</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31696</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31697</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23645</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23680</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23693</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23704</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23727</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23728</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23738</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23750</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23751</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23774</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23786</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23797</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23808</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23809</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23867</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23877</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>23889</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24388</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24956</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24957</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26615</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27370</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27869</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28716</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29213</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30653</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31684</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31685</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24654</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24655</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24643</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24644</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24631</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24585</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24561</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24562</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24550</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24538</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24539</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24527</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24528</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24504</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24492</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24480</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24469</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24458</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24400</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26104</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27358</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27359</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28704</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28705</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30143</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24667</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24689</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24713</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24748</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24759</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24770</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24771</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24876</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24898</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24910</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>24934</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25478</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25479</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26092</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26638</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27346</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27347</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27893</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28692</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29238</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31662</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25769</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25745</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25746</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25735</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25711</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25712</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25700</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25677</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25664</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25618</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25596</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25584</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25572</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25560</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25537</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25526</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25513</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25514</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26081</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27334</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27335</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27904</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28680</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28681</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30119</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30120</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30687</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25781</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25791</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25804</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25826</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25872</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25884</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25896</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25897</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25943</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25954</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>25966</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26000</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26001</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26035</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26047</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26058</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26059</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26070</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26071</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26662</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27324</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27914</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28669</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30108</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30699</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31639</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26976</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26964</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26940</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26929</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26917</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26906</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26883</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26871</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26860</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26848</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26836</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26837</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26825</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26813</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26789</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26743</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26731</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26732</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26721</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26709</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26697</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26698</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>26685</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27926</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28657</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30710</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31627</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27011</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27023</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27035</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27045</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27068</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27080</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27081</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27103</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27116</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27127</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27150</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27185</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27220</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27254</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27289</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27301</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27938</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30722</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28275</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28264</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28251</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28229</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28194</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28182</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28170</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28171</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28158</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28159</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28135</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28124</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28113</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28100</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28089</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28067</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28055</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28032</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27962</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>27950</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28635</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29295</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28286</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28298</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28309</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28356</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28368</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28379</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28390</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28391</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28403</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28413</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28414</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28438</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28449</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28472</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28495</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28507</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28519</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>28577</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30745</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31592</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29655</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29631</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29608</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29585</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29586</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29573</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29550</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29551</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29516</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29481</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29469</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29470</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29446</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29400</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29364</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29353</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29354</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29329</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29330</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30050</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30757</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29678</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29689</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29690</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29701</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29702</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29736</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29748</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29783</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29794</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29817</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29818</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29852</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29864</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29875</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29887</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29898</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29922</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29933</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29944</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29956</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29967</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29979</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>29991</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30002</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30038</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30768</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31568</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31140</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31127</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31128</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31116</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31069</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31047</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31035</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31000</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30988</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30989</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30977</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30965</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30966</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30953</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30931</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30918</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30919</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30896</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30861</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30837</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30815</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30802</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30803</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>30780</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31557</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31162</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31175</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31197</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31220</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31232</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31244</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31266</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31313</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31325</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31359</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31371</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31394</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31406</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31407</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31418</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31430</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31440</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31441</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31453</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31464</areaId>
-	</resource>
-	<resource>
-		<type>gold</type>
-		<areaId>31523</areaId>
-	</resource>
-
+<resources><resource>
+<type>treasure</type>
+<areaId>12020</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11729</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11648</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11335</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11856</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12042</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11972</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11857</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10058</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11161</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11903</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10859</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12031</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11845</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10094</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11254</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12101</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12088</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11879</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11902</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11765</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11045</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10407</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11138</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10081</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11914</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11626</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11405</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11150</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11892</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10371</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11799</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11740</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10571</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11891</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11683</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11637</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12030</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10488</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10710</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11323</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11741</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12053</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11753</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11718</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11046</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11764</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11868</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12065</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11649</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10395</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11694</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10674</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11950</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12007</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11961</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11730</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11833</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11869</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10452</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12066</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10894</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11949</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11985</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11821</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11579</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11811</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11973</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11798</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11822</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11927</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11255</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11682</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12077</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11984</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11603</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10116</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11672</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11810</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11660</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11695</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10001</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10012</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11080</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10686</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10290</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12008</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11776</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11079</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11671</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11719</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11926</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11962</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11787</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10558</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10685</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>10233</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11347</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>11844</areaId>
+</resource>
+<resource>
+<type>treasure</type>
+<areaId>12100</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>12054</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11834</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11938</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11521</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11474</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11450</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11416</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11777</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11532</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11334</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11545</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11034</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11011</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10999</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10987</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11752</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10849</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10872</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10884</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11230</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10628</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10582</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10802</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10477</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11591</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10326</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10279</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11091</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10453</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10221</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10257</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10767</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10129</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10106</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10093</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11116</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10372</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10071</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11160</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10188</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10013</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10720</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11137</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10187</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10384</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10070</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10140</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10430</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11173</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10105</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10128</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10210</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10268</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10234</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10349</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10778</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11706</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10280</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10789</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10535</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10801</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11578</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10593</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10814</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10907</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10871</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10860</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11556</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10975</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>10988</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11010</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11033</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11544</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11346</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11266</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11533</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11404</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11417</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11463</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11486</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11937</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>11915</areaId>
+</resource>
+<resource>
+<type>market</type>
+<areaId>12111</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>12089</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11520</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11508</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11439</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11393</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11288</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11358</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11369</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11023</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10953</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10837</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10883</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10918</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11058</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10813</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10639</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10606</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10476</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10523</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11590</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10663</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10338</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10302</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10673</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10245</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11615</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11185</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10768</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11172</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10431</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10059</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11126</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10743</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10419</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10000</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10396</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10175</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10037</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10025</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10024</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10036</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10163</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10176</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11661</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10047</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10709</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10744</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11636</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10139</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10698</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11625</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11184</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11614</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10256</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10348</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11196</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10325</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10465</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10790</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10534</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10512</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10570</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10617</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10640</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11057</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11231</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10906</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10848</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10825</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>10998</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11381</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11370</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11312</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11392</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11428</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11485</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11509</areaId>
+</resource>
+<resource>
+<type>gold</type>
+<areaId>11995</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>12078</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11788</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11475</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11440</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11277</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11324</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10965</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10941</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10930</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11242</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10895</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10616</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10559</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11218</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10652</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10489</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10524</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10314</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10303</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10222</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10269</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10442</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10117</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10755</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10199</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10383</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10151</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10721</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10164</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10406</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10048</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10152</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11127</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10697</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10756</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10359</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11104</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10244</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11602</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10313</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11208</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10501</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10651</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11068</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11219</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10581</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11567</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10826</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10929</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10940</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>10952</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11382</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11276</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11427</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11451</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11497</areaId>
+</resource>
+<resource>
+<type>solider</type>
+<areaId>11996</areaId>
+</resource>
 </resources>

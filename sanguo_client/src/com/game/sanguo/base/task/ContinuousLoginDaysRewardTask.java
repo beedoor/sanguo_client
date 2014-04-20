@@ -1,28 +1,33 @@
 package com.game.sanguo.base.task;
 
+import java.io.InputStream;
+
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
 
 import com.game.sanguo.base.domain.ContinuousLoginDaysRewardInfo;
 import com.game.sanguo.base.domain.UserBean;
+import com.game.sanguo.base.util.PipleLineTask;
 
 public class ContinuousLoginDaysRewardTask extends GameTask {
-	public ContinuousLoginDaysRewardTask(UserBean userBean) {
-		super();
+	public ContinuousLoginDaysRewardTask(UserBean userBean,PipleLineTask pipleLineTask) {
+		super(pipleLineTask);
 		this.userBean = userBean;
 	}
 
-	public void doAction() {
+	public boolean doAction() {
 		try {
 			// 计算是领取哪天的礼包
 			Long loginDays = userBean.getLoginGameInfo().getContinuousLoginDays();
 			long rewardDay = loginDays % 7;
 			logger.info(String.format("开始领取第[%s]天的奖励 ", rewardDay));
-			ContinuousLoginDaysRewardInfo rewardInfo = msgIdRecvContinuousLoginDaysRewardTask(rewardDay);
+			msgIdRecvContinuousLoginDaysRewardTask(rewardDay);
 			userBean.getLoginGameInfo().setContinuousLoginDays(String.valueOf(loginDays + 1));
+			return true;
 		} catch (Throwable e) {
 			logger.error("领取连续登录礼包异常", e);
 		}
+		return false;
 	}
 
 	private ContinuousLoginDaysRewardInfo msgIdRecvContinuousLoginDaysRewardTask(long rewardDay) {
@@ -50,10 +55,10 @@ public class ContinuousLoginDaysRewardTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("c0-e4", "number:" + rewardDay));
 		postMethod.addParameter(new NameValuePair("c0-param1", "Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
 		postMethod.addParameter(new NameValuePair("batchId", "" + userBean.getBatchId()));
-		doRequest(postMethod);
+		InputStream inputStream = doRequest(postMethod);
 
 		try {
-			awardInfo = initBeanInfo(ContinuousLoginDaysRewardInfo.class, postMethod.getResponseBodyAsStream(), "dwr");
+			awardInfo = initBeanInfo(ContinuousLoginDaysRewardInfo.class, inputStream, "dwr");
 			if (null != awardInfo) {
 				logger.info("连续登录奖励[" + rewardDay + "," + awardInfo.toString() + "]");
 			}

@@ -3,8 +3,6 @@ package com.game.sanguo.base.task;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,21 +13,19 @@ import org.apache.commons.httpclient.methods.PostMethod;
 import com.game.sanguo.base.domain.CityInfo;
 import com.game.sanguo.base.domain.SearchResult;
 import com.game.sanguo.base.domain.UserBean;
+import com.game.sanguo.base.util.PipleLineTask;
 
 public class GetTimeZoneTask extends GameTask {
 	SearchResult searchResult = null;
-	public GetTimeZoneTask(UserBean userBean,SearchResult searchResult) {
-		super();
+	public GetTimeZoneTask(UserBean userBean,SearchResult searchResult,PipleLineTask pipleLineTask) {
+		super(pipleLineTask);
 		this.userBean = userBean;
 		this.searchResult=searchResult;
 	}
 
-	public static void main(String[] args) {
-		System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-				.format(new Date(System.currentTimeMillis())));
-	}
+	
 
-	public void doAction() {
+	public boolean doAction() {
 		searchResult.clearAllResourceList();
 		searchResult.clearGoldList();
 		searchResult.clearMarketList();
@@ -52,6 +48,7 @@ public class GetTimeZoneTask extends GameTask {
 				}
 			}
 		}
+		return true;
 	}
 
 	private void msgIdGetZoneInfo(int areaX, int areaY) {
@@ -94,9 +91,9 @@ public class GetTimeZoneTask extends GameTask {
 						"Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
 		postMethod.addParameter(new NameValuePair("batchId", ""
 				+ userBean.getBatchId()));
-		doRequest(postMethod);
+		InputStream inputStream =doRequest(postMethod);
 		try {
-			decoeLoginGameInfo(postMethod.getResponseBodyAsStream());
+			decoeLoginGameInfo(inputStream);
 		} catch (Exception e) {
 			logger.error("转换异常", e);
 		}

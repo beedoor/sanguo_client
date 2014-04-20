@@ -17,62 +17,57 @@ import com.game.sanguo.base.domain.ScanResource;
 import com.game.sanguo.base.domain.SearchResult;
 import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.util.GameUtil;
+import com.game.sanguo.base.util.PipleLineTask;
 import com.game.sanguo.base.util.ResourceConfig;
 import com.game.sanguo.base.util.UserConfig;
 
 public class GetWordCityInfoTask extends GameTask {
-
 	ResourceConfig resourceConfig = null;
 	UserConfig userConfig = null;
 	SearchResult searchResult = null;
 
-	public GetWordCityInfoTask(UserBean userBean,
-			ResourceConfig resourceConfig, SearchResult searchResult) {
-		super();
+	public GetWordCityInfoTask(UserBean userBean, ResourceConfig resourceConfig, SearchResult searchResult, PipleLineTask pipleLineTask) {
+		super(pipleLineTask);
 		this.userBean = userBean;
 		this.resourceConfig = resourceConfig;
 		this.searchResult = searchResult;
 	}
 
-	public void doAction() {
+	public boolean doAction() {
 		try {
 			logger.info(userBean.getConfigure().toString());
 			ScanResource scan = userBean.getConfigure().getScanResource();
 			if (scan.getTreasure() == 1) {
 				logger.info("开始计算元宝山资源信息");
-				doSearchResultInfo(ResourceType.TREASURE,
-						resourceConfig.getTreasureAreaIdList());
+				doSearchResultInfo(ResourceType.TREASURE, resourceConfig.getTreasureAreaIdList());
 			} else {
 				logger.info("配置禁止扫描元宝山资源");
 			}
 			if (scan.getMarket() == 1) {
 				logger.info("开始计算黑市资源信息");
-				doSearchResultInfo(ResourceType.MARKET,
-						resourceConfig.getMarketAreaIdList());
+				doSearchResultInfo(ResourceType.MARKET, resourceConfig.getMarketAreaIdList());
 			} else {
 				logger.info("配置禁止扫描黑市资源");
 			}
 			if (scan.getGold() == 1) {
 				logger.info("开始计算金矿资源信息");
-				doSearchResultInfo(ResourceType.GOLD,
-						resourceConfig.getGoldAreaIdList());
+				doSearchResultInfo(ResourceType.GOLD, resourceConfig.getGoldAreaIdList());
 			} else {
 				logger.info("配置禁止扫描金矿资源");
 			}
 			if (scan.getSolider() == 1) {
 				logger.info("开始计算兵营资源信息");
-				doSearchResultInfo(ResourceType.SOLIDER,
-						resourceConfig.getSoliderAreaIdList());
+				doSearchResultInfo(ResourceType.SOLIDER, resourceConfig.getSoliderAreaIdList());
 			} else {
 				logger.info("配置禁止扫描兵营资源");
 			}
 		} catch (Exception e) {
 			logger.error("获取资源信息异常", e);
 		}
+		return true;
 	}
 
-	private void doSearchResultInfo(ResourceType resultType,
-			List<String> zuobiaoList) {
+	private void doSearchResultInfo(ResourceType resultType, List<String> zuobiaoList) {
 		reset(resultType);
 		if (zuobiaoList != null) {
 			logger.info("共有 " + zuobiaoList.size() + " 个资源信息");
@@ -82,8 +77,7 @@ public class GetWordCityInfoTask extends GameTask {
 					if (null != ciInfo) {
 						addCityInfo(resultType, ciInfo);
 					}
-					sleep(userBean.getConfigure().getScanResource()
-							.getWaitTime(), TimeUnit.MILLISECONDS);
+					sleep(userBean.getConfigure().getScanResource().getWaitTime(), TimeUnit.MILLISECONDS);
 				}
 			}
 		}
@@ -114,59 +108,44 @@ public class GetWordCityInfoTask extends GameTask {
 	}
 
 	private CityInfo msgIdWorldCityInfo(String zuobiao) {
-		PostMethod postMethod = new PostMethod(
-				String.format(
-						"%s/hero/dwr/call/plaincall/DwrGameWorld.setMsg.dwr;jsessionid=%s;mid=%s",
-						userBean.getUrlPrx(), userBean.getSessionId(),
-						userBean.getSessionId()));
+		PostMethod postMethod = new PostMethod(String.format("%s/hero/dwr/call/plaincall/DwrGameWorld.setMsg.dwr;jsessionid=%s;mid=%s", userBean.getUrlPrx(), userBean.getSessionId(),
+				userBean.getSessionId()));
 		postMethod.addRequestHeader("Content-type", "application/octet-stream");
 		postMethod.addRequestHeader("Cache-Control", "no-cache");
 		postMethod.addRequestHeader("Pragma", "no-cache");
 		postMethod.addRequestHeader("Accept-Encoding", "gzip");
-		postMethod.addRequestHeader("User-Agent",
-				"Dalvik/1.4.0 (Linux; U; Android 2.3.4; GT-I9100 Build/GRJ22)");
+		postMethod.addRequestHeader("User-Agent", "Dalvik/1.4.0 (Linux; U; Android 2.3.4; GT-I9100 Build/GRJ22)");
 		postMethod.addRequestHeader("Connection", "Keep-Alive");
 		// 使用系统提供的默认的恢复策略
 		postMethod.addParameter(new NameValuePair("callCount", "1"));
 		postMethod.addParameter(new NameValuePair("page", ""));
-		postMethod.addParameter(new NameValuePair("httpSessionId", userBean
-				.getSessionId()));
-		postMethod.addParameter(new NameValuePair("scriptSessionId",
-				"51A0434AF2250025CA28BCB7B4E55E900"));
-		postMethod.addParameter(new NameValuePair("c0-scriptName",
-				"DwrGameWorld"));
+		postMethod.addParameter(new NameValuePair("httpSessionId", userBean.getSessionId()));
+		postMethod.addParameter(new NameValuePair("scriptSessionId", "51A0434AF2250025CA28BCB7B4E55E900"));
+		postMethod.addParameter(new NameValuePair("c0-scriptName", "DwrGameWorld"));
 		postMethod.addParameter(new NameValuePair("c0-methodName", "setMsg"));
 		postMethod.addParameter(new NameValuePair("c0-id", "0"));
-		postMethod.addParameter(new NameValuePair("c0-param0", "number:"
-				+ userBean.getNumberId()));
-		postMethod
-				.addParameter(new NameValuePair("c0-e1", "number:" + zuobiao));
-		postMethod.addParameter(new NameValuePair("c0-e2",
-				"string:msgTypeWorld"));
-		postMethod.addParameter(new NameValuePair("c0-e3",
-				"string:msgIdWorldCityInfo"));
+		postMethod.addParameter(new NameValuePair("c0-param0", "number:" + userBean.getNumberId()));
+		postMethod.addParameter(new NameValuePair("c0-e1", "number:" + zuobiao));
+		postMethod.addParameter(new NameValuePair("c0-e2", "string:msgTypeWorld"));
+		postMethod.addParameter(new NameValuePair("c0-e3", "string:msgIdWorldCityInfo"));
 		postMethod.addParameter(new NameValuePair("c0-e4", "string:"));
-		postMethod
-				.addParameter(new NameValuePair(
-						"c0-param1",
-						"Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
-		postMethod.addParameter(new NameValuePair("batchId", ""
-				+ userBean.getBatchId()));
-		doRequest(postMethod);
+		postMethod.addParameter(new NameValuePair("c0-param1", "Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
+		postMethod.addParameter(new NameValuePair("batchId", "" + userBean.getBatchId()));
+		InputStream inputStream =doRequest(postMethod);
 		CityInfo cityInfo = null;
 		try {
-			cityInfo = convert(postMethod.getResponseBodyAsStream());
-			cityInfo.setEndTime(generateEndTime(cityInfo.getOccupyTime(),cityInfo.getOccupierVipLv()));
+			cityInfo = convert(inputStream);
+			cityInfo.setEndTime(generateEndTime(cityInfo.getOccupyTime(), cityInfo.getOccupierVipLv()));
 			logCityInfo(cityInfo);
-		} catch (Exception e) {
+		} catch (Throwable e) {
 			logger.error("转换异常", e);
 		}
 
 		return cityInfo;
 	}
-	private  Date generateEndTime(Date date, long level) {
-		if(date == null)
-		{
+
+	private Date generateEndTime(Date date, long level) {
+		if (date == null) {
 			return null;
 		}
 		Calendar cal = Calendar.getInstance();
@@ -180,10 +159,10 @@ public class GetWordCityInfoTask extends GameTask {
 		}
 		return cal.getTime();
 	}
+
 	private void logCityInfo(CityInfo cityInfo) {
 		if (cityInfo.getOccupierId() == 0) {
-			logger.info(cityInfo.getId() + " 类别"
-					+ decodeResourceType(cityInfo.getTypeAsInt()) + "资源为空");
+			logger.info(cityInfo.getId() + " 类别" + decodeResourceType(cityInfo.getTypeAsInt()) + "资源为空");
 			return;
 		}
 		Date currTime = new Date(System.currentTimeMillis());
@@ -195,20 +174,13 @@ public class GetWordCityInfoTask extends GameTask {
 		} else {
 			rage = 24 * 60 * 60 * 1000;
 		}
-		long relayTime = rage
-				- (currTime.getTime() - cityInfo.getOccupyTime().getTime());
+		long relayTime = rage - (currTime.getTime() - cityInfo.getOccupyTime().getTime());
 		long realayHour = relayTime / (60 * 60 * 1000);
 		long realayMins = (relayTime % (60 * 60 * 1000)) / (60 * 1000);
 		long realaySec = (relayTime % (60 * 1000)) / (1000);
 
-		logger.info(String
-				.format("坐标[%s]，占领者[%s]，占领者VIP级别[%s] ,资源类别[%s],占领时间[%s],剩余时间[%s:%s:%s]",
-						cityInfo.getId(),
-						GameUtil.parseUnicode(cityInfo.getOccupierName()),
-						cityInfo.getOccupierVipLv(),
-						decodeResourceType(cityInfo.getTypeAsInt()),
-						GameUtil.parseDate(cityInfo.getOccupyTime()),
-						realayHour, realayMins, realaySec));
+		logger.info(String.format("坐标[%s]，占领者[%s]，占领者VIP级别[%s] ,资源类别[%s],占领时间[%s],剩余时间[%s:%s:%s]", cityInfo.getId(), GameUtil.parseUnicode(cityInfo.getOccupierName()), cityInfo.getOccupierVipLv(),
+				decodeResourceType(cityInfo.getTypeAsInt()), GameUtil.parseDate(cityInfo.getOccupyTime()), realayHour, realayMins, realaySec));
 	}
 
 	private Object decodeResourceType(long typeAsInt) {
@@ -243,6 +215,7 @@ public class GetWordCityInfoTask extends GameTask {
 				break;
 			}
 		}
+
 		int s0Idx = s1.indexOf("s0.");
 		s1 = s1.substring(s0Idx);
 		s1 = s1.replaceAll("s0[.]", "");

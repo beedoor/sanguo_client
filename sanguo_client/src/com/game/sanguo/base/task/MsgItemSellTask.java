@@ -1,5 +1,6 @@
 package com.game.sanguo.base.task;
 
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -13,52 +14,58 @@ import com.game.sanguo.base.domain.LoginGameInfo;
 import com.game.sanguo.base.domain.PlayerItemsInfo;
 import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.util.ItemConfig;
+import com.game.sanguo.base.util.PipleLineTask;
 
 public class MsgItemSellTask extends GameTask {
 	ItemConfig itemConfig;
-
-	public MsgItemSellTask(UserBean userBean, ItemConfig itemConfig) {
-		super();
+	public MsgItemSellTask(UserBean userBean, ItemConfig itemConfig,PipleLineTask pipleLineTask) {
+		super(pipleLineTask);
 		this.userBean = userBean;
 		this.itemConfig = itemConfig;
 	}
 
 	@Override
-	protected void doAction() {
-		if (userBean.getConfigure().getSellConfig().getSell() == 0) {
-			logger.info("禁止自动贩卖装备");
-			return;
-		}
-		logger.info("开始自动贩卖装备");
-		// 获取待卖出的物品列表
-		LoginGameInfo loginGameInfo = userBean.getLoginGameInfo();
-		List<PlayerItemsInfo> playerItemsInfoList = loginGameInfo.getPlayerItemsInfoList();
-		if (playerItemsInfoList != null) {
-			Iterator<PlayerItemsInfo> ite = playerItemsInfoList.iterator();
-			while (ite.hasNext()) {
-				PlayerItemsInfo playerItemsInfo = ite.next();
-				EquipmentItem equipmentItem = itemConfig.decodeEquipment(playerItemsInfo.getSourceId());
-				if (null != equipmentItem) {
-					// 判断装备类别,没有装备，并且非粉色装备，并且强化等级为0的卖掉，狗日的
-					if (equipmentItem.getMax_smith() < 30 && playerItemsInfo.getHeroUseId() == -1 && playerItemsInfo.getStrengthenLevel() == 0) {
-						if (userBean.getConfigure().getSellConfig().getLevel() > equipmentItem.getNeed_level()) {
-							logger.info(String.format("准备卖掉[%s]", equipmentItem.getName()));
-							EquipmentItemSellInfo beanInfo = msgIdItemSell(playerItemsInfo.getId());
-							sleep(1, TimeUnit.SECONDS);
-							if (beanInfo.getErrCode() == 0) {
-								logger.info(String.format("贩卖装备[%s]成功,当前金币[%s]", equipmentItem.getName(), beanInfo.getGold()));
-								//卖掉后清理
-								ite.remove();
+	protected boolean doAction() {
+		try {
+			if (userBean.getConfigure().getSellConfig().getSell() == 0) {
+				logger.info("禁止自动贩卖装备");
+				return true;
+			} 
+			logger.info("开始自动贩卖装备");
+			// 获取待卖出的物品列表
+			LoginGameInfo loginGameInfo = userBean.getLoginGameInfo();
+			List<PlayerItemsInfo> playerItemsInfoList = loginGameInfo.getPlayerItemsInfoList();
+			if (playerItemsInfoList != null) {
+				Iterator<PlayerItemsInfo> ite = playerItemsInfoList.iterator();
+				while (ite.hasNext()) {
+					PlayerItemsInfo playerItemsInfo = ite.next();
+					EquipmentItem equipmentItem = itemConfig.decodeEquipment(playerItemsInfo.getSourceId());
+					if (null != equipmentItem) {
+						// 判断装备类别,没有装备，并且非粉色装备，并且强化等级为0的卖掉，狗日的
+						if (equipmentItem.getMax_smith() < 30 && playerItemsInfo.getHeroUseId() == -1 && playerItemsInfo.getStrengthenLevel() == 0) {
+							if (userBean.getConfigure().getSellConfig().getLevel() > equipmentItem.getNeed_level()) {
+								logger.info(String.format("准备卖掉[%s]", equipmentItem.getName()));
+								EquipmentItemSellInfo beanInfo = msgIdItemSell(playerItemsInfo.getId());
+								sleep(1, TimeUnit.SECONDS);
+								if (beanInfo.getErrCode() == 0) {
+									logger.info(String.format("贩卖装备[%s]成功,当前金币[%s]", equipmentItem.getName(), beanInfo.getGold()));
+									//卖掉后清理
+									ite.remove();
+								} else {
+									logger.info(String.format("贩卖装备[%s]失败,异常原因[%s]", equipmentItem.getName(), beanInfo.getErrMsg()));
+								}
 							} else {
-								logger.info(String.format("贩卖装备[%s]失败,异常原因[%s]", equipmentItem.getName(), beanInfo.getErrMsg()));
+								logger.info(String.format("装备[%s]，等级[%s]，高于设置卖出的最高等级[%s]，不卖", equipmentItem.getName(), equipmentItem.getNeed_level(), userBean.getConfigure().getSellConfig().getLevel()));
 							}
-						} else {
-							logger.info(String.format("装备[%s]，等级[%s]，高于设置卖出的最高等级[%s]，不卖", equipmentItem.getName(), equipmentItem.getNeed_level(), userBean.getConfigure().getSellConfig().getLevel()));
 						}
 					}
 				}
 			}
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+		return true;
 	}
 
 	private EquipmentItemSellInfo msgIdItemSell(Long itemId) {
@@ -86,9 +93,9 @@ public class MsgItemSellTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("c0-e4", "string:"));
 		postMethod.addParameter(new NameValuePair("c0-param1", "Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
 		postMethod.addParameter(new NameValuePair("batchId", "" + userBean.getBatchId()));
-		doRequest(postMethod);
+		InputStream inputStream=doRequest(postMethod);
 		try {
-			EquipmentItemSellInfo beanInfo = initBeanInfo(EquipmentItemSellInfo.class, postMethod.getResponseBodyAsStream(), "dwr");
+			EquipmentItemSellInfo beanInfo = initBeanInfo(EquipmentItemSellInfo.class, inputStream, "dwr");
 			return beanInfo;
 		} catch (Throwable ex) {
 			logger.error(String.format("贩卖装备[%s]异常", itemId), ex);

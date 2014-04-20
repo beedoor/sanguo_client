@@ -2,6 +2,7 @@ package com.game.sanguo.base.task;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,6 +22,7 @@ import com.game.sanguo.base.domain.PackItem;
 import com.game.sanguo.base.domain.SearchItem;
 import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.util.ItemConfig;
+import com.game.sanguo.base.util.PipleLineTask;
 
 /**
  * 元宝定时任务
@@ -29,16 +31,15 @@ import com.game.sanguo.base.util.ItemConfig;
  * 
  */
 public class CitySearchAndGoldTask extends GameTask {
-
 	ItemConfig itemConfig;
 
-	public CitySearchAndGoldTask(UserBean userBean, ItemConfig itemConfig) {
-		super();
+	public CitySearchAndGoldTask(UserBean userBean, ItemConfig itemConfig,PipleLineTask pipleLineTask) {
+		super(pipleLineTask);
 		this.userBean = userBean;
 		this.itemConfig = itemConfig;
 	}
 
-	public void doAction() {
+	public boolean doAction() {
 		try {
 			if (userBean.getConfigure().getSearchResource() == 1) {
 				msgIdGetGold();
@@ -46,9 +47,11 @@ public class CitySearchAndGoldTask extends GameTask {
 			} else {
 				logger.info("禁止自动收资源");
 			}
+			return true;
 		} catch (Throwable e) {
 			logger.error("定时搜索资源任务异常", e);
 		}
+		return false;
 	}
 
 	private void msgIdGetGold() {
@@ -89,11 +92,11 @@ public class CitySearchAndGoldTask extends GameTask {
 						"Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
 		postMethod.addParameter(new NameValuePair("batchId", ""
 				+ userBean.getBatchId()));
-		doRequest(postMethod);
+		InputStream inputStream = doRequest(postMethod);
 
 		try {
 			GoldSearchInfo goldInfo = initBeanInfo(GoldSearchInfo.class,
-					postMethod.getResponseBodyAsStream(), "dwr");
+					inputStream, "dwr");
 			logger.info("当前金币[{}],获得金币[{}]", new Object[] { goldInfo.getGold(),
 					goldInfo.getAddGold() });
 		} catch (Throwable e) {
@@ -145,7 +148,7 @@ public class CitySearchAndGoldTask extends GameTask {
 				.addParameter(new NameValuePair("batchId",
 						(new StringBuilder()).append(userBean.getBatchId())
 								.toString()));
-		doRequest(postMethod);
+		InputStream inputStream = doRequest(postMethod);
 		br = null;
 		try {
 			Pattern itemsPattern = Pattern
@@ -153,8 +156,7 @@ public class CitySearchAndGoldTask extends GameTask {
 			Pattern itemsContentPattern = Pattern.compile("(s[\\d]{1,})[.]");
 			Map<String, List<String>> itemStrListMap = new HashMap<String, List<String>>();
 			Map<String, String> itemMap = new HashMap<String, String>();
-			br = new BufferedReader(new InputStreamReader(
-					postMethod.getResponseBodyAsStream()));
+			br = new BufferedReader(new InputStreamReader(inputStream));
 			String s1 = null;
 			String content = null;
 			while ((s1 = br.readLine()) != null) {

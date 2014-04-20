@@ -14,14 +14,26 @@ public class ResourceSearchTableLabelProvider extends TableLabelProvider {
 			return isNull(itemInfo.getOccupierName()) ? "空资源" : itemInfo
 					.getOccupierName();
 		case 2:
-			return itemInfo.getOccupierHeroCount() + "";
+			return getStatus(itemInfo.getHeroCount(),itemInfo.getStatusAsInt());
 		case 3:
+			return isNull(itemInfo.getUnionName()) ? "" : itemInfo
+					.getUnionName();
+		case 4:
 			return GameUtil.parseDate(itemInfo.getEndTime());
 		default:
 			return "";
 		}
 	}
-	
+	private String getStatus(long heroCount,Long status)
+	{
+		if(status == 4)
+		{
+			return heroCount+",战斗中";
+		}else
+		{
+			return heroCount+"";
+		}
+	}
 	protected boolean isNull(String s)
 	{
 		if(s == null || s.equals("null"))

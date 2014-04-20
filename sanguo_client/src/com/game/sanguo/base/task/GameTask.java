@@ -1,14 +1,16 @@
 package com.game.sanguo.base.task;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import org.apache.commons.httpclient.Header;
 import org.apache.commons.httpclient.HttpClient;
@@ -22,52 +24,70 @@ import com.game.sanguo.base.domain.LoginByEmailInfo;
 import com.game.sanguo.base.domain.Pair;
 import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.util.GameUtil;
+import com.game.sanguo.base.util.PipleLineTask;
 
 public abstract class GameTask implements Runnable {
 
 	UserBean userBean = null;
+	PipleLineTask pipleLineTask = null;
 	protected static Logger logger = LoggerFactory.getLogger(GameTask.class);
 
-	protected static Lock loginLock = new ReentrantReadWriteLock().writeLock();
-	static HttpClient httpClient = new HttpClient();
+	protected static Object obj = new Object();
+	protected static Map<String, Pair<Lock, HttpClient>> httpClientMap = new HashMap<String, Pair<Lock, HttpClient>>();
 
-	public GameTask() {
+	public GameTask(PipleLineTask pipleLineTask) {
 		super();
+		this.pipleLineTask = pipleLineTask;
 	}
 
 	public void run() {
-		boolean lockFlag = false;
-		try {
-			lockFlag = loginLock.tryLock(10, TimeUnit.SECONDS);
-			if (lockFlag) {
-				doAction();
-			} else {
-				logger.info("暂时没有登录，无法执行该请求，等待登录");
-			}
-		} catch (Throwable e) {
-			logger.error("任务异常", e);
-		} finally {
-			if (lockFlag) {
-				loginLock.unlock();
+		boolean actionResult = doAction();
+		if (actionResult && pipleLineTask != null) {
+			TaskUnit task = pipleLineTask.get();
+			if (task != null) {
+				GameHelper.submit(task);
 			}
 		}
 	}
 
-	protected abstract void doAction();
+	public Pair<Lock, HttpClient> getHttpClient() {
+		String userName = userBean.getUserName();
+		if (!httpClientMap.containsKey(userName)) {
+			synchronized (obj) {
+				if (!httpClientMap.containsKey(userName)) {
+					HttpClient httpClient = new HttpClient();
+					Lock lock = new java.util.concurrent.locks.ReentrantReadWriteLock().writeLock();
+					httpClientMap.put(userName, Pair.makePair(lock, httpClient));
+				}
+			}
+		}
+		return httpClientMap.get(userName);
+	}
 
-	protected void doRequest(PostMethod postMethod) {
+	protected abstract boolean doAction();
+
+	protected InputStream doRequest(PostMethod postMethod) {
+		ByteArrayInputStream byteInputStream = null;
+		Pair<Lock, HttpClient> httpClientPair = getHttpClient();
 		try {
-			int statusCode = httpClient.executeMethod(postMethod);
+			httpClientPair.first.lock();
+			int statusCode = httpClientPair.second.executeMethod(postMethod);
 			if (statusCode != HttpStatus.SC_OK) {
 				logger.error("Method failed: " + postMethod.getStatusLine());
 			}
+			byte[] b = postMethod.getResponseBody();
+			byte[] btarget = new byte[b.length];
+			System.arraycopy(b, 0, btarget, 0, b.length);
+			byteInputStream = new ByteArrayInputStream(btarget);
 			printResponseInfo(postMethod);
 		} catch (Throwable e) {
 			logger.error(postMethod.getPath(), e);
 		} finally {
-			// 释放连接
-			postMethod.releaseConnection();
+			if (httpClientPair != null) {
+				httpClientPair.first.unlock();
+			}
 		}
+		return byteInputStream;
 	}
 
 	protected void sleep(long unit, TimeUnit tu) {
@@ -105,7 +125,7 @@ public abstract class GameTask implements Runnable {
 			// 会话失效，重新登录吧
 			logger.info(String.format("会话失效，[%s]分钟后重新登录", userBean.getReLoginTime()));
 			sleep(userBean.getReLoginTime(), TimeUnit.MINUTES);
-			new LoginTask(userBean).doAction();
+			new LoginTask(userBean, pipleLineTask).doAction();
 		}
 	}
 
@@ -240,4 +260,10 @@ public abstract class GameTask implements Runnable {
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public String toString() {
+		return this.getClass().getName();
+	}
+
 }
