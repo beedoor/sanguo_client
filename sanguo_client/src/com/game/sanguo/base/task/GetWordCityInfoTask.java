@@ -7,6 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
 
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
@@ -26,6 +27,8 @@ public class GetWordCityInfoTask extends GameTask {
 	UserConfig userConfig = null;
 	SearchResult searchResult = null;
 
+	private static Lock lock = new java.util.concurrent.locks.ReentrantReadWriteLock().writeLock();
+
 	public GetWordCityInfoTask(UserBean userBean, ResourceConfig resourceConfig, SearchResult searchResult, PipleLineTask pipleLineTask) {
 		super(pipleLineTask);
 		this.userBean = userBean;
@@ -34,6 +37,14 @@ public class GetWordCityInfoTask extends GameTask {
 	}
 
 	public boolean doAction() {
+		if (lock.tryLock()) {
+			doRealySearch();
+			lock.unlock();
+		}
+		return true;
+	}
+
+	private void doRealySearch() {
 		try {
 			logger.info(userBean.getConfigure().toString());
 			ScanResource scan = userBean.getConfigure().getScanResource();
@@ -61,10 +72,9 @@ public class GetWordCityInfoTask extends GameTask {
 			} else {
 				logger.info("配置禁止扫描兵营资源");
 			}
-		} catch (Exception e) {
+		} catch (Throwable e) {
 			logger.error("获取资源信息异常", e);
 		}
-		return true;
 	}
 
 	private void doSearchResultInfo(ResourceType resultType, List<String> zuobiaoList) {
@@ -131,7 +141,7 @@ public class GetWordCityInfoTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("c0-e4", "string:"));
 		postMethod.addParameter(new NameValuePair("c0-param1", "Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
 		postMethod.addParameter(new NameValuePair("batchId", "" + userBean.getBatchId()));
-		InputStream inputStream =doRequest(postMethod);
+		InputStream inputStream = doRequest(postMethod);
 		CityInfo cityInfo = null;
 		try {
 			cityInfo = convert(inputStream);

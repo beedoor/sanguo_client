@@ -1250,3 +1250,4 @@
 2014-04-20 17:10:54,188 [pool-2-thread-8] INFO  com.game.sanguo.base.task.GameTask - 配置禁止扫描金矿资源
 2014-04-20 17:10:54,188 [pool-2-thread-8] INFO  com.game.sanguo.base.task.GameTask - 配置禁止扫描兵营资源
 2014-04-20 17:13:11,325 [pool-2-thread-12] INFO  com.game.sanguo.base.task.GameTask - 会话失效，[120]分钟后重新登录
+2014-04-20 18:37:56,133 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件

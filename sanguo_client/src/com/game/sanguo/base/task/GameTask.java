@@ -123,7 +123,7 @@ public abstract class GameTask implements Runnable {
 		logger.debug(responseStr);
 		if (responseStr.indexOf("java.lang.Throwable") != -1) {
 			// 会话失效，重新登录吧
-			logger.info(String.format("会话失效，[%s]分钟后重新登录", userBean.getReLoginTime()));
+			logger.info(String.format("[%s]会话失效，[%s]分钟后重新登录", userBean.getUserName(),userBean.getReLoginTime()));
 			sleep(userBean.getReLoginTime(), TimeUnit.MINUTES);
 			new LoginTask(userBean, pipleLineTask).doAction();
 		}
