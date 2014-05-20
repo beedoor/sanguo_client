@@ -35,6 +35,7 @@ public class UserConfig {
 
 	public void loadUserConfig() {
 		File configFile = new File("./config/userconfig.xml");
+		logger.info(configFile.getAbsolutePath());
 		if (!configFile.exists()) {
 			logger.error("缺乏用户配置文件，创建一个");
 			return;
@@ -79,9 +80,9 @@ public class UserConfig {
 //		digester.addCallMethod("configuration/users/user/configure/scanResource/market","setMarket",0,new Class[]{Long.class});
 //		digester.addCallMethod("configuration/users/user/configure/scanResource/solider","setSolider",0,new Class[]{Long.class});
 		
-//		digester.addCallMethod("configuration/users/user/configure/searchResource","setSearchResource",0,new Class[]{Long.class});
-//		digester.addCallMethod("configuration/users/user/configure/autoSell/sell","setSell",0,new Class[]{Long.class});
-//		digester.addCallMethod("configuration/users/user/configure/autoSell/level","setLevel",0,new Class[]{Long.class});
+		digester.addCallMethod("configuration/users/user/configure/searchResource","setSearchResource",0,new Class[]{Long.class});
+		digester.addCallMethod("configuration/users/user/configure/autoSell/sell","setSell",0,new Class[]{Long.class});
+		digester.addCallMethod("configuration/users/user/configure/autoSell/level","setLevel",0,new Class[]{Long.class});
 		
 		digester.addSetNext("configuration/users/user/configure","setConfigure");
 		digester.addSetNext("configuration/users/user/configure/scanResource","setScanResource");

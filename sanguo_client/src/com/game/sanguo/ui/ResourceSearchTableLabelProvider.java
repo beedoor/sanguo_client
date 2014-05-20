@@ -14,11 +14,9 @@ public class ResourceSearchTableLabelProvider extends TableLabelProvider {
 			return isNull(itemInfo.getOccupierName()) ? "空资源" : itemInfo
 					.getOccupierName();
 		case 2:
-			return getStatus(itemInfo.getHeroCount(),itemInfo.getStatusAsInt());
-		case 3:
 			return isNull(itemInfo.getUnionName()) ? "" : itemInfo
 					.getUnionName();
-		case 4:
+		case 3:
 			return GameUtil.parseDate(itemInfo.getEndTime());
 		default:
 			return "";

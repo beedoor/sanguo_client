@@ -1,49 +1,72 @@
 package com.game.sanguo.base.task;
 
-import java.util.concurrent.TimeUnit;
+import java.util.Date;
 
-public class TaskUnit {
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-	private GameTask task;
-	private long delay;
-	private long period;
-	private TimeUnit timeUnit;
+public class TaskUnit implements Job {
+
+	protected static Logger	logger	= LoggerFactory.getLogger(TaskUnit.class);
+	private GameTask		task;
+
+	private String			cornExpress;
 	
-	public TaskUnit(GameTask task, long delay, long period, TimeUnit timeUnit) {
+	private Date runDate;
+	public TaskUnit() {
+		super();
+	}
+
+	public Date getRunDate() {
+		return runDate;
+	}
+
+	public void setRunDate(Date runDate) {
+		this.runDate = runDate;
+	}
+
+	public TaskUnit(GameTask task, Date runDate) {
 		super();
 		this.task = task;
-		this.delay = delay;
-		this.period = period;
-		this.timeUnit = timeUnit;
+		this.runDate = runDate;
 	}
+
+	public TaskUnit(GameTask task, String cornExpress) {
+		super();
+		this.task = task;
+		this.cornExpress = cornExpress;
+	}
+
+	public String getCornExpress() {
+		return cornExpress;
+	}
+
+	public void setCornExpress(String cornExpress) {
+		this.cornExpress = cornExpress;
+	}
+
+	public TaskUnit(GameTask task) {
+		super();
+		this.task = task;
+	}
+
 	public GameTask getTask() {
 		return task;
 	}
+
 	public void setTask(GameTask task) {
 		this.task = task;
 	}
-	public long getDelay() {
-		return delay;
-	}
-	public void setDelay(long delay) {
-		this.delay = delay;
-	}
-	public long getPeriod() {
-		return period;
-	}
-	public void setPeriod(long period) {
-		this.period = period;
-	}
-	public TimeUnit getTimeUnit() {
-		return timeUnit;
-	}
-	public void setTimeUnit(TimeUnit timeUnit) {
-		this.timeUnit = timeUnit;
-	}
+
 	@Override
-	public String toString() {
-		return "TaskUnit [task=" + task + ", delay=" + delay + ", period=" + period + ", timeUnit=" + timeUnit + "]";
+	public void execute(JobExecutionContext paramJobExecutionContext) throws JobExecutionException {
+		try {
+			task.execute();
+		} catch (Throwable e) {
+			logger.error("", e);
+		}
 	}
-	
-	
 }

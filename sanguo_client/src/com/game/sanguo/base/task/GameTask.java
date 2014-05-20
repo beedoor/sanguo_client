@@ -17,6 +17,9 @@ import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -26,26 +29,27 @@ import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.util.GameUtil;
 import com.game.sanguo.base.util.PipleLineTask;
 
-public abstract class GameTask implements Runnable {
+public abstract class GameTask {
 
-	UserBean userBean = null;
-	PipleLineTask pipleLineTask = null;
-	protected static Logger logger = LoggerFactory.getLogger(GameTask.class);
+	UserBean												userBean		= null;
+	PipleLineTask											pipleLineTask	= null;
+	protected static Logger									logger			= LoggerFactory.getLogger(GameTask.class);
 
-	protected static Object obj = new Object();
-	protected static Map<String, Pair<Lock, HttpClient>> httpClientMap = new HashMap<String, Pair<Lock, HttpClient>>();
+	protected static Object									obj				= new Object();
+	protected static Map<String, Pair<Lock, HttpClient>>	httpClientMap	= new HashMap<String, Pair<Lock, HttpClient>>();
 
 	public GameTask(PipleLineTask pipleLineTask) {
 		super();
 		this.pipleLineTask = pipleLineTask;
 	}
 
-	public void run() {
+	public void execute() {
+		logger.info(userBean.getUserName() + " exec " + getClass().getName());
 		boolean actionResult = doAction();
 		if (actionResult && pipleLineTask != null) {
 			TaskUnit task = pipleLineTask.get();
 			if (task != null) {
-				GameHelper.submit(task);
+				GameHelper.submitTask(task);
 			}
 		}
 	}
@@ -123,7 +127,7 @@ public abstract class GameTask implements Runnable {
 		logger.debug(responseStr);
 		if (responseStr.indexOf("java.lang.Throwable") != -1) {
 			// 会话失效，重新登录吧
-			logger.info(String.format("[%s]会话失效，[%s]分钟后重新登录", userBean.getUserName(),userBean.getReLoginTime()));
+			logger.info(String.format("[%s]会话失效，[%s]分钟后重新登录", userBean.getUserName(), userBean.getReLoginTime()));
 			sleep(userBean.getReLoginTime(), TimeUnit.MINUTES);
 			new LoginTask(userBean, pipleLineTask).doAction();
 		}

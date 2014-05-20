@@ -23,21 +23,20 @@ public class GetTimeZoneTask extends GameTask {
 		this.searchResult=searchResult;
 	}
 
-	
-
 	public boolean doAction() {
-		searchResult.clearAllResourceList();
-		searchResult.clearGoldList();
-		searchResult.clearMarketList();
-		searchResult.clearSoliderList();
-		searchResult.clearTreasureList();
+//		searchResult.clearAllResourceList();
+//		searchResult.clearGoldList();
+//		searchResult.clearMarketList();
+//		searchResult.clearSoliderList();
+//		searchResult.clearTreasureList();
 		long xPosEnd = userBean.getConfigure().getScanResource()
 				.getAllResourceConfig().getxPosEnd();
 		long yPosEnd = userBean.getConfigure().getScanResource()
 				.getAllResourceConfig().getyPosEnd();
 
-		for (int i = 0; i < xPosEnd; i++) {
-			for (int j = 0; j < yPosEnd; j++) {
+		
+		for (int i = 16; i < 18; i++) {
+			for (int j = 0; j < 17; j++) {
 				try {
 					msgIdGetZoneInfo(i, j);
 					sleep(userBean.getConfigure().getScanResource()
@@ -114,23 +113,24 @@ public class GetTimeZoneTask extends GameTask {
 				if (m.find()) {
 					String contentStr = m.replaceAll("");
 					CityInfo cityInfo = (CityInfo) initBeanInfo(CityInfo.class, contentStr, ';', '=');
-					if(cityInfo.getTypeAsInt() == 2)
-					{
-						searchResult.addGoIdnfo(cityInfo);
-					}else if(cityInfo.getTypeAsInt() == 3)
-					{
-						searchResult.addTreasureInfo(cityInfo);
-					}else if(cityInfo.getTypeAsInt() == 4)
-					{
-						searchResult.addMarketInfo(cityInfo);
-					}else if(cityInfo.getTypeAsInt() == 6)
-					{
-						searchResult.addSoliderInfo(cityInfo);
-					} 
-					if(cityInfo.getTypeAsInt() == 2 || cityInfo.getTypeAsInt() == 3 || cityInfo.getTypeAsInt() == 4 || cityInfo.getTypeAsInt() == 6)
-					{
-						searchResult.addAllResourceList(cityInfo);
-					}
+					logger.info(cityInfo.getId()+"\t"+cityInfo.getCityName()+"\t"+cityInfo.getTypeAsInt()+"\t"+cityInfo.getOccupierName()+"\t");
+//					if(cityInfo.getTypeAsInt() == 2)
+//					{
+//						searchResult.addGoIdnfo(cityInfo);
+//					}else if(cityInfo.getTypeAsInt() == 3)
+//					{
+//						searchResult.addTreasureInfo(cityInfo);
+//					}else if(cityInfo.getTypeAsInt() == 4)
+//					{
+//						searchResult.addMarketInfo(cityInfo);
+//					}else if(cityInfo.getTypeAsInt() == 6)
+//					{
+//						searchResult.addSoliderInfo(cityInfo);
+//					} 
+//					if(cityInfo.getTypeAsInt() == 2 || cityInfo.getTypeAsInt() == 3 || cityInfo.getTypeAsInt() == 4 || cityInfo.getTypeAsInt() == 6)
+//					{
+//						searchResult.addAllResourceList(cityInfo);
+//					}
 				}
 			}
 		} catch (Throwable e) {

@@ -42,7 +42,12 @@ public class MsgItemSellTask extends GameTask {
 					EquipmentItem equipmentItem = itemConfig.decodeEquipment(playerItemsInfo.getSourceId());
 					if (null != equipmentItem) {
 						// 判断装备类别,没有装备，并且非粉色装备，并且强化等级为0的卖掉，狗日的
-						if (equipmentItem.getMax_smith() < 30 && playerItemsInfo.getHeroUseId() == -1 && playerItemsInfo.getStrengthenLevel() == 0) {
+						if(equipmentItem.getQuality() >=5)
+						{
+							logger.info(String.format("装备[%s]品级大于紫色，不卖", equipmentItem.getName()));
+							continue;
+						}
+						if (equipmentItem.getMax_smith() < 30 && playerItemsInfo.getStrengthenLevel() == 0 ) {
 							if (userBean.getConfigure().getSellConfig().getLevel() > equipmentItem.getNeed_level()) {
 								logger.info(String.format("准备卖掉[%s]", equipmentItem.getName()));
 								EquipmentItemSellInfo beanInfo = msgIdItemSell(playerItemsInfo.getId());

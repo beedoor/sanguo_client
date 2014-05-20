@@ -1,5 +1,6 @@
 package com.game.sanguo.base.task;
 
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.httpclient.NameValuePair;
@@ -15,7 +16,7 @@ import com.game.sanguo.base.util.PipleLineTask;
  * 
  */
 public class MsgTypeWorldPvpFightTask extends GameTask {
-	FightItem fightItem;
+	FightItem	fightItem;
 
 	public MsgTypeWorldPvpFightTask(UserBean userBean, FightItem fightItem, PipleLineTask pipleLineTask) {
 		super(pipleLineTask);
@@ -34,8 +35,8 @@ public class MsgTypeWorldPvpFightTask extends GameTask {
 			msgTypeWorldPveFight(hero);
 			sleep(3, TimeUnit.SECONDS);
 			msgIdFightSelectHero(hero);
-			pipleLineTask.addFirst(new TaskUnit(new MsgTypeWorldPvpFightRetreatTask(userBean, pipleLineTask),6L, 0, TimeUnit.MINUTES));
-			logger.info("本次保护成功");;
+			pipleLineTask.addFirst(new TaskUnit(new MsgTypeWorldPvpFightRetreatTask(userBean, pipleLineTask), new Date(System.currentTimeMillis() + (6 * 1000 * 60L))));
+			logger.info(String.format("%s对%s本次保护成功", fightItem.getName(), fightItem.getTarget()));
 			return true;
 		} catch (Throwable e) {
 			logger.error("获取通知信息异常", e);

@@ -75,42 +75,42 @@ import com.game.sanguo.ui.ResourceSearchTableLabelProvider;
 import com.game.sanguo.ui.TableLabelProvider;
 
 public class GameClient extends ApplicationWindow {
-	protected static Logger logger = LoggerFactory.getLogger(GameClient.class);
-	private Action action;
-	private UserBean userBean;
-	UserConfig userConfig;
-	ResourceConfig resourceConfig;
-	ItemConfig itemConfig;
-	private Text text;
-	private Text text_1;
-	private Text text_2;
-	private Table table;
-	private Table table_1;
-	private Table table_2;
-	private Table table_3;
-	private Table table_4;
+	protected static Logger	logger			= LoggerFactory.getLogger(GameClient.class);
+	private Action			action;
+	private UserBean		userBean;
+	UserConfig				userConfig;
+	ResourceConfig			resourceConfig;
+	ItemConfig				itemConfig;
+	private Text			text;
+	private Text			text_1;
+	private Text			text_2;
+	private Table			table;
+	private Table			table_1;
+	private Table			table_2;
+	private Table			table_3;
+	private Table			table_4;
 
-	TableViewer heroItemViewer;
+	TableViewer				heroItemViewer;
 
-	TableViewer equiItemViewer;
+	TableViewer				equiItemViewer;
 
-	TableViewer measureViewer;
-	TableViewer marketViewer;
-	TableViewer goldViewer;
-	TableViewer soliderViewer;
-	TableViewer allResourceTableViewer;
+	TableViewer				measureViewer;
+	TableViewer				marketViewer;
+	TableViewer				goldViewer;
+	TableViewer				soliderViewer;
+	TableViewer				allResourceTableViewer;
 
-	ClientSearchResult searchResult = null;
-	private Table table_5;
-	private Button btnCheckButton;
-	private Button btnCheckButton_2;
-	private Button btnCheckButton_1;
-	private Button btnCheckButton_3;
-	private Combo combo;
-	private Text text_3;
-	private Text text_4;
-	private Text text_5;
-	private Table table_6;
+	ClientSearchResult		searchResult	= null;
+	private Table			table_5;
+	private Button			btnCheckButton;
+	private Button			btnCheckButton_2;
+	private Button			btnCheckButton_1;
+	private Button			btnCheckButton_3;
+	private Combo			combo;
+	private Text			text_3;
+	private Text			text_4;
+	private Text			text_5;
+	private Table			table_6;
 
 	@Override
 	public boolean close() {
@@ -312,6 +312,13 @@ public class GameClient extends ApplicationWindow {
 
 		TableViewerColumn tableViewerColumn_7 = new TableViewerColumn(measureViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_7 = tableViewerColumn_7.getColumn();
+		tblclmnNewColumn_7.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				SearchResultSorter.sort(searchResult.getTreasureList(), "byId");
+				measureViewer.setInput(searchResult.getTreasureList());
+			}
+		});
 		tblclmnNewColumn_7.setWidth(50);
 		tblclmnNewColumn_7.setText("area");
 
@@ -324,15 +331,9 @@ public class GameClient extends ApplicationWindow {
 				measureViewer.setInput(searchResult.getTreasureList());
 			}
 		});
-		tblclmnNewColumn_6.setWidth(70);
+		tblclmnNewColumn_6.setWidth(100);
 		tblclmnNewColumn_6.setText("occu");
 
-		TableViewerColumn tableViewerColumn_8 = new TableViewerColumn(measureViewer, SWT.NONE);
-		TableColumn tblclmnNewColumn_8 = tableViewerColumn_8.getColumn();
-
-		tblclmnNewColumn_8.setWidth(70);
-		tblclmnNewColumn_8.setText("heros");
-		
 		TableViewerColumn tableViewerColumn_27 = new TableViewerColumn(measureViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_27 = tableViewerColumn_27.getColumn();
 		tblclmnNewColumn_27.setWidth(60);
@@ -347,7 +348,7 @@ public class GameClient extends ApplicationWindow {
 				measureViewer.setInput(searchResult.getTreasureList());
 			}
 		});
-		tblclmnNewColumn_15.setWidth(125);
+		tblclmnNewColumn_15.setWidth(150);
 		tblclmnNewColumn_15.setText("endTime");
 
 		TabItem tbtmNewItem_4 = new TabItem(tabFolder_2, SWT.NONE);
@@ -361,6 +362,13 @@ public class GameClient extends ApplicationWindow {
 
 		TableViewerColumn tableViewerColumn_10 = new TableViewerColumn(goldViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_10 = tableViewerColumn_10.getColumn();
+		tblclmnNewColumn_10.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				SearchResultSorter.sort(searchResult.getGoldList(), "byId");
+				goldViewer.setInput(searchResult.getGoldList());
+			}
+		});
 		tblclmnNewColumn_10.setWidth(50);
 		tblclmnNewColumn_10.setText("area");
 
@@ -373,14 +381,11 @@ public class GameClient extends ApplicationWindow {
 				goldViewer.setInput(searchResult.getGoldList());
 			}
 		});
-		tblclmnNewColumn_11.setWidth(70);
+		tblclmnNewColumn_11.setWidth(100);
 		tblclmnNewColumn_11.setText("occu");
 
-		TableViewerColumn tableViewerColumn_9 = new TableViewerColumn(goldViewer, SWT.NONE);
-		TableColumn tblclmnNewColumn_9 = tableViewerColumn_9.getColumn();
-		tblclmnNewColumn_9.setWidth(70);
-		tblclmnNewColumn_9.setText("heros");
-		
+	
+
 		TableViewerColumn tableViewerColumn_28 = new TableViewerColumn(goldViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_28 = tableViewerColumn_28.getColumn();
 		tblclmnNewColumn_28.setWidth(80);
@@ -395,7 +400,7 @@ public class GameClient extends ApplicationWindow {
 				goldViewer.setInput(searchResult.getGoldList());
 			}
 		});
-		tblclmnNewColumn_16.setWidth(100);
+		tblclmnNewColumn_16.setWidth(150);
 		tblclmnNewColumn_16.setText("endTime");
 
 		TabItem tbtmNewItem_5 = new TabItem(tabFolder_2, SWT.NONE);
@@ -409,6 +414,13 @@ public class GameClient extends ApplicationWindow {
 
 		TableViewerColumn tableViewerColumn_13 = new TableViewerColumn(marketViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_13 = tableViewerColumn_13.getColumn();
+		tblclmnNewColumn_13.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				SearchResultSorter.sort(searchResult.getMarketList(), "byId");
+				marketViewer.setInput(searchResult.getMarketList());
+			}
+		});
 		tblclmnNewColumn_13.setWidth(50);
 		tblclmnNewColumn_13.setText("area");
 
@@ -421,14 +433,11 @@ public class GameClient extends ApplicationWindow {
 				marketViewer.setInput(searchResult.getMarketList());
 			}
 		});
-		tblclmnNewColumn_12.setWidth(70);
+		tblclmnNewColumn_12.setWidth(100);
 		tblclmnNewColumn_12.setText("occu");
 
-		TableViewerColumn tableViewerColumn_14 = new TableViewerColumn(marketViewer, SWT.NONE);
-		TableColumn tblclmnNewColumn_14 = tableViewerColumn_14.getColumn();
-		tblclmnNewColumn_14.setWidth(70);
-		tblclmnNewColumn_14.setText("heros");
 		
+
 		TableViewerColumn tableViewerColumn_29 = new TableViewerColumn(marketViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_29 = tableViewerColumn_29.getColumn();
 		tblclmnNewColumn_29.setWidth(80);
@@ -443,7 +452,7 @@ public class GameClient extends ApplicationWindow {
 				marketViewer.setInput(searchResult.getMarketList());
 			}
 		});
-		tblclmnNewColumn_17.setWidth(100);
+		tblclmnNewColumn_17.setWidth(150);
 		tblclmnNewColumn_17.setText("endTime");
 
 		TabItem tbtmNewItem_6 = new TabItem(tabFolder_2, SWT.NONE);
@@ -457,6 +466,13 @@ public class GameClient extends ApplicationWindow {
 
 		TableViewerColumn tableViewerColumn_19 = new TableViewerColumn(soliderViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_19 = tableViewerColumn_19.getColumn();
+		tblclmnNewColumn_19.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				SearchResultSorter.sort(searchResult.getSoliderList(), "byId");
+				soliderViewer.setInput(searchResult.getSoliderList());
+			}
+		});
 		tblclmnNewColumn_19.setWidth(50);
 		tblclmnNewColumn_19.setText("area");
 
@@ -469,14 +485,11 @@ public class GameClient extends ApplicationWindow {
 				soliderViewer.setInput(searchResult.getSoliderList());
 			}
 		});
-		tblclmnNewColumn_20.setWidth(70);
+		tblclmnNewColumn_20.setWidth(100);
 		tblclmnNewColumn_20.setText("occu");
 
-		TableViewerColumn tableViewerColumn_18 = new TableViewerColumn(soliderViewer, SWT.NONE);
-		TableColumn tblclmnNewColumn_18 = tableViewerColumn_18.getColumn();
-		tblclmnNewColumn_18.setWidth(70);
-		tblclmnNewColumn_18.setText("heros");
-		
+	
+
 		TableViewerColumn tableViewerColumn_30 = new TableViewerColumn(soliderViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_30 = tableViewerColumn_30.getColumn();
 		tblclmnNewColumn_30.setWidth(80);
@@ -491,7 +504,7 @@ public class GameClient extends ApplicationWindow {
 				soliderViewer.setInput(searchResult.getSoliderList());
 			}
 		});
-		tblclmnNewColumn_21.setWidth(100);
+		tblclmnNewColumn_21.setWidth(150);
 		tblclmnNewColumn_21.setText("endtime");
 
 		TabItem tbtmAllitem = new TabItem(tabFolder_2, SWT.NONE);
@@ -515,7 +528,7 @@ public class GameClient extends ApplicationWindow {
 
 		TableViewerColumn tableViewerColumn_24 = new TableViewerColumn(allResourceTableViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_24 = tableViewerColumn_24.getColumn();
-		tblclmnNewColumn_24.setWidth(80);
+		tblclmnNewColumn_24.setWidth(100);
 		tblclmnNewColumn_24.setText("occu");
 
 		TableViewerColumn tableViewerColumn_25 = new TableViewerColumn(allResourceTableViewer, SWT.NONE);
@@ -532,10 +545,10 @@ public class GameClient extends ApplicationWindow {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseDown(MouseEvent e) {
-				GameHelper.submit(new TaskUnit(new GetWordCityInfoTask(userBean, resourceConfig, searchResult, null), 0, 0, TimeUnit.SECONDS));
+				GameHelper.submitTask(new TaskUnit(new GetWordCityInfoTask(userBean, resourceConfig, searchResult, null)));
 				// 扫描全图信息
 				if (userBean.getConfigure().getScanResource().getAllResourceConfig().getIsAllScanOpen() == 1) {
-					GameHelper.submit(new TaskUnit(new GetTimeZoneTask(userBean, searchResult, null), 0, 0, TimeUnit.SECONDS));
+					GameHelper.submitTask(new TaskUnit(new GetTimeZoneTask(userBean, searchResult, null)));
 				}
 			}
 		});
@@ -784,12 +797,12 @@ public class GameClient extends ApplicationWindow {
 				if (ok == Dialog.OK) {
 
 					PipleLineTask pipleLineTask = new PipleLineTask();
-					pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean, pipleLineTask), 0, 10L, TimeUnit.SECONDS));
-					pipleLineTask.add(new TaskUnit(new ContinuousLoginDaysRewardTask(userBean, pipleLineTask), 0, 24, TimeUnit.HOURS));
-					pipleLineTask.add(new TaskUnit(new MsgItemSellTask(userBean, itemConfig, pipleLineTask), 0, 24, TimeUnit.HOURS));
-					pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(userBean, itemConfig, pipleLineTask), 0, 10, TimeUnit.MINUTES));
+					pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean, pipleLineTask), "0/10 * * * * ?"));
+					pipleLineTask.add(new TaskUnit(new ContinuousLoginDaysRewardTask(userBean, pipleLineTask), "0 30 * * * ?"));
+					pipleLineTask.add(new TaskUnit(new MsgItemSellTask(userBean, itemConfig, pipleLineTask), "0 40 * * * ?"));
+					pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(userBean, itemConfig, pipleLineTask), "0 10 * * * ?"));
 					// 此任务立刻执行
-					GameHelper.submit(new TaskUnit(new LoginTask(userBean, pipleLineTask), 0L, 0L, TimeUnit.HOURS));
+					GameHelper.submitTask(new TaskUnit(new LoginTask(userBean, pipleLineTask)));
 				}
 			}
 		};

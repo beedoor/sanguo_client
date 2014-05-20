@@ -12,6 +12,7 @@ public class EquipmentItem {
 	Long price = 0L;
 	Long max_smith = 0L;
 	Long need_level = 0L;
+	Long quality = 0L;
 
 	public Long getId() {
 		return id;
@@ -101,11 +102,20 @@ public class EquipmentItem {
 		this.need_level = need_level;
 	}
 
+	public Long getQuality() {
+		return quality;
+	}
+
+	public void setQuality(Long quality) {
+		this.quality = quality;
+	}
+
 	@Override
 	public String toString() {
 		return "EquipmentItem [id=" + id + ", name=" + name + ", intelligence=" + intelligence + ", max_hp=" + max_hp + ", max_mp=" + max_mp + ", speed=" + speed + ", description=" + description
-				+ ", strength=" + strength + ", price=" + price + ", max_smith=" + max_smith + ", need_level=" + need_level + "]";
+				+ ", strength=" + strength + ", price=" + price + ", max_smith=" + max_smith + ", need_level=" + need_level + ", quality=" + quality + "]";
 	}
 
+	
 
 }

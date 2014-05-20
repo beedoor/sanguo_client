@@ -22,6 +22,20 @@ public class SearchResultSorter {
 					return o1.getOccupierName().compareTo(o2.getOccupierName());
 				}
 			};
+		} else if (sortType != null && sortType.equals("byId")) {
+			comparator = new Comparator<CityInfo>() {
+				public int compare(CityInfo o1, CityInfo o2) {
+					if (o1.getId() == null
+							|| o1.getId().equals("")) {
+						return 1;
+					}
+					if (o2.getId() == null
+							|| o2.getId().equals("")) {
+						return -1;
+					}
+					return o1.getId().compareTo(o2.getId());
+				}
+			};
 		} else {
 			comparator = new Comparator<CityInfo>() {
 				public int compare(CityInfo o1, CityInfo o2) {

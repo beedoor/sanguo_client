@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class GameUtil {
 
-	private static SimpleDateFormat sdf = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+	private static SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm:ss");
 
 	public static String parseUnicode(String line) {
 		if (line == null) {
