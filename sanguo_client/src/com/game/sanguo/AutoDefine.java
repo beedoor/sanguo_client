@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import com.game.sanguo.base.domain.FightItem;
 import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.task.CitySearchAndGoldTask;
+import com.game.sanguo.base.task.ContinuousLoginDaysRewardTask;
 import com.game.sanguo.base.task.GameHelper;
 import com.game.sanguo.base.task.GameNotifyTask;
 import com.game.sanguo.base.task.LoginTask;
@@ -53,7 +54,8 @@ public class AutoDefine {
 
 			PipleLineTask pipleLineTask = new PipleLineTask();
 			pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean, pipleLineTask), "0/10 * * * * ?"));
-			pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(userBean, itemConfig, pipleLineTask), "0 30 * * * ?"));
+//			pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(userBean, itemConfig, pipleLineTask), "0 30 * * * ?"));
+			pipleLineTask.add(new TaskUnit(new ContinuousLoginDaysRewardTask(userBean, pipleLineTask), "0 0 5 * * ?"));
 			// 维持会话的获取通知信息惹任务
 
 			pipleLineTask.add(new TaskUnit(new MsgTypeWorldPvpFightTask(userBean, fightItem, pipleLineTask), "0 1 * * * ?"));

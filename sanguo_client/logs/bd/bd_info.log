@@ -1,11 +1,11 @@
-2014-05-20 15:58:00,493 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
-2014-05-20 15:58:01,094 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
-2014-05-20 15:58:34,192 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2014-05-20 15:58:34,212 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
-2014-05-20 15:58:34,292 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2014-05-20 15:58:34,292 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
-2014-05-20 15:58:34,302 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2014-05-20 15:58:34,312 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+2014-06-06 06:18:48,961 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
+2014-06-06 06:18:49,391 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
+2014-06-06 06:18:51,524 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2014-06-06 06:18:51,544 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2014-06-06 06:18:51,615 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2014-06-06 06:18:51,625 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2014-06-06 06:18:51,645 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2014-06-06 06:18:51,655 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -13,20 +13,19 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2014-05-20 15:58:34,322 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-2014-05-20 15:58:34,332 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
-2014-05-20 15:58:34,332 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-2014-05-20 15:58:34,342 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
-2014-05-20 15:58:34,342 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
-2014-05-20 15:58:34,352 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
-2014-05-20 16:00:08,537 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
-2014-05-20 16:00:08,918 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
-2014-05-20 16:00:43,638 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2014-05-20 16:00:43,668 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
-2014-05-20 16:00:43,748 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2014-05-20 16:00:43,768 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
-2014-05-20 16:00:43,778 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2014-05-20 16:00:43,788 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+2014-06-06 06:18:51,665 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2014-06-06 06:18:51,675 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2014-06-06 06:18:51,685 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2014-06-06 06:18:51,915 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.LoginTask
+2014-06-06 06:19:03,211 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - [564195410@qq.com]会话失效，[120]分钟后重新登录
+2014-06-06 06:19:33,214 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
+2014-06-06 06:19:33,665 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
+2014-06-06 06:19:36,048 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2014-06-06 06:19:36,069 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2014-06-06 06:19:36,149 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2014-06-06 06:19:36,159 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2014-06-06 06:19:36,169 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2014-06-06 06:19:36,189 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -34,20 +33,19 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2014-05-20 16:00:43,798 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-2014-05-20 16:00:43,808 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
-2014-05-20 16:00:43,808 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-2014-05-20 16:00:43,828 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
-2014-05-20 16:00:43,838 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
-2014-05-20 16:00:43,848 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
-2014-05-20 16:01:30,605 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
-2014-05-20 16:01:30,946 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
-2014-05-20 16:02:00,669 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2014-05-20 16:02:00,699 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
-2014-05-20 16:02:00,759 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2014-05-20 16:02:00,769 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
-2014-05-20 16:02:00,789 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2014-05-20 16:02:00,799 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+2014-06-06 06:19:36,199 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2014-06-06 06:19:36,209 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2014-06-06 06:19:36,219 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2014-06-06 06:19:36,449 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.LoginTask
+2014-06-06 06:19:51,701 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - [564195410@qq.com]会话失效，[120]分钟后重新登录
+2014-06-06 06:21:00,560 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
+2014-06-06 06:21:00,971 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
+2014-06-06 06:21:06,468 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2014-06-06 06:21:06,489 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2014-06-06 06:21:06,629 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2014-06-06 06:21:06,639 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2014-06-06 06:21:06,659 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2014-06-06 06:21:06,679 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -55,160 +53,19 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2014-05-20 16:02:00,799 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-2014-05-20 16:02:00,809 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
-2014-05-20 16:02:00,809 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-2014-05-20 16:02:00,999 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.LoginTask
-2014-05-20 16:02:15,630 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com 登录成功
-2014-05-20 16:02:17,082 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GetWordCityInfoTask
-2014-05-20 16:02:17,092 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - Configure [scanResource=ScanResource [gold=0, treasure=1, market=0, solider=0, waitTime=100, sortType=null, allResourceConfig=ScanResourceData [xPosStart=0, yPosStart=0, xPosEnd=0, yPosEnd=0, isAllScanOpen=0]], searchResource=1, sellConfig=SellConfig [sell=0, level=101]]
-2014-05-20 16:02:17,092 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 开始计算元宝山资源信息
-2014-05-20 16:02:17,112 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 共有 100 个资源信息
-2014-05-20 16:02:17,172 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12020]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 04:21:51],剩余时间[12:19:33]
-2014-05-20 16:02:17,353 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11729]，占领者[西凉匪王]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 14:57:29],剩余时间[22:55:11]
-2014-05-20 16:02:17,523 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11648]，占领者[霸气侧漏]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 22:11:25],剩余时间[30:9:7]
-2014-05-20 16:02:17,693 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11335]，占领者[忆梦惊尘]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 18:53:03],剩余时间[2:50:45]
-2014-05-20 16:02:17,853 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11856]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:17:10],剩余时间[7:14:52]
-2014-05-20 16:02:18,014 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12042]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 12:40:55],剩余时间[20:38:36]
-2014-05-20 16:02:18,184 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11972]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 20:20:06],剩余时间[28:17:47]
-2014-05-20 16:02:18,364 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11857]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:15:29],剩余时间[7:13:10]
-2014-05-20 16:02:18,544 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10058]，占领者[纯静小乔]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 19:59:48],剩余时间[3:57:29]
-2014-05-20 16:02:18,715 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11161]，占领者[蒙恬]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:23:48],剩余时间[31:21:29]
-2014-05-20 16:02:18,885 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11903]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-19 19:18:04],剩余时间[3:15:45]
-2014-05-20 16:02:19,055 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10859]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-19 18:51:56],剩余时间[2:49:36]
-2014-05-20 16:02:19,235 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12031]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 19:07:31],剩余时间[27:5:11]
-2014-05-20 16:02:19,406 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11845]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:14:17],剩余时间[7:11:57]
-2014-05-20 16:02:19,596 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10094]，占领者[扶苏]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-20 00:37:26],剩余时间[56:35:6]
-2014-05-20 16:02:19,836 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11254]，占领者[左武卫狂飚]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-20 14:52:28],剩余时间[22:50:9]
-2014-05-20 16:02:20,046 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:02:20,117 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12101]，占领者[蒙毅]，占领者VIP级别[4] ,资源类别[元宝山],占领时间[05-20 13:17:13],剩余时间[21:14:53]
-2014-05-20 16:02:20,397 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12088]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 00:43:03],剩余时间[32:40:42]
-2014-05-20 16:02:20,567 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11879]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:43:48],剩余时间[31:41:27]
-2014-05-20 16:02:20,848 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11902]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-19 20:18:20],剩余时间[4:15:59]
-2014-05-20 16:02:21,098 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11765]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 20:41:27],剩余时间[4:39:5]
-2014-05-20 16:02:21,308 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11045]，占领者[左武卫狂飚]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-20 14:57:58],剩余时间[22:55:36]
-2014-05-20 16:02:21,489 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10407]，占领者[风想]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-20 03:35:49],剩余时间[11:33:27]
-2014-05-20 16:02:21,659 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11138]，占领者[蒙恬]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:24:54],剩余时间[31:22:32]
-2014-05-20 16:02:21,849 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10081]，占领者[扶苏]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-20 00:36:05],剩余时间[56:33:43]
-2014-05-20 16:02:22,019 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11914]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-20 14:33:44],剩余时间[22:31:22]
-2014-05-20 16:02:22,170 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11626]，占领者[宁始皇]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 17:09:13],剩余时间[1:6:50]
-2014-05-20 16:02:22,360 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11405]，占领者[天水麒麟哥]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 20:51:53],剩余时间[28:49:30]
-2014-05-20 16:02:22,550 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11150]，占领者[蒙恬]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:22:44],剩余时间[31:20:21]
-2014-05-20 16:02:22,710 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11892]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:48:04],剩余时间[31:45:41]
-2014-05-20 16:02:22,871 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10371]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 22:49:44],剩余时间[30:47:21]
-2014-05-20 16:02:23,041 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11799]，占领者[扶苏]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-19 14:12:39],剩余时间[46:10:15]
-2014-05-20 16:02:23,211 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11740]，占领者[天龙]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 11:16:24],剩余时间[19:14:0]
-2014-05-20 16:02:23,391 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10571]，占领者[蒙毅]，占领者VIP级别[4] ,资源类别[元宝山],占领时间[05-20 10:13:08],剩余时间[18:10:44]
-2014-05-20 16:02:23,572 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11891]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:45:56],剩余时间[31:43:32]
-2014-05-20 16:02:23,752 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11683]，占领者[天下无敌涛]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-19 18:12:34],剩余时间[2:10:10]
-2014-05-20 16:02:23,922 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11637]，占领者[宁始皇]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-20 09:17:30],剩余时间[17:15:6]
-2014-05-20 16:02:24,102 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12030]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 03:44:56],剩余时间[35:42:31]
-2014-05-20 16:02:24,263 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10488]，占领者[风想]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-20 03:12:51],剩余时间[11:10:26]
-2014-05-20 16:02:24,443 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10710]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 12:38:33],剩余时间[20:36:8]
-2014-05-20 16:02:24,603 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11323]，占领者[忆梦惊尘]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 08:14:54],剩余时间[16:12:29]
-2014-05-20 16:02:24,773 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11741]，占领者[剑君止步]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 20:40:32],剩余时间[4:38:7]
-2014-05-20 16:02:24,944 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12053]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 12:15:55],剩余时间[44:13:30]
-2014-05-20 16:02:25,124 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11753]，占领者[鲁台望道]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 16:08:38],剩余时间[24:6:12]
-2014-05-20 16:02:25,274 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11718]，占领者[云天霸]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:24:33],剩余时间[31:22:7]
-2014-05-20 16:02:25,474 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11046]，占领者[神匸司空]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-20 08:25:39],剩余时间[16:23:14]
-2014-05-20 16:02:25,635 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11764]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 12:14:24],剩余时间[20:11:58]
-2014-05-20 16:02:25,815 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11868]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:38:25],剩余时间[31:35:59]
-2014-05-20 16:02:25,985 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12065]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 08:46:32],剩余时间[16:44:6]
-2014-05-20 16:02:26,155 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11649]，占领者[霸气侧漏]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 22:12:44],剩余时间[30:10:17]
-2014-05-20 16:02:26,315 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10395]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 22:51:11],剩余时间[30:48:44]
-2014-05-20 16:02:26,486 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11694]，占领者[夜鬼狼]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-19 19:47:08],剩余时间[51:44:41]
-2014-05-20 16:02:26,656 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10674]，占领者[蒙毅]，占领者VIP级别[4] ,资源类别[元宝山],占领时间[05-20 10:11:40],剩余时间[18:9:13]
-2014-05-20 16:02:26,816 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11950]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 20:16:17],剩余时间[28:13:50]
-2014-05-20 16:02:26,986 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12007]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:47:09],剩余时间[6:44:42]
-2014-05-20 16:02:27,187 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11961]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 08:35:00],剩余时间[40:32:32]
-2014-05-20 16:02:27,347 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11730]，占领者[独步]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 15:40:36],剩余时间[23:38:8]
-2014-05-20 16:02:27,527 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11833]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:11:32],剩余时间[7:9:4]
-2014-05-20 16:02:27,687 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11869]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:40:56],剩余时间[31:38:28]
-2014-05-20 16:02:27,858 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10452]，占领者[风想]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-20 03:16:45],剩余时间[11:14:17]
-2014-05-20 16:02:28,038 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12066]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 00:39:11],剩余时间[32:36:42]
-2014-05-20 16:02:28,218 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10894]，占领者[忆梦惊尘]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 08:24:02],剩余时间[16:21:33]
-2014-05-20 16:02:28,388 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11949]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 20:14:44],剩余时间[28:12:15]
-2014-05-20 16:02:28,549 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11985]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 21:01:37],剩余时间[4:59:8]
-2014-05-20 16:02:28,729 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11821]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 22:57:16],剩余时间[6:54:47]
-2014-05-20 16:02:28,909 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11579]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:37:22],剩余时间[6:34:53]
-2014-05-20 16:02:29,079 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11811]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 22:53:14],剩余时间[6:50:44]
-2014-05-20 16:02:29,240 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11973]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:44:31],剩余时间[6:42:1]
-2014-05-20 16:02:29,410 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11798]，占领者[武王天下]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:30:09],剩余时间[6:27:39]
-2014-05-20 16:02:29,580 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11822]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:09:18],剩余时间[7:6:48]
-2014-05-20 16:02:29,760 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11927]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-20 14:30:49],剩余时间[22:28:19]
-2014-05-20 16:02:29,941 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11255]，占领者[左武卫狂飚]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-20 14:54:36],剩余时间[22:52:6]
-2014-05-20 16:02:30,021 [DefaultQuartzScheduler_Worker-4] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:02:30,151 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11682]，占领者[夜鬼狼]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-19 19:53:05],剩余时间[51:50:34]
-2014-05-20 16:02:30,321 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12077]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 00:53:37],剩余时间[32:51:6]
-2014-05-20 16:02:30,502 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11984]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:50:01],剩余时间[6:47:30]
-2014-05-20 16:02:30,662 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11603]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:21:38],剩余时间[6:19:7]
-2014-05-20 16:02:30,832 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10116]，占领者[纯静小乔]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 10:32:30],剩余时间[42:29:59]
-2014-05-20 16:02:30,992 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11672]，占领者[夜鬼狼]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-19 19:49:10],剩余时间[51:46:39]
-2014-05-20 16:02:31,162 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11810]，占领者[小乔她哥]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-19 21:08:08],剩余时间[5:5:36]
-2014-05-20 16:02:31,313 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11660]，占领者[霸王之龙]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 13:44:46],剩余时间[45:42:14]
-2014-05-20 16:02:31,483 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11695]，占领者[子车轩尘]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-19 22:27:19],剩余时间[6:24:47]
-2014-05-20 16:02:31,653 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10001]，占领者[扶苏]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-20 09:16:25],剩余时间[65:13:53]
-2014-05-20 16:02:31,823 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10012]，占领者[扶苏]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-20 00:40:10],剩余时间[56:37:38]
-2014-05-20 16:02:31,984 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11080]，占领者[忆梦惊尘]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 08:16:11],剩余时间[16:13:39]
-2014-05-20 16:02:32,154 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10686]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 12:46:46],剩余时间[20:44:13]
-2014-05-20 16:02:32,324 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10290]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 00:48:34],剩余时间[32:46:1]
-2014-05-20 16:02:32,494 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12008]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:40:40],剩余时间[6:38:7]
-2014-05-20 16:02:32,675 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11776]，占领者[痞冖饭特希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 17:45:32],剩余时间[1:42:59]
-2014-05-20 16:02:32,845 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11079]，占领者[咔咔洛特]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 20:13:53],剩余时间[4:11:20]
-2014-05-20 16:02:33,015 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11671]，占领者[宁始皇]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 17:14:30],剩余时间[1:11:56]
-2014-05-20 16:02:33,185 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11719]，占领者[无祖]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 13:55:01],剩余时间[21:52:27]
-2014-05-20 16:02:33,376 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11926]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-19 20:20:45],剩余时间[4:18:11]
-2014-05-20 16:02:33,556 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11962]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 11:55:19],剩余时间[43:52:46]
-2014-05-20 16:02:33,726 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11787]，占领者[长阪坡]，占领者VIP级别[6] ,资源类别[元宝山],占领时间[05-19 19:01:58],剩余时间[2:59:24]
-2014-05-20 16:02:33,916 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10558]，占领者[蒙毅]，占领者VIP级别[4] ,资源类别[元宝山],占领时间[05-19 23:52:14],剩余时间[7:49:40]
-2014-05-20 16:02:34,087 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10685]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 03:43:24],剩余时间[35:40:49]
-2014-05-20 16:02:34,267 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10233]，占领者[爷限量版]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 21:33:59],剩余时间[29:31:24]
-2014-05-20 16:02:34,437 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11347]，占领者[天水麒麟哥]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 21:12:57],剩余时间[29:10:22]
-2014-05-20 16:02:34,627 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11844]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:12:48],剩余时间[7:10:13]
-2014-05-20 16:02:34,798 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12100]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 00:45:35],剩余时间[32:43:0]
-2014-05-20 16:02:34,908 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 配置禁止扫描黑市资源
-2014-05-20 16:02:34,918 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 配置禁止扫描金矿资源
-2014-05-20 16:02:34,918 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 配置禁止扫描兵营资源
-2014-05-20 16:02:40,015 [DefaultQuartzScheduler_Worker-5] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:02:50,020 [DefaultQuartzScheduler_Worker-6] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:03:00,004 [DefaultQuartzScheduler_Worker-7] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:03:10,008 [DefaultQuartzScheduler_Worker-8] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:03:20,013 [DefaultQuartzScheduler_Worker-9] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:03:30,017 [DefaultQuartzScheduler_Worker-10] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:03:40,001 [DefaultQuartzScheduler_Worker-11] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:03:50,016 [DefaultQuartzScheduler_Worker-12] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:04:00,000 [DefaultQuartzScheduler_Worker-13] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:04:10,005 [DefaultQuartzScheduler_Worker-14] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:04:20,059 [DefaultQuartzScheduler_Worker-15] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:04:30,013 [DefaultQuartzScheduler_Worker-16] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:04:40,058 [DefaultQuartzScheduler_Worker-17] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:04:50,052 [DefaultQuartzScheduler_Worker-18] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:05:00,017 [DefaultQuartzScheduler_Worker-19] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:05:10,011 [DefaultQuartzScheduler_Worker-20] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:05:20,005 [DefaultQuartzScheduler_Worker-21] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:05:30,010 [DefaultQuartzScheduler_Worker-22] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:05:40,014 [DefaultQuartzScheduler_Worker-23] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:05:50,028 [DefaultQuartzScheduler_Worker-24] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:06:00,683 [DefaultQuartzScheduler_Worker-25] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:06:10,276 [DefaultQuartzScheduler_Worker-26] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:06:20,004 [DefaultQuartzScheduler_Worker-27] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:06:30,037 [DefaultQuartzScheduler_Worker-28] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:06:40,641 [DefaultQuartzScheduler_Worker-29] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:06:50,035 [DefaultQuartzScheduler_Worker-30] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:07:00,005 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:07:10,010 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:07:20,004 [DefaultQuartzScheduler_Worker-4] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:07:22,147 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
-2014-05-20 16:07:22,147 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
-2014-05-20 16:07:22,157 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
-2014-05-20 16:07:37,369 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
-2014-05-20 16:07:37,720 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
-2014-05-20 16:07:46,653 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2014-05-20 16:07:46,673 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
-2014-05-20 16:07:46,723 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2014-05-20 16:07:46,733 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
-2014-05-20 16:07:46,743 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2014-05-20 16:07:46,753 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+2014-06-06 06:21:06,689 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2014-06-06 06:21:06,699 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2014-06-06 06:21:06,699 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2014-06-06 06:21:06,879 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.LoginTask
+2014-06-06 06:22:25,652 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - [564195410@qq.com]会话失效，[120]分钟后重新登录
+2014-06-06 06:23:37,135 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
+2014-06-06 06:23:37,476 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
+2014-06-06 06:23:39,519 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2014-06-06 06:23:39,539 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2014-06-06 06:23:39,599 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2014-06-06 06:23:39,609 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2014-06-06 06:23:39,619 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2014-06-06 06:23:39,629 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
   Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
   NOT STARTED.
   Currently in standby mode.
@@ -216,120 +73,55 @@
   Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
   Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2014-05-20 16:07:46,763 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-2014-05-20 16:07:46,773 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
-2014-05-20 16:07:46,773 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-2014-05-20 16:07:46,923 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.LoginTask
-2014-05-20 16:07:58,379 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GetWordCityInfoTask
-2014-05-20 16:07:58,379 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - Configure [scanResource=ScanResource [gold=0, treasure=1, market=0, solider=0, waitTime=100, sortType=null, allResourceConfig=ScanResourceData [xPosStart=0, yPosStart=0, xPosEnd=0, yPosEnd=0, isAllScanOpen=0]], searchResource=1, sellConfig=SellConfig [sell=0, level=101]]
-2014-05-20 16:07:58,379 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 开始计算元宝山资源信息
-2014-05-20 16:07:58,389 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 共有 100 个资源信息
-2014-05-20 16:07:58,460 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12020]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 04:21:51],剩余时间[12:13:52]
-2014-05-20 16:07:58,670 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11729]，占领者[西凉匪王]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 14:57:29],剩余时间[22:49:30]
-2014-05-20 16:07:58,860 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11648]，占领者[霸气侧漏]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 22:11:25],剩余时间[30:3:26]
-2014-05-20 16:07:59,020 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11335]，占领者[忆梦惊尘]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 18:53:03],剩余时间[2:45:3]
-2014-05-20 16:07:59,191 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11856]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:17:10],剩余时间[7:9:10]
-2014-05-20 16:07:59,371 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12042]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 12:40:55],剩余时间[20:32:55]
-2014-05-20 16:07:59,541 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11972]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 20:20:06],剩余时间[28:12:6]
-2014-05-20 16:07:59,751 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11857]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:15:29],剩余时间[7:7:29]
-2014-05-20 16:07:59,822 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com 登录成功
-2014-05-20 16:07:59,932 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10058]，占领者[纯静小乔]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 19:59:48],剩余时间[3:51:48]
-2014-05-20 16:08:00,002 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:08:00,152 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11161]，占领者[蒙恬]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:23:48],剩余时间[31:15:47]
-2014-05-20 16:08:00,322 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11903]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-19 19:18:04],剩余时间[3:10:3]
-2014-05-20 16:08:00,513 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10859]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-19 18:51:56],剩余时间[2:43:55]
-2014-05-20 16:08:00,693 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12031]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 19:07:31],剩余时间[26:59:30]
-2014-05-20 16:08:00,883 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11845]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:14:17],剩余时间[7:6:16]
-2014-05-20 16:08:01,053 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10094]，占领者[扶苏]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-20 00:37:26],剩余时间[56:29:24]
-2014-05-20 16:08:01,254 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11254]，占领者[左武卫狂飚]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-20 14:52:28],剩余时间[22:44:27]
-2014-05-20 16:08:01,404 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12101]，占领者[蒙毅]，占领者VIP级别[4] ,资源类别[元宝山],占领时间[05-20 13:17:13],剩余时间[21:9:11]
-2014-05-20 16:08:01,594 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12088]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 00:43:03],剩余时间[32:35:1]
-2014-05-20 16:08:01,744 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11879]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:43:48],剩余时间[31:35:46]
-2014-05-20 16:08:01,915 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11902]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-19 20:18:20],剩余时间[4:10:18]
-2014-05-20 16:08:02,095 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11765]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 20:41:27],剩余时间[4:33:24]
-2014-05-20 16:08:02,275 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11045]，占领者[左武卫狂飚]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-20 14:57:58],剩余时间[22:49:55]
-2014-05-20 16:08:02,425 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10407]，占领者[风想]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-20 03:35:49],剩余时间[11:27:46]
-2014-05-20 16:08:02,616 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11138]，占领者[蒙恬]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:24:54],剩余时间[31:16:51]
-2014-05-20 16:08:02,786 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10081]，占领者[扶苏]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-20 00:36:05],剩余时间[56:28:2]
-2014-05-20 16:08:02,956 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11914]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-20 14:33:44],剩余时间[22:25:41]
-2014-05-20 16:08:03,136 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11626]，占领者[宁始皇]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 17:09:13],剩余时间[1:1:9]
-2014-05-20 16:08:03,307 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11405]，占领者[天水麒麟哥]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 20:51:53],剩余时间[28:43:49]
-2014-05-20 16:08:03,487 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11150]，占领者[蒙恬]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:22:44],剩余时间[31:14:40]
-2014-05-20 16:08:03,667 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11892]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:48:04],剩余时间[31:40:0]
-2014-05-20 16:08:03,837 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10371]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 22:49:44],剩余时间[30:41:40]
-2014-05-20 16:08:04,008 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11799]，占领者[扶苏]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-19 14:12:39],剩余时间[46:4:34]
-2014-05-20 16:08:04,178 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11740]，占领者[天龙]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 11:16:24],剩余时间[19:8:19]
-2014-05-20 16:08:04,378 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10571]，占领者[蒙毅]，占领者VIP级别[4] ,资源类别[元宝山],占领时间[05-20 10:13:08],剩余时间[18:5:3]
-2014-05-20 16:08:04,548 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11891]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:45:56],剩余时间[31:37:51]
-2014-05-20 16:08:04,719 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11683]，占领者[天下无敌涛]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-19 18:12:34],剩余时间[2:4:29]
-2014-05-20 16:08:04,879 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11637]，占领者[宁始皇]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-20 09:17:30],剩余时间[17:9:25]
-2014-05-20 16:08:05,039 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12030]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 03:44:56],剩余时间[35:36:50]
-2014-05-20 16:08:05,209 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10488]，占领者[风想]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-20 03:12:51],剩余时间[11:4:45]
-2014-05-20 16:08:05,410 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10710]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 12:38:33],剩余时间[20:30:27]
-2014-05-20 16:08:05,570 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11323]，占领者[忆梦惊尘]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 08:14:54],剩余时间[16:6:48]
-2014-05-20 16:08:05,910 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11741]，占领者[剑君止步]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 20:40:32],剩余时间[4:32:26]
-2014-05-20 16:08:06,101 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12053]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 12:15:55],剩余时间[44:7:49]
-2014-05-20 16:08:06,301 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11753]，占领者[鲁台望道]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 16:08:38],剩余时间[24:0:31]
-2014-05-20 16:08:06,481 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11718]，占领者[云天霸]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:24:33],剩余时间[31:16:26]
-2014-05-20 16:08:06,661 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11046]，占领者[神匸司空]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-20 08:25:39],剩余时间[16:17:33]
-2014-05-20 16:08:06,852 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11764]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 12:14:24],剩余时间[20:6:17]
-2014-05-20 16:08:07,052 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11868]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:38:25],剩余时间[31:30:17]
-2014-05-20 16:08:07,242 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12065]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 08:46:32],剩余时间[16:38:24]
-2014-05-20 16:08:07,402 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11649]，占领者[霸气侧漏]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 22:12:44],剩余时间[30:4:36]
-2014-05-20 16:08:07,563 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10395]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 22:51:11],剩余时间[30:43:3]
-2014-05-20 16:08:07,753 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11694]，占领者[夜鬼狼]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-19 19:47:08],剩余时间[51:39:0]
-2014-05-20 16:08:07,943 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10674]，占领者[蒙毅]，占领者VIP级别[4] ,资源类别[元宝山],占领时间[05-20 10:11:40],剩余时间[18:3:32]
-2014-05-20 16:08:08,153 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11950]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 20:16:17],剩余时间[28:8:8]
-2014-05-20 16:08:08,304 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12007]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:47:09],剩余时间[6:39:0]
-2014-05-20 16:08:08,484 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11961]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 08:35:00],剩余时间[40:26:51]
-2014-05-20 16:08:08,674 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11730]，占领者[独步]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 15:40:36],剩余时间[23:32:27]
-2014-05-20 16:08:08,875 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11833]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:11:32],剩余时间[7:3:23]
-2014-05-20 16:08:09,065 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11869]，占领者[炫悦]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 23:40:56],剩余时间[31:32:46]
-2014-05-20 16:08:09,255 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10452]，占领者[风想]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-20 03:16:45],剩余时间[11:8:35]
-2014-05-20 16:08:09,425 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12066]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 00:39:11],剩余时间[32:31:1]
-2014-05-20 16:08:09,606 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10894]，占领者[忆梦惊尘]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 08:24:02],剩余时间[16:15:52]
-2014-05-20 16:08:09,776 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11949]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 20:14:44],剩余时间[28:6:34]
-2014-05-20 16:08:10,026 [DefaultQuartzScheduler_Worker-4] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:08:10,026 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11985]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 21:01:37],剩余时间[4:53:26]
-2014-05-20 16:08:10,206 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11821]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 22:57:16],剩余时间[6:49:5]
-2014-05-20 16:08:10,357 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11579]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:37:22],剩余时间[6:29:11]
-2014-05-20 16:08:10,557 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11811]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 22:53:14],剩余时间[6:45:3]
-2014-05-20 16:08:10,717 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11973]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:44:31],剩余时间[6:36:20]
-2014-05-20 16:08:10,917 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11798]，占领者[武王天下]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:30:09],剩余时间[6:21:58]
-2014-05-20 16:08:11,118 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11822]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:09:18],剩余时间[7:1:6]
-2014-05-20 16:08:11,328 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11927]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-20 14:30:49],剩余时间[22:22:38]
-2014-05-20 16:08:11,528 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11255]，占领者[左武卫狂飚]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-20 14:54:36],剩余时间[22:46:24]
-2014-05-20 16:08:11,729 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11682]，占领者[夜鬼狼]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-19 19:53:05],剩余时间[51:44:53]
-2014-05-20 16:08:11,899 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12077]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 00:53:37],剩余时间[32:45:25]
-2014-05-20 16:08:12,079 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11984]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:50:01],剩余时间[6:41:48]
-2014-05-20 16:08:12,259 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11603]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:21:38],剩余时间[6:13:25]
-2014-05-20 16:08:12,460 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10116]，占领者[纯静小乔]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 10:32:30],剩余时间[42:24:18]
-2014-05-20 16:08:12,640 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11672]，占领者[夜鬼狼]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-19 19:49:10],剩余时间[51:40:57]
-2014-05-20 16:08:12,820 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11810]，占领者[小乔她哥]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-19 21:08:08],剩余时间[4:59:55]
-2014-05-20 16:08:13,000 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11660]，占领者[霸王之龙]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 13:44:46],剩余时间[45:36:33]
-2014-05-20 16:08:13,201 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11695]，占领者[子车轩尘]，占领者VIP级别[7] ,资源类别[元宝山],占领时间[05-19 22:27:19],剩余时间[6:19:5]
-2014-05-20 16:08:13,391 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10001]，占领者[扶苏]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-20 09:16:25],剩余时间[65:8:12]
-2014-05-20 16:08:13,591 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10012]，占领者[扶苏]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-20 00:40:10],剩余时间[56:31:56]
-2014-05-20 16:08:13,762 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11080]，占领者[忆梦惊尘]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 08:16:11],剩余时间[16:7:57]
-2014-05-20 16:08:13,962 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10686]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 12:46:46],剩余时间[20:38:32]
-2014-05-20 16:08:14,152 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10290]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 00:48:34],剩余时间[32:40:19]
-2014-05-20 16:08:14,332 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12008]，占领者[贡嘎之巅]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 22:40:40],剩余时间[6:32:25]
-2014-05-20 16:08:14,493 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11776]，占领者[痞冖饭特希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 17:45:32],剩余时间[1:37:17]
-2014-05-20 16:08:14,673 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11079]，占领者[咔咔洛特]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-18 20:13:53],剩余时间[4:5:38]
-2014-05-20 16:08:14,843 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11671]，占领者[宁始皇]，占领者VIP级别[3] ,资源类别[元宝山],占领时间[05-19 17:14:30],剩余时间[1:6:15]
-2014-05-20 16:08:15,033 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11719]，占领者[无祖]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 13:55:01],剩余时间[21:46:45]
-2014-05-20 16:08:15,194 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11926]，占领者[一日就是一天]，占领者VIP级别[5] ,资源类别[元宝山],占领时间[05-19 20:20:45],剩余时间[4:12:29]
-2014-05-20 16:08:15,384 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11962]，占领者[陈庆之]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 11:55:19],剩余时间[43:47:4]
-2014-05-20 16:08:15,564 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11787]，占领者[长阪坡]，占领者VIP级别[6] ,资源类别[元宝山],占领时间[05-19 19:01:58],剩余时间[2:53:42]
-2014-05-20 16:08:15,955 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10558]，占领者[蒙毅]，占领者VIP级别[4] ,资源类别[元宝山],占领时间[05-19 23:52:14],剩余时间[7:43:58]
-2014-05-20 16:08:16,105 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10685]，占领者[痞丶饭布希]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 03:43:24],剩余时间[35:35:7]
-2014-05-20 16:08:16,285 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[10233]，占领者[爷限量版]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 21:33:59],剩余时间[29:25:42]
-2014-05-20 16:08:16,465 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11347]，占领者[天水麒麟哥]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-19 21:12:57],剩余时间[29:4:40]
-2014-05-20 16:08:16,666 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[11844]，占领者[风雅周公谨]，占领者VIP级别[9] ,资源类别[元宝山],占领时间[05-17 23:12:48],剩余时间[7:4:31]
-2014-05-20 16:08:16,856 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 坐标[12100]，占领者[天山雪狼之魂]，占领者VIP级别[8] ,资源类别[元宝山],占领时间[05-20 00:45:35],剩余时间[32:37:18]
-2014-05-20 16:08:16,976 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 配置禁止扫描黑市资源
-2014-05-20 16:08:16,996 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 配置禁止扫描金矿资源
-2014-05-20 16:08:16,996 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 配置禁止扫描兵营资源
-2014-05-20 16:08:20,001 [DefaultQuartzScheduler_Worker-5] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:08:30,005 [DefaultQuartzScheduler_Worker-6] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-05-20 16:08:40,009 [DefaultQuartzScheduler_Worker-7] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.GameNotifyTask
+2014-06-06 06:23:39,639 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2014-06-06 06:23:39,649 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2014-06-06 06:23:39,679 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2014-06-06 06:23:39,889 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 564195410@qq.com exec com.game.sanguo.base.task.LoginTask
+2014-06-06 06:23:47,220 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - [564195410@qq.com]会话失效，[120]分钟后重新登录
+2014-06-06 06:58:07,402 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
+2014-06-06 06:58:07,833 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
+2014-06-06 06:58:10,416 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2014-06-06 06:58:10,446 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2014-06-06 06:58:10,507 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2014-06-06 06:58:10,527 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2014-06-06 06:58:10,537 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2014-06-06 06:58:10,547 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2014-06-06 06:58:10,557 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2014-06-06 06:58:10,567 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2014-06-06 06:58:10,597 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2014-06-06 06:58:10,777 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.LoginTask
+2014-06-06 06:58:49,953 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com 登录成功
+2014-06-06 06:58:50,053 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
+2014-06-06 06:58:50,284 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.AutoLqSearchAndGoldTaskTest
+2014-06-06 06:59:00,088 [DefaultQuartzScheduler_Worker-4] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
+2014-06-06 07:00:57,206 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
+2014-06-06 07:00:57,627 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
+2014-06-06 07:01:00,541 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2014-06-06 07:01:00,571 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
+2014-06-06 07:01:00,701 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2014-06-06 07:01:00,721 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
+2014-06-06 07:01:00,741 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
+2014-06-06 07:01:00,761 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2014-06-06 07:01:00,781 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2014-06-06 07:01:00,791 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
+2014-06-06 07:01:00,821 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2014-06-06 07:01:01,042 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.LoginTask
+2014-06-06 07:01:37,504 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com 登录成功
+2014-06-06 07:01:40,018 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
+2014-06-06 07:01:40,158 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.AutoLqSearchAndGoldTaskTest
+2014-06-06 07:01:50,042 [DefaultQuartzScheduler_Worker-4] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
+2014-06-06 07:02:00,057 [DefaultQuartzScheduler_Worker-5] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask

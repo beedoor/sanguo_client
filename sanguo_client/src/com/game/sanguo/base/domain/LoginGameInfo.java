@@ -57,6 +57,8 @@ public class LoginGameInfo {
 	private String worldInfo;
 
 	private String guideProgress;
+	
+	private Long hun;
 
 	List<PlayerCitysInfo> playerCitysInfoList = new ArrayList<PlayerCitysInfo>();
 	List<PlayerHerosInfo> playerHerosInfoList = new ArrayList<PlayerHerosInfo>();
@@ -107,6 +109,16 @@ public class LoginGameInfo {
 	public void setChallengeTimes(String challengeTimes) {
 		this.challengeTimes = Long.valueOf(challengeTimes);
 	}
+
+	public Long getHun() {
+		return hun;
+	}
+
+
+	public void setHun(String hun) {
+		this.hun = Long.parseLong(hun);
+	}
+
 
 	public Long getChangeNameTimes() {
 		return changeNameTimes;

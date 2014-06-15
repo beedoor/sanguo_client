@@ -4,7 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.game.sanguo.base.domain.UserBean;
+import com.game.sanguo.base.task.AutoLqSearchAndGoldTaskTest;
 import com.game.sanguo.base.task.GameHelper;
+import com.game.sanguo.base.task.GameNotifyTask;
 import com.game.sanguo.base.task.GetTimeZoneTask;
 import com.game.sanguo.base.task.LoginTask;
 import com.game.sanguo.base.task.TaskUnit;
@@ -35,9 +37,9 @@ public class Main {
 		userBean.setItemConfig(itemConfig);
 
 		PipleLineTask pipleLineTask = new PipleLineTask();
-//		pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean, pipleLineTask), "0/10 * * * * ?"));
+		pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean, pipleLineTask), "0/10 * * * * ?"));
 //		pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(userBean, itemConfig, pipleLineTask), "0 0/10 * * * ?"));
-		pipleLineTask.add(new TaskUnit(new GetTimeZoneTask(userBean, null, pipleLineTask)));
+		pipleLineTask.add(new TaskUnit(new AutoLqSearchAndGoldTaskTest(userBean, null, pipleLineTask)));
 		// 此任务立刻执行
 		GameHelper.submitTask(new TaskUnit(new LoginTask(userBean, pipleLineTask)));
 	}

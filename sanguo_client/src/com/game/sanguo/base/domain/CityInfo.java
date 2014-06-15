@@ -25,6 +25,15 @@ public class CityInfo {
 	String unionName;
 	Long zoneId = 0L;
 	Date endTime;
+	Long vipLv=0L;
+	
+	public Long getVipLv() {
+		return vipLv;
+	}
+
+	public void setVipLv(String vipLv) {
+		this.vipLv = Long.valueOf(vipLv);
+	}
 
 	public Date getEndTime() {
 		return endTime;

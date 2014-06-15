@@ -2,8 +2,8 @@
 <configuration>
 	<users>
 		<user>
- 			<userName>564195410@qq.com</userName>
- 			<password>h156788</password> 
+ 			<userName>xinyuanalex@sohu.com</userName>
+ 			<password>123456</password> 
 			<areaId>8</areaId>
 			<reLoginTime desc="断线重新登录时间间隔,以分钟记，120分即2小时">120</reLoginTime>
 			<configure>

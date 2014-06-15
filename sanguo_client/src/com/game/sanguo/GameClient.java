@@ -336,7 +336,14 @@ public class GameClient extends ApplicationWindow {
 
 		TableViewerColumn tableViewerColumn_27 = new TableViewerColumn(measureViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_27 = tableViewerColumn_27.getColumn();
-		tblclmnNewColumn_27.setWidth(60);
+		tblclmnNewColumn_27.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				SearchResultSorter.sort(searchResult.getTreasureList(), "byUnion");
+				measureViewer.setInput(searchResult.getTreasureList());
+			}
+		});
+		tblclmnNewColumn_27.setWidth(100);
 		tblclmnNewColumn_27.setText("union");
 
 		TableViewerColumn tableViewerColumn_15 = new TableViewerColumn(measureViewer, SWT.NONE);
@@ -388,7 +395,14 @@ public class GameClient extends ApplicationWindow {
 
 		TableViewerColumn tableViewerColumn_28 = new TableViewerColumn(goldViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_28 = tableViewerColumn_28.getColumn();
-		tblclmnNewColumn_28.setWidth(80);
+		tblclmnNewColumn_28.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				SearchResultSorter.sort(searchResult.getGoldList(), "byUnion");
+				goldViewer.setInput(searchResult.getGoldList());
+			}
+		});
+		tblclmnNewColumn_28.setWidth(100);
 		tblclmnNewColumn_28.setText("union");
 
 		TableViewerColumn tableViewerColumn_16 = new TableViewerColumn(goldViewer, SWT.NONE);
@@ -440,7 +454,14 @@ public class GameClient extends ApplicationWindow {
 
 		TableViewerColumn tableViewerColumn_29 = new TableViewerColumn(marketViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_29 = tableViewerColumn_29.getColumn();
-		tblclmnNewColumn_29.setWidth(80);
+		tblclmnNewColumn_29.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				SearchResultSorter.sort(searchResult.getMarketList(), "byUnion");
+				marketViewer.setInput(searchResult.getMarketList());
+			}
+		});
+		tblclmnNewColumn_29.setWidth(100);
 		tblclmnNewColumn_29.setText("union");
 
 		TableViewerColumn tableViewerColumn_17 = new TableViewerColumn(marketViewer, SWT.NONE);
@@ -492,7 +513,14 @@ public class GameClient extends ApplicationWindow {
 
 		TableViewerColumn tableViewerColumn_30 = new TableViewerColumn(soliderViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_30 = tableViewerColumn_30.getColumn();
-		tblclmnNewColumn_30.setWidth(80);
+		tblclmnNewColumn_30.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				SearchResultSorter.sort(searchResult.getSoliderList(), "byUnion");
+				soliderViewer.setInput(searchResult.getSoliderList());
+			}
+		});
+		tblclmnNewColumn_30.setWidth(100);
 		tblclmnNewColumn_30.setText("union");
 
 		TableViewerColumn tableViewerColumn_21 = new TableViewerColumn(soliderViewer, SWT.NONE);
@@ -533,7 +561,7 @@ public class GameClient extends ApplicationWindow {
 
 		TableViewerColumn tableViewerColumn_25 = new TableViewerColumn(allResourceTableViewer, SWT.NONE);
 		TableColumn tblclmnNewColumn_25 = tableViewerColumn_25.getColumn();
-		tblclmnNewColumn_25.setWidth(50);
+		tblclmnNewColumn_25.setWidth(100);
 		tblclmnNewColumn_25.setText("union");
 
 		TableViewerColumn tableViewerColumn_26 = new TableViewerColumn(allResourceTableViewer, SWT.NONE);
