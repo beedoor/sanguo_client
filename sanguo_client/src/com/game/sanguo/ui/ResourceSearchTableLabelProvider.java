@@ -15,11 +15,13 @@ public class ResourceSearchTableLabelProvider
       return itemInfo.getId()+"";
     case 1: 
       return 
-        (isNull(itemInfo.getOccupierName()) ? "空资源" : itemInfo.getOccupierName()) + getBattleStatus(itemInfo.getStatusAsInt());
+        (isNull(itemInfo.getOccupierName()) ? "空资源" : itemInfo.getOccupierName());
     case 2: 
       return isNull(itemInfo.getUnionName()) ? "" : itemInfo
         .getUnionName();
-    case 3: 
+    case 3:
+    	 return getBattleStatus(itemInfo.getStatusAsInt());
+    case 4: 
       return GameUtil.parseDate(itemInfo.getEndTime());
     }
     return "";

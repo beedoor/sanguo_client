@@ -59,6 +59,18 @@ public class UserBean
   
   public void setAreaName(String areaName)
   {
+	  if(areaName != null)
+	  {
+		  List<GameAreaInfo> allGameList = getAllGameList();
+		  for(GameAreaInfo ga:allGameList)  
+		  {
+			  if(ga.getName().equals(areaName))
+			  {
+				  this.areaId = ga.getId();
+				  break;
+			  }
+		  }
+	  }
     this.areaName = areaName;
   }
   
@@ -218,6 +230,7 @@ public class UserBean
   
   public Long getAreaId()
   {
+	  
     return this.areaId;
   }
   

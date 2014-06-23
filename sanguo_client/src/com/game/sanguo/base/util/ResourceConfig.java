@@ -20,14 +20,13 @@ public class ResourceConfig {
 	private List<String> barrackAreaIdList = new ArrayList<String>();
 	private List<String> marketAreaIdList = new ArrayList<String>();
 	private List<String> treasureAreaIdList = new ArrayList<String>();
-	private List<String> soliderAreaIdList = new ArrayList<String>(); 
-	
-	List<ResourceItem> resourceItemList= new ArrayList<ResourceItem>();
+	private List<String> soliderAreaIdList = new ArrayList<String>();
 
-	
+	List<ResourceItem> resourceItemList = new ArrayList<ResourceItem>();
+
 	public ResourceConfig() {
 	}
-	
+
 	public List<String> getGoldAreaIdList() {
 		return goldAreaIdList;
 	}
@@ -76,36 +75,46 @@ public class ResourceConfig {
 		this.soliderAreaIdList = soliderAreaIdList;
 	}
 
-	public void addItem(ResourceItem ri)
-	{
-		if(ri.getType().equals("gold"))
-		{
+	public void addItem(ResourceItem ri) {
+		if (ri.getType().equals("gold")) {
 			goldAreaIdList.add(ri.getAreaId());
-		}else if(ri.getType().equals("barrack"))
-		{
+		} else if (ri.getType().equals("barrack")) {
 			barrackAreaIdList.add(ri.getAreaId());
-		}else if(ri.getType().equals("market"))
-		{
+		} else if (ri.getType().equals("market")) {
 			marketAreaIdList.add(ri.getAreaId());
-		}else if(ri.getType().equals("treasure"))
-		{
+		} else if (ri.getType().equals("treasure")) {
 			treasureAreaIdList.add(ri.getAreaId());
-		}else if(ri.getType().equals("solider"))
-		{
+		} else if (ri.getType().equals("solider")) {
 			soliderAreaIdList.add(ri.getAreaId());
 		}
 		resourceItemList.add(ri);
 	}
 
-	public void loadResourceConfig(){
+	private void resetConfig() {
+
+		goldAreaIdList.clear();
+
+		barrackAreaIdList.clear();
+
+		marketAreaIdList.clear();
+
+		treasureAreaIdList.clear();
+
+		soliderAreaIdList.clear();
+
+		resourceItemList.clear();
+	}
+
+	public void loadResourceConfig() {
 		File configFile = new File("./config/resource.xml");
 		if (!configFile.exists()) {
 			logger.error("缺乏资源配置文件，创建一个");
 			return;
 		}
+		resetConfig();
 		loadConfig(configFile);
 	}
-	
+
 	private void loadConfig(File configFile) {
 		try {
 			Digester dig = new Digester();
@@ -128,11 +137,11 @@ public class ResourceConfig {
 		digester.addBeanPropertySetter("resources/resource/areaId", "areaId");
 		digester.addSetNext("resources/resource", "addItem");
 	}
-	
-	public static void main(String args[])
-	{
+
+	public static void main(String args[]) {
 		ResourceConfig config = new ResourceConfig();
 		config.loadResourceConfig();
-		System.out.println(Arrays.toString(config.treasureAreaIdList.toArray()));
+		System.out
+				.println(Arrays.toString(config.treasureAreaIdList.toArray()));
 	}
 }

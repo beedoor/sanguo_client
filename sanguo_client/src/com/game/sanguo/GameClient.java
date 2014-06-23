@@ -81,6 +81,7 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.eclipse.swt.SWT;
 
 public class GameClient
   extends ApplicationWindow
@@ -294,7 +295,7 @@ public class GameClient
         GameClient.this.measureViewer.setInput(GameClient.this.searchResult.getTreasureList());
       }
     });
-    tblclmnNewColumn_6.setWidth(100);
+    tblclmnNewColumn_6.setWidth(90);
     tblclmnNewColumn_6.setText("occu");
     
     TableViewerColumn tableViewerColumn_27 = new TableViewerColumn(this.measureViewer, 0);
@@ -307,8 +308,12 @@ public class GameClient
         GameClient.this.measureViewer.setInput(GameClient.this.searchResult.getTreasureList());
       }
     });
-    tblclmnNewColumn_27.setWidth(100);
+    tblclmnNewColumn_27.setWidth(90);
     tblclmnNewColumn_27.setText("union");
+    
+    TableColumn tblclmnNewColumn_8 = new TableColumn(table_2, SWT.NONE);
+    tblclmnNewColumn_8.setWidth(35);
+    tblclmnNewColumn_8.setText("sta");
     
     TableViewerColumn tableViewerColumn_15 = new TableViewerColumn(this.measureViewer, 0);
     TableColumn tblclmnNewColumn_15 = tableViewerColumn_15.getColumn();
@@ -320,7 +325,7 @@ public class GameClient
         GameClient.this.measureViewer.setInput(GameClient.this.searchResult.getTreasureList());
       }
     });
-    tblclmnNewColumn_15.setWidth(150);
+    tblclmnNewColumn_15.setWidth(100);
     tblclmnNewColumn_15.setText("endTime");
     
     TabItem tbtmNewItem_4 = new TabItem(tabFolder_2, 0);
@@ -355,7 +360,7 @@ public class GameClient
         GameClient.this.goldViewer.setInput(GameClient.this.searchResult.getGoldList());
       }
     });
-    tblclmnNewColumn_11.setWidth(100);
+    tblclmnNewColumn_11.setWidth(90);
     tblclmnNewColumn_11.setText("occu");
     
 
@@ -370,8 +375,12 @@ public class GameClient
         GameClient.this.goldViewer.setInput(GameClient.this.searchResult.getGoldList());
       }
     });
-    tblclmnNewColumn_28.setWidth(100);
+    tblclmnNewColumn_28.setWidth(90);
     tblclmnNewColumn_28.setText("union");
+    
+    TableColumn tblclmnNewColumn_9 = new TableColumn(table_3, SWT.NONE);
+    tblclmnNewColumn_9.setWidth(35);
+    tblclmnNewColumn_9.setText("sta");
     
     TableViewerColumn tableViewerColumn_16 = new TableViewerColumn(this.goldViewer, 0);
     TableColumn tblclmnNewColumn_16 = tableViewerColumn_16.getColumn();
@@ -383,7 +392,7 @@ public class GameClient
         GameClient.this.goldViewer.setInput(GameClient.this.searchResult.getGoldList());
       }
     });
-    tblclmnNewColumn_16.setWidth(150);
+    tblclmnNewColumn_16.setWidth(100);
     tblclmnNewColumn_16.setText("endTime");
     
     TabItem tbtmNewItem_5 = new TabItem(tabFolder_2, 0);
@@ -418,7 +427,7 @@ public class GameClient
         GameClient.this.marketViewer.setInput(GameClient.this.searchResult.getMarketList());
       }
     });
-    tblclmnNewColumn_12.setWidth(100);
+    tblclmnNewColumn_12.setWidth(90);
     tblclmnNewColumn_12.setText("occu");
     
 
@@ -433,8 +442,12 @@ public class GameClient
         GameClient.this.marketViewer.setInput(GameClient.this.searchResult.getMarketList());
       }
     });
-    tblclmnNewColumn_29.setWidth(100);
+    tblclmnNewColumn_29.setWidth(90);
     tblclmnNewColumn_29.setText("union");
+    
+    TableColumn tblclmnNewColumn_14 = new TableColumn(table_4, SWT.NONE);
+    tblclmnNewColumn_14.setWidth(35);
+    tblclmnNewColumn_14.setText("sta");
     
     TableViewerColumn tableViewerColumn_17 = new TableViewerColumn(this.marketViewer, 0);
     TableColumn tblclmnNewColumn_17 = tableViewerColumn_17.getColumn();
@@ -446,7 +459,7 @@ public class GameClient
         GameClient.this.marketViewer.setInput(GameClient.this.searchResult.getMarketList());
       }
     });
-    tblclmnNewColumn_17.setWidth(150);
+    tblclmnNewColumn_17.setWidth(100);
     tblclmnNewColumn_17.setText("endTime");
     
     TabItem tbtmNewItem_6 = new TabItem(tabFolder_2, 0);
@@ -481,7 +494,7 @@ public class GameClient
         GameClient.this.soliderViewer.setInput(GameClient.this.searchResult.getSoliderList());
       }
     });
-    tblclmnNewColumn_20.setWidth(100);
+    tblclmnNewColumn_20.setWidth(90);
     tblclmnNewColumn_20.setText("occu");
     
 
@@ -496,8 +509,12 @@ public class GameClient
         GameClient.this.soliderViewer.setInput(GameClient.this.searchResult.getSoliderList());
       }
     });
-    tblclmnNewColumn_30.setWidth(100);
+    tblclmnNewColumn_30.setWidth(90);
     tblclmnNewColumn_30.setText("union");
+    
+    TableColumn tblclmnNewColumn_18 = new TableColumn(table_5, SWT.NONE);
+    tblclmnNewColumn_18.setWidth(35);
+    tblclmnNewColumn_18.setText("sta");
     
     TableViewerColumn tableViewerColumn_21 = new TableViewerColumn(this.soliderViewer, 0);
     TableColumn tblclmnNewColumn_21 = tableViewerColumn_21.getColumn();
@@ -509,7 +526,7 @@ public class GameClient
         GameClient.this.soliderViewer.setInput(GameClient.this.searchResult.getSoliderList());
       }
     });
-    tblclmnNewColumn_21.setWidth(150);
+    tblclmnNewColumn_21.setWidth(100);
     tblclmnNewColumn_21.setText("endtime");
     
     TabItem tbtmAllitem = new TabItem(tabFolder_2, 0);
@@ -634,7 +651,7 @@ public class GameClient
     });
     btnNewButton_1.setBounds(306, 56, 63, 24);
     this.formToolkit.adapt(btnNewButton_1, true, true);
-    btnNewButton_1.setText("export");
+    btnNewButton_1.setText("show");
     
     this.text_3 = new Text(grpResource, 2048);
     this.text_3.addFocusListener(new FocusAdapter()
@@ -864,7 +881,7 @@ public class GameClient
         RebuildResourceDialog rebuildResource = new RebuildResourceDialog(GameClient.this.userBean, GameClient.this.getParentShell());
         int ok = rebuildResource.open();
         if (ok == 0) {
-          GameHelper.submitTask(new TaskUnit(new GetTimeZoneTask(GameClient.this.userBean, GameClient.this.searchResult, null)));
+          GameHelper.submitTask(new TaskUnit(new GetTimeZoneTask(GameClient.this.userBean,GameClient.this.searchResult,resourceConfig , null)));
         }
       }
     };
