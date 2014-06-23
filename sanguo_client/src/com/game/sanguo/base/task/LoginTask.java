@@ -45,25 +45,32 @@ public class LoginTask extends GameTask {
 
 	public boolean doAction() {
 		try {
-			userBean.reSetNumberIdAndBatchId();
-
-			getBaseInfoNew();
-			loginByEmail();
-			sleep(5);// 游戏加载
-			getServerList();
-			clientUpdate();
-			loginGame();
-			sleep(5);// 游戏加载
-			startChat();
-			msgIdServerTime();
-			// 获取资源信息
-			msgIdGetCitiesGoldAvailable();
-			logger.info(userBean.getUserName()+" 登录成功");
+			doLoginGame();
+			doLoginArea();
 			return true;
 		} catch (Throwable e) {
 			logger.error("登录异常", e);
 		}
 		return false;
+	}
+
+	public void doLoginGame() {
+		this.userBean.reSetNumberIdAndBatchId();
+		getBaseInfoNew();
+		loginByEmail();
+		sleep(5);
+		getServerList();
+		logger.info(this.userBean.getUserName() + " 登录成功");
+	}
+
+	public void doLoginArea() {
+		clientUpdate();
+		loginGame();
+		sleep(5);
+		startChat();
+		msgIdServerTime();
+
+		msgIdGetCitiesGoldAvailable();
 	}
 
 	private void getBaseInfoNew() {
@@ -91,8 +98,8 @@ public class LoginTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("c0-param2", "string:10"));
 		postMethod.addParameter(new NameValuePair("c0-param3",
 				"string:com.noumena.android.olcn.of"));
-		postMethod.addParameter(new NameValuePair("batchId", ""
-				+ userBean.getBatchId()));
+		postMethod.addParameter(new NameValuePair("batchId", this.userBean
+				.getBatchId() + ""));
 
 		doRequest(postMethod);
 	}
@@ -118,22 +125,20 @@ public class LoginTask extends GameTask {
 				"loginByEmail"));
 		postMethod.addParameter(new NameValuePair("c0-id", "0"));
 		postMethod.addParameter(new NameValuePair("c0-param0", "string:"
-				+ userBean.getUserName()));
+				+ this.userBean.getUserName()));
 		postMethod.addParameter(new NameValuePair("c0-param1", "string:"
-				+ userBean.getPassword()));
-		postMethod.addParameter(new NameValuePair("batchId", ""
-				+ userBean.getBatchId()));
+				+ this.userBean.getPassword()));
+		postMethod.addParameter(new NameValuePair("batchId", this.userBean
+				.getBatchId() + ""));
 
-		InputStream inputStream =doRequest(postMethod);
-
+		InputStream inputStream = doRequest(postMethod);
 		try {
-			LoginByEmailInfo beanInfo = initBeanInfo(LoginByEmailInfo.class,
-					inputStream, "dwr");
-			userBean.setCheckId(beanInfo.getCheckId());
-			userBean.setAreaId(beanInfo.getServerId());
-			userBean.setUserID(beanInfo.getUserId());
+			LoginByEmailInfo beanInfo = (LoginByEmailInfo) initBeanInfo(
+					LoginByEmailInfo.class, inputStream, "dwr");
+			this.userBean.setCheckId(beanInfo.getCheckId());
+			this.userBean.setAreaId(beanInfo.getServerId());
+			this.userBean.setUserID(beanInfo.getUserId());
 		} catch (Throwable e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -141,7 +146,7 @@ public class LoginTask extends GameTask {
 	private void loginGame() {
 		PostMethod postMethod = new PostMethod(String.format(
 				"%s/hero/dwr/call/plaincall/DwrGame.loginGame.dwr;jsessionid=",
-				userBean.getUrlPrx()));
+				new Object[] { this.userBean.getUrlPrx() }));
 		postMethod.addRequestHeader("Content-type", "application/octet-stream");
 		postMethod.addRequestHeader("Cache-Control", "no-cache");
 		postMethod.addRequestHeader("Pragma", "no-cache");
@@ -160,52 +165,44 @@ public class LoginTask extends GameTask {
 				.addParameter(new NameValuePair("c0-methodName", "loginGame"));
 		postMethod.addParameter(new NameValuePair("c0-id", "0"));
 		postMethod.addParameter(new NameValuePair("c0-param0", "number:"
-				+ userBean.getUserID()));
+				+ this.userBean.getUserID()));
 		postMethod.addParameter(new NameValuePair("c0-param1", "string:ANDK"));
 		postMethod.addParameter(new NameValuePair("c0-param2", "number:"
-				+ userBean.getAreaId()));
+				+ this.userBean.getAreaId()));
 		postMethod.addParameter(new NameValuePair("c0-param3", "string:"
-				+ userBean.getCheckId()));
+				+ this.userBean.getCheckId()));
 		postMethod.addParameter(new NameValuePair("c0-param4",
 				"string:602102200"));
 		postMethod.addParameter(new NameValuePair("c0-param5", "string:"));
 		postMethod.addParameter(new NameValuePair("c0-param6",
 				"string:official"));
-		postMethod.addParameter(new NameValuePair("batchId", ""
-				+ userBean.getBatchId()));
+		postMethod.addParameter(new NameValuePair("batchId", this.userBean
+				.getBatchId() + ""));
 
-		InputStream inputStream =doRequest(postMethod);
-
+		InputStream inputStream = doRequest(postMethod);
 		try {
-			// LoginGameInfo beanInfo = initBeanInfo(LoginGameInfo.class,
-			// postMethod.getResponseBodyAsStream(), "dwr");
 			LoginGameInfo beanInfo = decoeLoginGameInfo(inputStream);
-			userBean.setLoginGameInfo(beanInfo);
-			userBean.setSessionId(beanInfo.getSessionId());
+			this.userBean.setLoginGameInfo(beanInfo);
+			this.userBean.setSessionId(beanInfo.getSessionId());
 		} catch (Throwable e) {
 			logger.error("登录服务器异常", e);
 		}
 	}
 
-	/**
-	 * 解析登录游戏内容数据
-	 * 
-	 * @param inputStream
-	 */
 	private LoginGameInfo decoeLoginGameInfo(InputStream inputStream) {
 		LoginGameInfo loginGameInfo = null;
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					inputStream));
-			List<PlayerCitysInfo> playerCitysInfoList = new ArrayList<PlayerCitysInfo>();
-			List<PlayerHerosInfo> playerHerosInfoList = new ArrayList<PlayerHerosInfo>();
-			List<PlayerItemsInfo> playerItemsInfoList = new ArrayList<PlayerItemsInfo>();
+			List<PlayerCitysInfo> playerCitysInfoList = new ArrayList();
+			List<PlayerHerosInfo> playerHerosInfoList = new ArrayList();
+			List<PlayerItemsInfo> playerItemsInfoList = new ArrayList();
 			Pattern itemsPattern = Pattern
 					.compile("(s[\\d]{1,})\\[[\\d]{1,}\\]=");
 			Pattern itemsContentPattern = Pattern.compile("(s[\\d]{1,})[.]");
-			Map<String, List<String>> itemChildMap = new HashMap<String, List<String>>();
-			Map<String, String> itemContentMap = new HashMap<String, String>();
-			for (String s1 = null; (s1 = br.readLine()) != null;)
+			Map<String, List<String>> itemChildMap = new HashMap();
+			Map<String, String> itemContentMap = new HashMap();
+			for (String s1 = null; (s1 = br.readLine()) != null;) {
 				if (s1.startsWith("dwr")) {
 					loginGameInfo = (LoginGameInfo) initBeanInfo(
 							LoginGameInfo.class, s1);
@@ -219,11 +216,11 @@ public class LoginTask extends GameTask {
 					m = itemsPattern.matcher(s1);
 					if (m.find()) {
 						String keyName = m.group(1);
-						List<String> sList = new ArrayList<String>();
+						List<String> sList = new ArrayList();
 						itemChildMap.put(keyName, sList);
 						String tempStr = m.replaceAll("");
-						String strArray[] = tempStr.split(";");
-						String as[];
+						String[] strArray = tempStr.split(";");
+						String[] as;
 						int j = (as = strArray).length;
 						for (int i = 0; i < j; i++) {
 							String s = as[i];
@@ -231,24 +228,23 @@ public class LoginTask extends GameTask {
 						}
 					}
 				}
-
+			}
 			if (itemChildMap.containsKey(loginGameInfo.getPlayerCitys())) {
+				Iterator<String> iterator = ((List) itemChildMap
+						.get(loginGameInfo.getPlayerCitys())).iterator();
 				String content;
-				for (Iterator<String> iterator = ((List<String>) itemChildMap
-						.get(loginGameInfo.getPlayerCitys())).iterator(); iterator
-						.hasNext(); playerCitysInfoList
+				for (; iterator.hasNext(); playerCitysInfoList
 						.add((PlayerCitysInfo) initBeanInfo(
 								PlayerCitysInfo.class, content, ';', '='))) {
 					String itemName = (String) iterator.next();
 					content = (String) itemContentMap.get(itemName);
 				}
-
 			}
 			if (itemChildMap.containsKey(loginGameInfo.getPlayerHeros())) {
+				Iterator<String> iterator1 = ((List) itemChildMap
+						.get(loginGameInfo.getPlayerHeros())).iterator();
 				String content;
-				for (Iterator<String> iterator1 = ((List<String>) itemChildMap
-						.get(loginGameInfo.getPlayerHeros())).iterator(); iterator1
-						.hasNext(); playerHerosInfoList
+				for (; iterator1.hasNext(); playerHerosInfoList
 						.add((PlayerHerosInfo) initBeanInfo(
 								PlayerHerosInfo.class, content, ';', '='))) {
 					String itemName = (String) iterator1.next();
@@ -256,16 +252,15 @@ public class LoginTask extends GameTask {
 				}
 			}
 			if (itemChildMap.containsKey(loginGameInfo.getPlayerItems())) {
+				Iterator<String> iterator2 = ((List) itemChildMap
+						.get(loginGameInfo.getPlayerItems())).iterator();
 				String content;
-				for (Iterator<String> iterator2 = ((List<String>) itemChildMap
-						.get(loginGameInfo.getPlayerItems())).iterator(); iterator2
-						.hasNext(); playerItemsInfoList
+				for (; iterator2.hasNext(); playerItemsInfoList
 						.add((PlayerItemsInfo) initBeanInfo(
 								PlayerItemsInfo.class, content, ';', '='))) {
 					String itemName = (String) iterator2.next();
 					content = (String) itemContentMap.get(itemName);
 				}
-
 			}
 			if (loginGameInfo != null) {
 				loginGameInfo.setPlayerCitysInfoList(playerCitysInfoList);
@@ -284,18 +279,18 @@ public class LoginTask extends GameTask {
 			List<PlayerHerosInfo> playerHerosInfoList,
 			List<PlayerItemsInfo> playerItemsInfoList) {
 		for (PlayerCitysInfo playerCitysInfo : playerCitysInfoList) {
-			CityItem cityItem = userBean.getItemConfig().decodeCity(
+			CityItem cityItem = this.userBean.getItemConfig().decodeCity(
 					playerCitysInfo.getSourceId());
-			if (null != cityItem) {
+			if (cityItem != null) {
 				playerCitysInfo.setCityName(cityItem.getCity_name());
 			}
 		}
 		for (PlayerHerosInfo playerHerosInfo : playerHerosInfoList) {
-			userBean.putHeroIdToSrcId(playerHerosInfo.getId(),
+			this.userBean.putHeroIdToSrcId(playerHerosInfo.getId(),
 					playerHerosInfo.getSourceId());
-			CityItem cityItem = userBean.getItemConfig().decodeCity(
+			CityItem cityItem = this.userBean.getItemConfig().decodeCity(
 					playerHerosInfo.getCityId());
-			HeroItem heroItem = userBean.getItemConfig().decodeHero(
+			HeroItem heroItem = this.userBean.getItemConfig().decodeHero(
 					playerHerosInfo.getSourceId());
 			if (cityItem != null) {
 				playerHerosInfo.setCityName(cityItem.getCity_name());
@@ -305,19 +300,19 @@ public class LoginTask extends GameTask {
 			}
 		}
 		for (PlayerItemsInfo playerItemsInfo : playerItemsInfoList) {
-			userBean.putItemIdToSrcId(playerItemsInfo.getId(),
+			this.userBean.putItemIdToSrcId(playerItemsInfo.getId(),
 					playerItemsInfo.getSourceId());
-			EquipmentItem equipmentItem = userBean.getItemConfig()
+			EquipmentItem equipmentItem = this.userBean.getItemConfig()
 					.decodeEquipment(playerItemsInfo.getSourceId());
-			HeroItem heroItem = userBean.getItemConfig().decodeHero(
-					userBean.decodeHeroSrcIdByUseId(playerItemsInfo
+			HeroItem heroItem = this.userBean.getItemConfig().decodeHero(
+					this.userBean.decodeHeroSrcIdByUseId(playerItemsInfo
 							.getHeroUseId()));
 			if (equipmentItem != null) {
 				playerItemsInfo.setItemName(equipmentItem.getName());
 			} else {
-				PackItem packItem = userBean.getItemConfig().decodePack(
+				PackItem packItem = this.userBean.getItemConfig().decodePack(
 						playerItemsInfo.getSourceId());
-				if (null != packItem) {
+				if (packItem != null) {
 					playerItemsInfo.setItemName(packItem.getProps_name());
 				}
 			}
@@ -327,8 +322,7 @@ public class LoginTask extends GameTask {
 		}
 	}
 
-	public void getServerList() {
-		// 创建GET方法的实例
+	private void getServerList() {
 		PostMethod postMethod = new PostMethod(
 				"http://118.26.192.76:8080/VersionServerIOS/dwr//call/plaincall/DwrEntry.getServerList.dwr;jsessionid");
 		postMethod.addRequestHeader("Content-type", "application/octet-stream");
@@ -348,29 +342,27 @@ public class LoginTask extends GameTask {
 				"getServerList"));
 		postMethod.addParameter(new NameValuePair("c0-id", "0"));
 		postMethod.addParameter(new NameValuePair("c0-param0", "string:8"));
-		postMethod.addParameter(new NameValuePair("batchId", ""
-				+ userBean.getBatchId()));
-		InputStream inputStream =doRequest(postMethod);
-
+		postMethod.addParameter(new NameValuePair("batchId", this.userBean
+				.getBatchId() + ""));
+		InputStream inputStream = doRequest(postMethod);
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					inputStream));
 			String s1 = null;
 			while ((s1 = br.readLine()) != null) {
 				if (s1.startsWith("s")) {
-					// 游戏服务器了
 					int prex = s1.indexOf(".");
 					String areaIdStr = s1.substring(0, prex);
-					// 进行替换咯
+
 					s1 = s1.replaceAll(areaIdStr + "[.]", "");
 					s1 = s1.replaceAll("[:]", "#");
 					s1 = s1.replaceAll("[=]", ":");
 					s1 = s1.replaceAll("[;]", ",");
-					GameAreaInfo gameArea = initBeanInfo(GameAreaInfo.class,
-							"{" + s1 + "}");
+					GameAreaInfo gameArea = (GameAreaInfo) initBeanInfo(
+							GameAreaInfo.class, "{" + s1 + "}");
 					String url = gameArea.getUrl().replaceAll("#", ":");
 					gameArea.setUrl(url);
-					userBean.putGameAreaInfo(gameArea);
+					this.userBean.putGameAreaInfo(gameArea);
 				}
 			}
 		} catch (Throwable e) {
@@ -378,8 +370,7 @@ public class LoginTask extends GameTask {
 		}
 	}
 
-	public void clientUpdate() {
-		// 创建GET方法的实例
+	private void clientUpdate() {
 		PostMethod postMethod = new PostMethod(
 				"http://118.26.192.76:8080/VersionServer/dwr//call/plaincall/DwrEntry.clientUpdate.dwr;jsessionid");
 		postMethod.addRequestHeader("Content-type", "application/octet-stream");
@@ -402,31 +393,30 @@ public class LoginTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("c0-param1", "string:2"));
 		postMethod.addParameter(new NameValuePair("c0-param2", "string:"
 				+ getClientVersion()));
-		postMethod.addParameter(new NameValuePair("batchId", ""
-				+ userBean.getBatchId()));
-		InputStream inputStream =doRequest(postMethod);
-
+		postMethod.addParameter(new NameValuePair("batchId", this.userBean
+				.getBatchId() + ""));
+		InputStream inputStream = doRequest(postMethod);
 		try {
-			ClientUpdateInfo clientInfo = initBeanInfo(ClientUpdateInfo.class,
-					inputStream, "dwr");
-			userBean.setClientInfo(clientInfo);
+			ClientUpdateInfo clientInfo = (ClientUpdateInfo) initBeanInfo(
+					ClientUpdateInfo.class, inputStream, "dwr");
+			this.userBean.setClientInfo(clientInfo);
 		} catch (Throwable e) {
 			logger.error("客户端更新异常", e);
 		}
 	}
 
 	private String getClientVersion() {
-		if (userBean.getClientInfo() == null) {
+		if (this.userBean.getClientInfo() == null) {
 			return "475";
 		}
-		return userBean.getClientInfo().getLatestVersion() + "";
+		return this.userBean.getClientInfo().getLatestVersion() + "";
 	}
 
 	public void startChat() {
 		PostMethod postMethod = new PostMethod(
 				String.format(
 						"%s/ChatServer/dwr/call/plaincall/DwrChat.startChat.dwr;jsessionid",
-						userBean.getUrlPrx()));
+						new Object[] { this.userBean.getUrlPrx() }));
 		postMethod.addRequestHeader("Content-type", "application/octet-stream");
 		postMethod.addRequestHeader("Cache-Control", "no-cache");
 		postMethod.addRequestHeader("Pragma", "no-cache");
@@ -444,16 +434,15 @@ public class LoginTask extends GameTask {
 				.addParameter(new NameValuePair("c0-methodName", "startChat"));
 		postMethod.addParameter(new NameValuePair("c0-id", "0"));
 		postMethod.addParameter(new NameValuePair("c0-param0", "number:"
-				+ userBean.getAreaId()));
+				+ this.userBean.getAreaId()));
 		postMethod.addParameter(new NameValuePair("c0-param1", "number:1"));
-		postMethod.addParameter(new NameValuePair("batchId", ""
-				+ userBean.getBatchId()));
-		InputStream inputStream=doRequest(postMethod);
-
+		postMethod.addParameter(new NameValuePair("batchId", this.userBean
+				.getBatchId() + ""));
+		InputStream inputStream = doRequest(postMethod);
 		try {
-			StartChatInfo beanInfo = initBeanInfo(StartChatInfo.class,
-					inputStream, "dwr");
-			userBean.setChatSessionId(beanInfo.getSessionId());
+			StartChatInfo beanInfo = (StartChatInfo) initBeanInfo(
+					StartChatInfo.class, inputStream, "dwr");
+			this.userBean.setChatSessionId(beanInfo.getSessionId());
 		} catch (Throwable e) {
 			logger.error("获取聊天会话ID异常", e);
 		}
@@ -463,8 +452,9 @@ public class LoginTask extends GameTask {
 		PostMethod postMethod = new PostMethod(
 				String.format(
 						"%s/hero/dwr/call/plaincall/DwrGameWorld.getMsg.dwr;jsessionid=%s;mid=%s",
-						userBean.getUrlPrx(), userBean.getSessionId(),
-						userBean.getSessionId()));
+						new Object[] { this.userBean.getUrlPrx(),
+								this.userBean.getSessionId(),
+								this.userBean.getSessionId() }));
 		postMethod.addRequestHeader("Content-type", "application/octet-stream");
 		postMethod.addRequestHeader("Cache-Control", "no-cache");
 		postMethod.addRequestHeader("Pragma", "no-cache");
@@ -474,8 +464,8 @@ public class LoginTask extends GameTask {
 		postMethod.addRequestHeader("Connection", "Keep-Alive");
 		postMethod.addParameter(new NameValuePair("callCount", "1"));
 		postMethod.addParameter(new NameValuePair("page", ""));
-		postMethod.addParameter(new NameValuePair("httpSessionId", userBean
-				.getSessionId()));
+		postMethod.addParameter(new NameValuePair("httpSessionId",
+				this.userBean.getSessionId()));
 		postMethod.addParameter(new NameValuePair("scriptSessionId",
 				"51A0434AF2250025CA28BCB7B4E55E900"));
 		postMethod.addParameter(new NameValuePair("c0-scriptName",
@@ -492,8 +482,8 @@ public class LoginTask extends GameTask {
 				.addParameter(new NameValuePair(
 						"c0-param0",
 						"Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
-		postMethod.addParameter(new NameValuePair("batchId", ""
-				+ userBean.getBatchId()));
+		postMethod.addParameter(new NameValuePair("batchId", this.userBean
+				.getBatchId() + ""));
 		doRequest(postMethod);
 	}
 
@@ -501,8 +491,9 @@ public class LoginTask extends GameTask {
 		PostMethod postMethod = new PostMethod(
 				String.format(
 						"%s/hero/dwr/call/plaincall/DwrGameWorld.getMsg.dwr;jsessionid=%s;mid=%s",
-						userBean.getUrlPrx(), userBean.getSessionId(),
-						userBean.getSessionId()));
+						new Object[] { this.userBean.getUrlPrx(),
+								this.userBean.getSessionId(),
+								this.userBean.getSessionId() }));
 		postMethod.addRequestHeader("Content-type", "application/octet-stream");
 		postMethod.addRequestHeader("Cache-Control", "no-cache");
 		postMethod.addRequestHeader("Pragma", "no-cache");
@@ -512,8 +503,8 @@ public class LoginTask extends GameTask {
 		postMethod.addRequestHeader("Connection", "Keep-Alive");
 		postMethod.addParameter(new NameValuePair("callCount", "1"));
 		postMethod.addParameter(new NameValuePair("page", ""));
-		postMethod.addParameter(new NameValuePair("httpSessionId", userBean
-				.getSessionId()));
+		postMethod.addParameter(new NameValuePair("httpSessionId",
+				this.userBean.getSessionId()));
 		postMethod.addParameter(new NameValuePair("scriptSessionId",
 				"51A0434AF2250025CA28BCB7B4E55E900"));
 		postMethod.addParameter(new NameValuePair("c0-scriptName",
@@ -530,8 +521,8 @@ public class LoginTask extends GameTask {
 				.addParameter(new NameValuePair(
 						"c0-param0",
 						"Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
-		postMethod.addParameter(new NameValuePair("batchId", ""
-				+ userBean.getBatchId()));
+		postMethod.addParameter(new NameValuePair("batchId", this.userBean
+				.getBatchId() + ""));
 		doRequest(postMethod);
 	}
 }

@@ -52,6 +52,27 @@ public class PlayerHerosInfo {
 	private String cityName;
 	private String heroName;
 	private Long playerId=0L;
+	private Long maxMP;
+	private Long maxHP;
+	private Long intelligence;
+	private Long force;
+	
+	public Long getMaxMP() {
+		return maxMP;
+	}
+
+	public void setMaxMP(String maxMP) {
+		this.maxMP = Long.parseLong(maxMP);
+	}
+
+	public Long getMaxHP() {
+		return maxHP;
+	}
+
+	public void setMaxHP(String maxHP) {
+		this.maxHP = Long.parseLong(maxHP);
+	}
+
 	public Long getPlayerId() {
 		return playerId;
 	}
@@ -378,6 +399,21 @@ public class PlayerHerosInfo {
 	public void setUpdateDate(String updateDate) {
 		this.updateDate = GameUtil.parseDate(updateDate);
 	}
+	public Long getIntelligence() {
+		return intelligence;
+	}
+
+	public void setIntelligence(String intelligence) {
+		this.intelligence = Long.parseLong(intelligence);
+	}
+
+	public Long getForce() {
+		return force;
+	}
+
+	public void setForce(String force) {
+		this.force = Long.parseLong(force);
+	}
 
 	@Override
 	public String toString() {
@@ -390,4 +426,6 @@ public class PlayerHerosInfo {
 				+ sourceId + ", surrenderGrem=" + surrenderGrem + ", surrenderNum=" + surrenderNum + ", type=" + type + ", updateDate=" + updateDate + ", cityName=" + cityName + ", heroName="
 				+ heroName + "]";
 	}
+
+
 }
