@@ -41,12 +41,12 @@ public class CitySearchAndGoldTask extends GameTask {
 
 	public boolean doAction() {
 		try {
-			if (userBean.getConfigure().getSearchResource() == 1) {
+//			if (userBean.getConfigure().getSearchResource() == 1) {
 				msgIdGetGold();
 				msgIdCitySearch();
-			} else {
-				logger.info("禁止自动收资源");
-			}
+//			} else {
+//				logger.info("禁止自动收资源");
+//			}
 			return true;
 		} catch (Throwable e) {
 			logger.error("定时搜索资源任务异常", e);
@@ -190,8 +190,8 @@ public class CitySearchAndGoldTask extends GameTask {
 					(List<String>) itemStrListMap.get(cityInfo.getItems()),
 					SearchItem.class);
 			logger.info(
-					"当前金币[{}],获得金币[{}],物品[{}]",
-					new Object[] { cityInfo.getGold(),
+					"[{}]当前金币[{}],获得金币[{}],物品[{}]",
+					new Object[] {userBean.getUserName(), cityInfo.getGold(),
 							cityInfo.getSearchGold(),
 							decodeItem(searchItem, itemConfig) });
 		} catch (Throwable e) {

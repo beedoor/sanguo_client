@@ -58,7 +58,7 @@
         </filter>
     </appender>
  
-    <root level="debug">
+    <root level="info">
         <appender-ref ref="stdout" />
         <appender-ref ref="file.debug" />
         <appender-ref ref="file.info" />
