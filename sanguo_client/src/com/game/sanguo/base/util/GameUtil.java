@@ -1,5 +1,9 @@
 package com.game.sanguo.base.util;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -7,6 +11,25 @@ public class GameUtil {
 
 	private static SimpleDateFormat sdf = new SimpleDateFormat("MM-dd HH:mm:ss");
 
+	public static String convertStr(InputStream input)
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(input));
+		StringBuffer strb = new StringBuffer();
+		String s1 = null;
+		try {
+			while ((s1 = br.readLine()) != null) {
+				strb.append(s1);
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return strb.toString();
+	}
+	public static String parseUnicode(InputStream input) {
+		return parseUnicode(convertStr(input));
+	}
 	public static String parseUnicode(String line) {
 		if (line == null) {
 			return "";

@@ -4,7 +4,7 @@
 		<user>
  			<userName>xinyuanalex@sohu.com</userName>
  			<password>123456</password> 
-			<areaId>8</areaId>
+			<areaName>西凉</areaName>
 			<reLoginTime desc="断线重新登录时间间隔,以分钟记，120分即2小时">120</reLoginTime>
 			<configure>
 				<!--sortType :byName 按名字排序，byTime 按时间排序-->

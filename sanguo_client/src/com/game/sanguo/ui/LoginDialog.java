@@ -3,7 +3,9 @@ package com.game.sanguo.ui;
 import com.game.sanguo.base.domain.GameAreaInfo;
 import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.task.LoginTask;
+
 import java.util.List;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.BeanProperties;
 import org.eclipse.core.databinding.beans.IBeanValueProperty;
@@ -82,23 +84,28 @@ public class LoginDialog extends Dialog {
 
 		button.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				LoginDialog.this.loginTask.doLoginGame();
+				try {
+					LoginDialog.this.loginTask.doLoginGame();
 
-				List<GameAreaInfo> gInfoList = LoginDialog.this.userBean
-						.getAllGameList();
-				String[] s = new String[gInfoList.size()];
-				int select = 0;
-				for (int i = 0; i < gInfoList.size(); i++) {
-					s[i] = ((GameAreaInfo) gInfoList.get(i)).getName();
-					if (((GameAreaInfo) gInfoList.get(i)).getId() == LoginDialog.this.userBean
-							.getAreaId()) {
-						select = i;
+					List<GameAreaInfo> gInfoList = LoginDialog.this.userBean
+							.getAllGameList();
+					String[] s = new String[gInfoList.size()];
+					int select = 0;
+					for (int i = 0; i < gInfoList.size(); i++) {
+						s[i] = ((GameAreaInfo) gInfoList.get(i)).getName();
+						if (((GameAreaInfo) gInfoList.get(i)).getId() == LoginDialog.this.userBean
+								.getAreaId()) {
+							select = i;
+						}
 					}
+					LoginDialog.this.combo.setItems(s);
+					LoginDialog.this.combo.select(select);
+					button2.setEnabled(true);
+					button.setEnabled(false);
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
-				LoginDialog.this.combo.setItems(s);
-				LoginDialog.this.combo.select(select);
-				button2.setEnabled(true);
-				button.setEnabled(false);
 			}
 		});
 		button2.setEnabled(false);

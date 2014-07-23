@@ -14,7 +14,7 @@ public class PipleLineTask {
 	}
 
 	public void add(TaskUnit r) {
-		pipleQueue.add(r);
+		addFirst(r);
 
 	}
 

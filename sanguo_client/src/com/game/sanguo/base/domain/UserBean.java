@@ -21,6 +21,7 @@ public class UserBean
   private Long userID = Long.valueOf(0L);
   private String checkId;
   private Long areaId;
+  private Long vipLv = Long.valueOf(0L);
   private Long reLoginTime = Long.valueOf(0L);
   private ClientUpdateInfo clientInfo;
   private LoginGameInfo loginGameInfo = new LoginGameInfo();
@@ -32,8 +33,17 @@ public class UserBean
   private Map<Long, Long> heroIdToSrcIdMap = new HashMap();
   private String areaName = "";
   private String scanExclude;
+  private long notDonate;
   
-  public String getScanExclude()
+  public long getNotDonate() {
+	return notDonate;
+}
+
+public void setNotDonate(long notDonate) {
+	this.notDonate = notDonate;
+}
+
+public String getScanExclude()
   {
     return this.scanExclude;
   }
@@ -319,20 +329,18 @@ public class UserBean
     this.userID = userID;
   }
   
-  public String toString()
+  public Long getVipLv() {
+	return vipLv;
+}
+
+public void setVipLv(Long vipLv) {
+	this.vipLv = vipLv;
+}
+
+public String toString()
   {
     return 
     
-
-
-
-
-
-
-
-
-
-
       "UserBean [numberId=" + this.numberId + ", batchId=" + this.batchId + ", sessionId=" + this.sessionId + ", chatSessionId=" + this.chatSessionId + ", userName=" + this.userName + ", password=" + this.password + ", userID=" + this.userID + ", checkId=" + this.checkId + ", areaId=" + this.areaId + ", reLoginTime=" + this.reLoginTime + ", clientInfo=" + this.clientInfo + ", loginGameInfo=" + this.loginGameInfo + ", isSuspend=" + this.isSuspend + ", gameAreaInfoMap=" + this.gameAreaInfoMap + ", configure=" + this.configure + ", itemConfig=" + this.itemConfig + ", itemIdToSrcIdMap=" + this.itemIdToSrcIdMap + ", heroIdToSrcIdMap=" + this.heroIdToSrcIdMap + ", areaName=" + this.areaName + ", propertyChangeSupport=" + this.propertyChangeSupport + "]";
   }
 }

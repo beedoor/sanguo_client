@@ -72,7 +72,7 @@ public class UserConfig {
 		digester.addCallMethod("configuration/users/user/userName", "setUserName",0);
 		digester.addCallMethod("configuration/users/user/password", "setPassword",0);
 		digester.addCallMethod("configuration/users/user/reLoginTime", "setReLoginTime",0,new Class[]{Long.class});
-		digester.addCallMethod("configuration/users/user/areaId", "setAreaId",0,new Class[]{Long.class});
+		digester.addCallMethod("configuration/users/user/areaName", "setAreaName",0,new Class[]{String.class});
 		//设置扫描间隔
 //		digester.addSetProperties("configuration/users/user/configure/scanResource","waitTime","waitTime");
 //		digester.addCallMethod("configuration/users/user/configure/scanResource/gold","setGold",0,new Class[]{Long.class});
@@ -115,7 +115,7 @@ public class UserConfig {
 	public static void main(String args[]) {
 		UserConfig config = new UserConfig();
 		config.loadUserConfig();
-		UserBean userBean = config.userBeanMap.get("564195410@qq.com");
+		UserBean userBean = config.userBeanMap.get("xinyuanalex@sohu.com");
 		System.out.println(userBean.getConfigure());
 	}
 }

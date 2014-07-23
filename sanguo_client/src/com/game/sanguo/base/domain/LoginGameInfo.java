@@ -504,20 +504,46 @@ public class LoginGameInfo {
 		this.playerItemsInfoList = playerItemsInfoList;
 	}
 
+
+
+
+
+
 	@Override
 	public String toString() {
-		return "LoginGameInfo [autoFlag=" + autoFlag + ", captureHeros=" + captureHeros + ", challengeTimes=" + challengeTimes + ", changeNameTimes=" + changeNameTimes + ", computerCitys="
-				+ computerCitys + ", computerHeros=" + computerHeros + ", continuousLoginDays=" + continuousLoginDays + ", continuousLoginRewardRecv=" + continuousLoginRewardRecv + ", errCode="
-				+ errCode + ", errMsg=" + errMsg + ", gem=" + gem + ", gold=" + gold + ", goldLimitId=" + goldLimitId + ", head=" + head + ", heroBoardData=" + heroBoardData + ", id=" + id
-				+ ", lastChapterIsReward=" + lastChapterIsReward + ", lastForceId=" + lastForceId + ", leagueId=" + leagueId + ", maxMedicalCampStorage=" + maxMedicalCampStorage
-				+ ", medicalCampStorage=" + medicalCampStorage + ", monthCardRewardYB=" + monthCardRewardYB + ", name=" + name + ", occupyPvpMainCityId=" + occupyPvpMainCityId + ", option=" + option
-				+ ", permitLoginTime=" + permitLoginTime + ", playerCitys=" + playerCitys + ", playerHeros=" + playerHeros + ", playerItems=" + playerItems + ", preChapterIsReward="
-				+ preChapterIsReward + ", prepareSoldierNum=" + prepareSoldierNum + ", pvpMainCityOccupyHead=" + pvpMainCityOccupyHead + ", pvpMainCityOccupyName=" + pvpMainCityOccupyName
-				+ ", pvpScore=" + pvpScore + ", resultCode=" + resultCode + ", selectedHeroPresent=" + selectedHeroPresent + ", sendGold=" + sendGold + ", sessionId=" + sessionId + ", sex=" + sex
-				+ ", skipFightTimes=" + skipFightTimes + ", taskTriggers=" + taskTriggers + ", tasks=" + tasks + ", totalRecharge=" + totalRecharge + ", unreadLetterCount=" + unreadLetterCount
-				+ ", vipItem=" + vipItem + ", vipLv=" + vipLv + ", worldInfo=" + worldInfo + ", guideProgress=" + guideProgress + ", playerCitysInfoList=" + toArrayStr(playerCitysInfoList)
-				+ ", playerHerosInfoList=" + toArrayStr(playerHerosInfoList) + ", playerItemsInfoList=" + toArrayStr(playerItemsInfoList) + "]";
+		return "LoginGameInfo [autoFlag=" + autoFlag + ", captureHeros="
+				+ captureHeros + ", challengeTimes=" + challengeTimes
+				+ ", changeNameTimes=" + changeNameTimes + ", computerCitys="
+				+ computerCitys + ", computerHeros=" + computerHeros
+				+ ", continuousLoginDays=" + continuousLoginDays
+				+ ", continuousLoginRewardRecv=" + continuousLoginRewardRecv
+				+ ", errCode=" + errCode + ", errMsg=" + errMsg + ", gem="
+				+ gem + ", gold=" + gold + ", goldLimitId=" + goldLimitId
+				+ ", head=" + head + ", heroBoardData=" + heroBoardData
+				+ ", id=" + id + ", lastChapterIsReward=" + lastChapterIsReward
+				+ ", lastForceId=" + lastForceId + ", leagueId=" + leagueId
+				+ ", maxMedicalCampStorage=" + maxMedicalCampStorage
+				+ ", medicalCampStorage=" + medicalCampStorage
+				+ ", monthCardRewardYB=" + monthCardRewardYB + ", name=" + name
+				+ ", occupyPvpMainCityId=" + occupyPvpMainCityId + ", option="
+				+ option + ", permitLoginTime=" + permitLoginTime
+				+ ", playerCitys=" + playerCitys + ", playerHeros="
+				+ playerHeros + ", playerItems=" + playerItems
+				+ ", preChapterIsReward=" + preChapterIsReward
+				+ ", prepareSoldierNum=" + prepareSoldierNum
+				+ ", pvpMainCityOccupyHead=" + pvpMainCityOccupyHead
+				+ ", pvpMainCityOccupyName=" + pvpMainCityOccupyName
+				+ ", pvpScore=" + pvpScore + ", resultCode=" + resultCode
+				+ ", selectedHeroPresent=" + selectedHeroPresent
+				+ ", sendGold=" + sendGold + ", sessionId=" + sessionId
+				+ ", sex=" + sex + ", skipFightTimes=" + skipFightTimes
+				+ ", taskTriggers=" + taskTriggers + ", tasks=" + tasks
+				+ ", totalRecharge=" + totalRecharge + ", unreadLetterCount="
+				+ unreadLetterCount + ", vipItem=" + vipItem + ", vipLv="
+				+ vipLv + ", worldInfo=" + worldInfo + ", guideProgress="
+				+ guideProgress + ", hun=" + hun + "]";
 	}
+
 
 	private <T> String toArrayStr(List<T> objList) {
 		if (objList == null) {

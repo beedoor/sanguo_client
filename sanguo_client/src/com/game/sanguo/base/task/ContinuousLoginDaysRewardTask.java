@@ -19,10 +19,17 @@ public class ContinuousLoginDaysRewardTask extends GameTask {
 		try {
 			// 计算是领取哪天的礼包
 			Long loginDays = userBean.getLoginGameInfo().getContinuousLoginDays();
-			long rewardDay = loginDays % 7;
-			logger.info(String.format("开始领取第[%s]天的奖励 ", rewardDay));
-			msgIdRecvContinuousLoginDaysRewardTask(rewardDay);
-			userBean.getLoginGameInfo().setContinuousLoginDays(String.valueOf(loginDays + 1));
+			
+			if(loginDays == 7)
+			{
+				//更改为每到周五下午开始领取
+				for(int rewardDay=1;rewardDay<=7;rewardDay++)
+				{
+					msgIdRecvContinuousLoginDaysRewardTask(rewardDay);
+					logger.info(String.format("[%s]开始领取第[%s]天的奖励 ", userBean.getUserName(),rewardDay));
+					userBean.getLoginGameInfo().setContinuousLoginDays(String.valueOf(loginDays + 1));
+				}
+			}
 			return true;
 		} catch (Throwable e) {
 			logger.error("领取连续登录礼包异常", e);

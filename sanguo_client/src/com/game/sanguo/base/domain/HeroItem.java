@@ -2,62 +2,75 @@ package com.game.sanguo.base.domain;
 
 public class HeroItem {
 	Long id = 0L;
-	String name;
-	Long default_warriors = 0L;
-	Long skill1_type = 0L;
-	Long skill1_level = 0L;
-	Long skill1_id = 0L;
-	Long skill2_type = 0L;
-	Long skill2_level = 0L;
-	Long skill2_id = 0L;
-	Long skill3_type = 0L;
-	Long skill3_level = 0L;
-	Long skill3_id = 0L;
-	Long skill4_type = 0L;
-	Long skill4_level = 0L;
-	Long skill4_id = 0L;
-	Long skill5_type = 0L;
-	Long skill5_level = 0L;
-	Long skill5_id = 0L;
-	Long skill6_type = 0L;
-	Long skill6_level = 0L;
-	Long skill6_id = 0L;
-	Long skill7_type = 0L;
-	Long skill7_level = 0L;
-	Long skill7_id = 0L;
-	Long skill8_type = 0L;
-	Long skill8_level = 0L;
-	Long skill8_id = 0L;
-	Long skill9_type = 0L;
-	Long skill9_level = 0L;
-	Long skill9_id = 0L;
-	Long skill10_type = 0L;
-	Long skill10_level = 0L;
-	Long skill10_id = 0L;
-	Long skill11_type = 0L;
-	Long skill11_level = 0L;
-	Long skill11_id = 0L;
-	Long skill12_type = 0L;
-	Long skill12_level = 0L;
-	Long skill12_id = 0L;
-	Long skill13_type = 0L;
-	Long skill13_level = 0L;
-	Long skill13_id = 0L;
-	Long skill14_type = 0L;
-	Long skill14_level = 0L;
-	Long skill14_id = 0L;
-	Long skill15_type = 0L;
-	Long skill15_level = 0L;
-	Long skill15_id = 0L;
-	Long skill16_type = 0L;
-	Long skill16_level = 0L;
-	Long skill16_id = 0L;
-	Long skill17_type = 0L;
-	Long skill17_level = 0L;
-	Long skill17_id = 0L;
-	Long skill18_type = 0L;
-	Long skill18_level = 0L;
-	Long skill18_id = 0L;
+	public String name;
+	public Long strength;
+	public Long intelligence;
+	public Long evaluation;
+	public Long mp;
+	public Long hp;
+	public Long default_warriors = 0L;
+	public Long skill1_type = 0L;
+	public Long skill1_level = 0L;
+	public Long skill1_id = 0L;
+	public Long skill2_type = 0L;
+	public Long skill2_level = 0L;
+	public Long skill2_id = 0L;
+	public Long skill3_type = 0L;
+	public Long skill3_level = 0L;
+	public Long skill3_id = 0L;
+	public Long skill4_type = 0L;
+	public Long skill4_level = 0L;
+	public Long skill4_id = 0L;
+	public Long skill5_type = 0L;
+	public Long skill5_level = 0L;
+	public Long skill5_id = 0L;
+	public Long skill6_type = 0L;
+	public Long skill6_level = 0L;
+	public Long skill6_id = 0L;
+	public Long skill7_type = 0L;
+	public Long skill7_level = 0L;
+	public Long skill7_id = 0L;
+	public Long skill8_type = 0L;
+	public Long skill8_level = 0L;
+	public Long skill8_id = 0L;
+	public Long skill9_type = 0L;
+	public Long skill9_level = 0L;
+	public Long skill9_id = 0L;
+	public Long skill10_type = 0L;
+	public Long skill10_level = 0L;
+	public Long skill10_id = 0L;
+	public Long skill11_type = 0L;
+	public Long skill11_level = 0L;
+	public Long skill11_id = 0L;
+	public Long skill12_type = 0L;
+	public Long skill12_level = 0L;
+	public Long skill12_id = 0L;
+	public Long skill13_type = 0L;
+	public Long skill13_level = 0L;
+	public Long skill13_id = 0L;
+	public Long skill14_type = 0L;
+	public Long skill14_level = 0L;
+	public Long skill14_id = 0L;
+	public Long skill15_type = 0L;
+	public Long skill15_level = 0L;
+	public Long skill15_id = 0L;
+	public Long skill16_type = 0L;
+	public Long skill16_level = 0L;
+	public Long skill16_id = 0L;
+	public Long skill17_type = 0L;
+	public Long skill17_level = 0L;
+	public Long skill17_id = 0L;
+	public Long skill18_type = 0L;
+	public Long skill18_level = 0L;
+	public Long skill18_id = 0L;
+
+	public Long getEvaluation() {
+		return evaluation;
+	}
+
+	public void setEvaluation(Long evaluation) {
+		this.evaluation = evaluation;
+	}
 
 	public Long getId() {
 		return id;
@@ -515,18 +528,128 @@ public class HeroItem {
 		this.skill18_id = skill18_id;
 	}
 
+	public Long getStrength() {
+		return strength;
+	}
+
+	public void setStrength(Long strength) {
+		this.strength = strength;
+	}
+
+	public Long getIntelligence() {
+		return intelligence;
+	}
+
+	public void setIntelligence(Long intelligence) {
+		this.intelligence = intelligence;
+	}
+
+	public Long getMp() {
+		return mp;
+	}
+
+	public void setMp(Long mp) {
+		this.mp = mp;
+	}
+
+	public Long getHp() {
+		return hp;
+	}
+
+	public void setHp(Long hp) {
+		this.hp = hp;
+	}
+
 	@Override
 	public String toString() {
-		return "HeroItem [id=" + id + ", name=" + name + ", default_warriors=" + default_warriors + ", skill1_type=" + skill1_type + ", skill1_level=" + skill1_level + ", skill1_id=" + skill1_id
-				+ ", skill2_type=" + skill2_type + ", skill2_level=" + skill2_level + ", skill2_id=" + skill2_id + ", skill3_type=" + skill3_type + ", skill3_level=" + skill3_level + ", skill3_id="
-				+ skill3_id + ", skill4_type=" + skill4_type + ", skill4_level=" + skill4_level + ", skill4_id=" + skill4_id + ", skill5_type=" + skill5_type + ", skill5_level=" + skill5_level
-				+ ", skill5_id=" + skill5_id + ", skill6_type=" + skill6_type + ", skill6_level=" + skill6_level + ", skill6_id=" + skill6_id + ", skill7_type=" + skill7_type + ", skill7_level="
-				+ skill7_level + ", skill7_id=" + skill7_id + ", skill8_type=" + skill8_type + ", skill8_level=" + skill8_level + ", skill8_id=" + skill8_id + ", skill9_type=" + skill9_type
-				+ ", skill9_level=" + skill9_level + ", skill9_id=" + skill9_id + ", skill10_type=" + skill10_type + ", skill10_level=" + skill10_level + ", skill10_id=" + skill10_id
-				+ ", skill11_type=" + skill11_type + ", skill11_level=" + skill11_level + ", skill11_id=" + skill11_id + ", skill12_type=" + skill12_type + ", skill12_level=" + skill12_level
-				+ ", skill12_id=" + skill12_id + ", skill13_type=" + skill13_type + ", skill13_level=" + skill13_level + ", skill13_id=" + skill13_id + ", skill14_type=" + skill14_type
-				+ ", skill14_level=" + skill14_level + ", skill14_id=" + skill14_id + ", skill15_type=" + skill15_type + ", skill15_level=" + skill15_level + ", skill15_id=" + skill15_id
-				+ ", skill16_type=" + skill16_type + ", skill16_level=" + skill16_level + ", skill16_id=" + skill16_id + ", skill17_type=" + skill17_type + ", skill17_level=" + skill17_level
-				+ ", skill17_id=" + skill17_id + ", skill18_type=" + skill18_type + ", skill18_level=" + skill18_level + ", skill18_id=" + skill18_id + "]";
+		return "HeroItem [id=" + id + ", name=" + name + ", strength="
+				+ strength + ", intelligence=" + intelligence + ", mp=" + mp
+				+ ", hp=" + hp + ", default_warriors=" + default_warriors
+				+ ", skill1_type=" + skill1_type + ", skill1_level="
+				+ skill1_level + ", skill1_id=" + skill1_id + ", skill2_type="
+				+ skill2_type + ", skill2_level=" + skill2_level
+				+ ", skill2_id=" + skill2_id + ", skill3_type=" + skill3_type
+				+ ", skill3_level=" + skill3_level + ", skill3_id=" + skill3_id
+				+ ", skill4_type=" + skill4_type + ", skill4_level="
+				+ skill4_level + ", skill4_id=" + skill4_id + ", skill5_type="
+				+ skill5_type + ", skill5_level=" + skill5_level
+				+ ", skill5_id=" + skill5_id + ", skill6_type=" + skill6_type
+				+ ", skill6_level=" + skill6_level + ", skill6_id=" + skill6_id
+				+ ", skill7_type=" + skill7_type + ", skill7_level="
+				+ skill7_level + ", skill7_id=" + skill7_id + ", skill8_type="
+				+ skill8_type + ", skill8_level=" + skill8_level
+				+ ", skill8_id=" + skill8_id + ", skill9_type=" + skill9_type
+				+ ", skill9_level=" + skill9_level + ", skill9_id=" + skill9_id
+				+ ", skill10_type=" + skill10_type + ", skill10_level="
+				+ skill10_level + ", skill10_id=" + skill10_id
+				+ ", skill11_type=" + skill11_type + ", skill11_level="
+				+ skill11_level + ", skill11_id=" + skill11_id
+				+ ", skill12_type=" + skill12_type + ", skill12_level="
+				+ skill12_level + ", skill12_id=" + skill12_id
+				+ ", skill13_type=" + skill13_type + ", skill13_level="
+				+ skill13_level + ", skill13_id=" + skill13_id
+				+ ", skill14_type=" + skill14_type + ", skill14_level="
+				+ skill14_level + ", skill14_id=" + skill14_id
+				+ ", skill15_type=" + skill15_type + ", skill15_level="
+				+ skill15_level + ", skill15_id=" + skill15_id
+				+ ", skill16_type=" + skill16_type + ", skill16_level="
+				+ skill16_level + ", skill16_id=" + skill16_id
+				+ ", skill17_type=" + skill17_type + ", skill17_level="
+				+ skill17_level + ", skill17_id=" + skill17_id
+				+ ", skill18_type=" + skill18_type + ", skill18_level="
+				+ skill18_level + ", skill18_id=" + skill18_id + ", getId()="
+				+ getId() + ", getName()=" + getName()
+				+ ", getDefault_warriors()=" + getDefault_warriors()
+				+ ", getSkill1_type()=" + getSkill1_type()
+				+ ", getSkill1_level()=" + getSkill1_level()
+				+ ", getSkill1_id()=" + getSkill1_id() + ", getSkill2_type()="
+				+ getSkill2_type() + ", getSkill2_level()=" + getSkill2_level()
+				+ ", getSkill2_id()=" + getSkill2_id() + ", getSkill3_type()="
+				+ getSkill3_type() + ", getSkill3_level()=" + getSkill3_level()
+				+ ", getSkill3_id()=" + getSkill3_id() + ", getSkill4_type()="
+				+ getSkill4_type() + ", getSkill4_level()=" + getSkill4_level()
+				+ ", getSkill4_id()=" + getSkill4_id() + ", getSkill5_type()="
+				+ getSkill5_type() + ", getSkill5_level()=" + getSkill5_level()
+				+ ", getSkill5_id()=" + getSkill5_id() + ", getSkill6_type()="
+				+ getSkill6_type() + ", getSkill6_level()=" + getSkill6_level()
+				+ ", getSkill6_id()=" + getSkill6_id() + ", getSkill7_type()="
+				+ getSkill7_type() + ", getSkill7_level()=" + getSkill7_level()
+				+ ", getSkill7_id()=" + getSkill7_id() + ", getSkill8_type()="
+				+ getSkill8_type() + ", getSkill8_level()=" + getSkill8_level()
+				+ ", getSkill8_id()=" + getSkill8_id() + ", getSkill9_type()="
+				+ getSkill9_type() + ", getSkill9_level()=" + getSkill9_level()
+				+ ", getSkill9_id()=" + getSkill9_id() + ", getSkill10_type()="
+				+ getSkill10_type() + ", getSkill10_level()="
+				+ getSkill10_level() + ", getSkill10_id()=" + getSkill10_id()
+				+ ", getSkill11_type()=" + getSkill11_type()
+				+ ", getSkill11_level()=" + getSkill11_level()
+				+ ", getSkill11_id()=" + getSkill11_id()
+				+ ", getSkill12_type()=" + getSkill12_type()
+				+ ", getSkill12_level()=" + getSkill12_level()
+				+ ", getSkill12_id()=" + getSkill12_id()
+				+ ", getSkill13_type()=" + getSkill13_type()
+				+ ", getSkill13_level()=" + getSkill13_level()
+				+ ", getSkill13_id()=" + getSkill13_id()
+				+ ", getSkill14_type()=" + getSkill14_type()
+				+ ", getSkill14_level()=" + getSkill14_level()
+				+ ", getSkill14_id()=" + getSkill14_id()
+				+ ", getSkill15_type()=" + getSkill15_type()
+				+ ", getSkill15_level()=" + getSkill15_level()
+				+ ", getSkill15_id()=" + getSkill15_id()
+				+ ", getSkill16_type()=" + getSkill16_type()
+				+ ", getSkill16_level()=" + getSkill16_level()
+				+ ", getSkill16_id()=" + getSkill16_id()
+				+ ", getSkill17_type()=" + getSkill17_type()
+				+ ", getSkill17_level()=" + getSkill17_level()
+				+ ", getSkill17_id()=" + getSkill17_id()
+				+ ", getSkill18_type()=" + getSkill18_type()
+				+ ", getSkill18_level()=" + getSkill18_level()
+				+ ", getSkill18_id()=" + getSkill18_id() + ", getStrength()="
+				+ getStrength() + ", getIntelligence()=" + getIntelligence()
+				+ ", getMp()=" + getMp() + ", getHp()=" + getHp()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
 	}
+
+	
 }

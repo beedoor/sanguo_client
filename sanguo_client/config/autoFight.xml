@@ -1,44 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
 	<user>
-		<name>xinyuanalex@sohu.com</name>
-		<password>123456</password>
-		<target>10685</target>
+		<name>858100100@qq.com</name>
+		<password>463456858</password>
+		<area>西凉</area>
+		<gameName>蒙恬</gameName>
+		<isOnlyLogin>0</isOnlyLogin>
+		<vipLv>0</vipLv>
+		<isAutoLqLogin>0</isAutoLqLogin>
+		<defend>10710</defend>
+		<notDonate>1</notDonate>
 	</user>
 	<user>
-		<name>qdxiaohua@sohu.com</name>
-		<password>123456</password>
-		<target>10686</target>
+		<name>gulade@qq.com</name>
+		<password>sutingting168</password>
+		<area>西凉</area>
+		<gameName>一梦惊尘</gameName>
+		<isOnlyLogin>0</isOnlyLogin>
+		<vipLv>0</vipLv>
+		<isAutoLqLogin>0</isAutoLqLogin>
+		<defend>10710</defend>
+		<notDonate>1</notDonate>
 	</user>
 	<user>
-		<name>854116222@qq.com</name>
-		<password>1314520</password>
-		<target>10710</target>
+		<name>841399214@qq.com</name>
+		<password>cczz1213</password>
+		<area>西凉</area>
+		<gameName>夜鬼狼</gameName>
+		<isOnlyLogin>0</isOnlyLogin>
+		<vipLv>0</vipLv>
+		<isAutoLqLogin>0</isAutoLqLogin>
+		<defend>10710</defend>
+		<notDonate>1</notDonate>
 	</user>
-	<user>
-		<name>876053609@qq.com</name>
-		<password>19890821</password>
-		<target>12020</target>
-	</user>
-	<user>
-		<name>sanguo10001@126.com</name>
-		<password>123123</password>
-		<target>12030</target>
-	</user>
-	<user>
-		<name>sanguo10002@126.com</name>
-		<password>123123</password>
-		<target>12031</target>
-	</user>
-	<user>
-		<name>sanguo10003@126.com</name>
-		<password>123123</password>
-		<target>12042</target>
-	</user>
-	<user>
-		<name>sanguo10004@126.com</name>
-		<password>123123</password>
-		<target>12053</target>
-	</user>
-
 </users>

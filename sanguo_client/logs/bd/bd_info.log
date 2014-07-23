@@ -1,51 +1,15 @@
-2014-07-01 08:53:56,422 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
-2014-07-01 08:53:56,913 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
-2014-07-01 08:53:59,076 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2014-07-01 08:53:59,096 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
-2014-07-01 08:53:59,166 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2014-07-01 08:53:59,176 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
-2014-07-01 08:53:59,186 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2014-07-01 08:53:59,186 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2014-07-01 08:53:59,196 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-2014-07-01 08:53:59,196 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
-2014-07-01 08:53:59,196 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-2014-07-01 08:53:59,386 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.LoginTask
-2014-07-01 08:54:05,054 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com 登录成功
-2014-07-01 08:54:20,016 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-07-01 08:54:20,096 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.WorldCupTask
-2014-07-01 08:54:30,000 [DefaultQuartzScheduler_Worker-4] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-07-01 08:54:40,015 [DefaultQuartzScheduler_Worker-5] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-07-01 08:57:23,109 [main] INFO  com.game.sanguo.base.util.UserConfig - E:\sanguo_client\sanguo_client\.\config\userconfig.xml
-2014-07-01 08:57:23,550 [main] INFO  com.game.sanguo.base.util.UserConfig - 加载完毕，共加载1个用户配置文件
-2014-07-01 08:57:25,803 [main] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
-2014-07-01 08:57:25,833 [main] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: main
-2014-07-01 08:57:25,923 [main] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
-2014-07-01 08:57:25,933 [main] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.2.1 created.
-2014-07-01 08:57:25,933 [main] INFO  org.quartz.simpl.RAMJobStore - RAMJobStore initialized.
-2014-07-01 08:57:25,943 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
-  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
-  NOT STARTED.
-  Currently in standby mode.
-  Number of jobs executed: 0
-  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 30 threads.
-  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
-
-2014-07-01 08:57:25,943 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
-2014-07-01 08:57:25,943 [main] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.2.1
-2014-07-01 08:57:25,953 [main] INFO  org.quartz.core.QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
-2014-07-01 08:57:26,154 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.LoginTask
-2014-07-01 08:57:31,902 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com 登录成功
-2014-07-01 08:57:40,024 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-07-01 08:57:40,094 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.WorldCupTask
-2014-07-01 08:57:50,018 [DefaultQuartzScheduler_Worker-4] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-07-01 08:58:00,022 [DefaultQuartzScheduler_Worker-5] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-07-01 08:58:10,017 [DefaultQuartzScheduler_Worker-6] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-07-01 08:58:20,001 [DefaultQuartzScheduler_Worker-7] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
-2014-07-01 08:58:30,005 [DefaultQuartzScheduler_Worker-8] INFO  com.game.sanguo.base.task.GameTask - xinyuanalex@sohu.com exec com.game.sanguo.base.task.GameNotifyTask
+2014-07-24 00:00:21,413 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 858100100@qq.com exec com.game.sanguo.base.task.LoginTask
+2014-07-24 00:00:22,174 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 开始登陆:858100100@qq.com	西凉
+2014-07-24 00:00:28,613 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 858100100@qq.com:西凉 登录游戏成功
+2014-07-24 00:01:13,087 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 858100100@qq.com	LoginGameInfo [autoFlag=false, captureHeros=s0, challengeTimes=5, changeNameTimes=1, computerCitys=s1, computerHeros=s2, continuousLoginDays=8, continuousLoginRewardRecv=-2, errCode=0, errMsg=successful, gem=3102, gold=19366521, goldLimitId=1, head=4, heroBoardData=s3, id=59311, lastChapterIsReward=true, lastForceId=11, leagueId=1, maxMedicalCampStorage=26900, medicalCampStorage=26900, monthCardRewardYB=0, name=蒙恬, occupyPvpMainCityId=10246, option=s4, permitLoginTime=null, playerCitys=s5, playerHeros=s6, playerItems=s7, preChapterIsReward=true, prepareSoldierNum=9135, pvpMainCityOccupyHead=4, pvpMainCityOccupyName=忆梦惊尘, pvpScore=36, resultCode=0, selectedHeroPresent=385, sendGold=0, sessionId=F12F0532B52BF7420C31379F4BC905DE, sex=1, skipFightTimes=0, taskTriggers=s8, tasks=, totalRecharge=1856600, unreadLetterCount=5, vipItem=s9, vipLv=8, worldInfo=s10, guideProgress={"version": 6, "guideVisitSet": "56009C00C21001724F108E308520CB2002304830A37044701172415087508570D5702172C1C04A602C60C6708B603172438041720D705172617208C08980CF804EC084D0CAD001E047E08DE0"}, hun=6402]
+2014-07-24 00:01:18,225 [DefaultQuartzScheduler_Worker-1] INFO  com.game.sanguo.base.task.GameTask - 858100100@qq.com:西凉 登录分区成功
+2014-07-24 00:01:35,389 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - gulade@qq.com exec com.game.sanguo.base.task.LoginTask
+2014-07-24 00:01:35,409 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - 开始登陆:gulade@qq.com	西凉
+2014-07-24 00:01:41,248 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - 841399214@qq.com exec com.game.sanguo.base.task.LoginTask
+2014-07-24 00:01:41,248 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - 开始登陆:841399214@qq.com	西凉
+2014-07-24 00:02:30,118 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - gulade@qq.com:西凉 登录游戏成功
+2014-07-24 00:02:30,128 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - 841399214@qq.com:西凉 登录游戏成功
+2014-07-24 00:03:19,970 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - gulade@qq.com	LoginGameInfo [autoFlag=false, captureHeros=s0, challengeTimes=5, changeNameTimes=1, computerCitys=s1, computerHeros=s2, continuousLoginDays=8, continuousLoginRewardRecv=-2, errCode=0, errMsg=successful, gem=2348, gold=7699769, goldLimitId=1, head=4, heroBoardData=s3, id=59263, lastChapterIsReward=true, lastForceId=11, leagueId=2, maxMedicalCampStorage=30000, medicalCampStorage=11283, monthCardRewardYB=0, name=忆梦惊尘, occupyPvpMainCityId=0, option=s4, permitLoginTime=null, playerCitys=s5, playerHeros=s6, playerItems=s7, preChapterIsReward=true, prepareSoldierNum=9947, pvpMainCityOccupyHead=0, pvpMainCityOccupyName=, pvpScore=4, resultCode=0, selectedHeroPresent=385, sendGold=0, sessionId=718D9451B0960F20418AB363A9CD4F06, sex=1, skipFightTimes=0, taskTriggers=s8, tasks=, totalRecharge=1889400, unreadLetterCount=0, vipItem=s9, vipLv=8, worldInfo=s10, guideProgress={"version": 6, "guideVisitSet": "56009C0089808570D5704F108520CB204A60CF800D7043808B602C60"}, hun=392]
+2014-07-24 00:03:25,147 [DefaultQuartzScheduler_Worker-2] INFO  com.game.sanguo.base.task.GameTask - gulade@qq.com:西凉 登录分区成功
+2014-07-24 00:03:29,093 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - 841399214@qq.com	LoginGameInfo [autoFlag=false, captureHeros=s0, challengeTimes=5, changeNameTimes=1, computerCitys=s1, computerHeros=s2, continuousLoginDays=7, continuousLoginRewardRecv=-65, errCode=0, errMsg=successful, gem=12173, gold=13378048, goldLimitId=1, head=1, heroBoardData=s3, id=54335, lastChapterIsReward=true, lastForceId=11, leagueId=2, maxMedicalCampStorage=36900, medicalCampStorage=36900, monthCardRewardYB=0, name=夜鬼狼, occupyPvpMainCityId=0, option=s4, permitLoginTime=null, playerCitys=s5, playerHeros=s6, playerItems=s7, preChapterIsReward=true, prepareSoldierNum=9640, pvpMainCityOccupyHead=0, pvpMainCityOccupyName=, pvpScore=39, resultCode=0, selectedHeroPresent=310, sendGold=0, sessionId=85B02A524ED1E1546E6A8C4EF5A9FB7E, sex=1, skipFightTimes=0, taskTriggers=s8, tasks=, totalRecharge=4132000, unreadLetterCount=0, vipItem=s9, vipLv=9, worldInfo=s10, guideProgress={"version": 6, "guideVisitSet": "56009C00C21001724F108E3085204830A37044701172CB200230415087508570D57021724A602C60C6708B603172438041720D705172617208C08980CF804EC084D0CAD001E047E08DE0"}, hun=22372]
+2014-07-24 00:03:34,260 [DefaultQuartzScheduler_Worker-3] INFO  com.game.sanguo.base.task.GameTask - 841399214@qq.com:西凉 登录分区成功

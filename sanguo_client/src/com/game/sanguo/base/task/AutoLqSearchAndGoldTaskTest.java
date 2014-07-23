@@ -21,6 +21,7 @@ import com.game.sanguo.base.domain.GoldSearchInfo;
 import com.game.sanguo.base.domain.PackItem;
 import com.game.sanguo.base.domain.SearchItem;
 import com.game.sanguo.base.domain.UserBean;
+import com.game.sanguo.base.util.GameUtil;
 import com.game.sanguo.base.util.ItemConfig;
 import com.game.sanguo.base.util.PipleLineTask;
 
@@ -93,7 +94,7 @@ public class AutoLqSearchAndGoldTaskTest extends GameTask {
 		InputStream inputStream = doRequest(postMethod);
 
 		try {
-			System.out.println(postMethod.getResponseBodyAsString());
+			System.out.println(GameUtil.convertStr(inputStream));
 		} catch (Throwable e) {
 			logger.error("转换异常", e);
 		}

@@ -69,7 +69,12 @@ public class AutoFightConfig {
 		digester.addObjectCreate("users/user", FightItem.class);// 创建节点的实例
 		digester.addBeanPropertySetter("users/user/name", "name");
 		digester.addBeanPropertySetter("users/user/password", "password");
-		digester.addBeanPropertySetter("users/user/target", "target");
+		digester.addBeanPropertySetter("users/user/area", "area");
+		digester.addBeanPropertySetter("users/user/defend", "target");
+		digester.addBeanPropertySetter("users/user/isOnlyLogin", "isOnlyLogin");
+		digester.addBeanPropertySetter("users/user/notDonate", "notDonate");
+		digester.addBeanPropertySetter("users/user/vipLv", "vipLv");
+		digester.addBeanPropertySetter("users/user/isAutoLqLogin", "isAutoLqLogin");
 		digester.addSetNext("users/user", "add");
 	}
 

@@ -41,6 +41,7 @@ public class CitySearchAndGoldTask extends GameTask {
 
 	public boolean doAction() {
 		try {
+			logger.info(userBean.getUserName()+" 收菜开始");
 //			if (userBean.getConfigure().getSearchResource() == 1) {
 				msgIdGetGold();
 				msgIdCitySearch();

@@ -1,27 +1,13 @@
 package com.game.sanguo.base.task;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Iterator;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
 
-import com.game.sanguo.base.domain.CityInfo;
-import com.game.sanguo.base.domain.EquipmentItemSellInfo;
-import com.game.sanguo.base.domain.SearchResult;
 import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.util.GameUtil;
 import com.game.sanguo.base.util.PipleLineTask;
-import com.game.sanguo.base.util.ResourceConfig;
 
 public class AutoChoujiangTask extends GameTask {
 
@@ -61,12 +47,9 @@ public class AutoChoujiangTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("c0-param1", "Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
 		postMethod.addParameter(new NameValuePair("batchId", "" + userBean.getBatchId()));
 		InputStream inputStream=doRequest(postMethod);
-		try {
-			logger.info(userBean.getUserName()+"\t"+GameUtil.parseUnicode(postMethod.getResponseBodyAsString()));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		logger.info(userBean.getUserName()+"\t"+GameUtil.parseUnicode(inputStream));
+		
 	}
 
 }

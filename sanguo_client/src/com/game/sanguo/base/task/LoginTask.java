@@ -45,22 +45,26 @@ public class LoginTask extends GameTask {
 
 	public boolean doAction() {
 		try {
+			logger.info("开始登陆:"+userBean.getUserName()+"\t"+userBean.getAreaName());
 			doLoginGame();
 			doLoginArea();
 			return true;
 		} catch (Throwable e) {
-			logger.error("登录异常", e);
+			logger.error(
+					this.userBean.getUserName() + ":" + userBean.getAreaName()
+							+ "登录异常", e);
 		}
 		return false;
 	}
 
-	public void doLoginGame() {
+	public void doLoginGame() throws Exception {
 		this.userBean.reSetNumberIdAndBatchId();
 		getBaseInfoNew();
 		loginByEmail();
 		sleep(5);
 		getServerList();
-		logger.info(this.userBean.getUserName() + " 登录成功");
+		logger.info(this.userBean.getUserName() + ":" + userBean.getAreaName()
+				+ " 登录游戏成功");
 	}
 
 	public void doLoginArea() {
@@ -68,9 +72,11 @@ public class LoginTask extends GameTask {
 		loginGame();
 		sleep(5);
 		startChat();
-		msgIdServerTime();
+		// msgIdServerTime();
 
-		msgIdGetCitiesGoldAvailable();
+		// msgIdGetCitiesGoldAvailable();
+		logger.info(this.userBean.getUserName() + ":" + userBean.getAreaName()
+				+ " 登录分区成功");
 	}
 
 	private void getBaseInfoNew() {
@@ -132,15 +138,13 @@ public class LoginTask extends GameTask {
 				.getBatchId() + ""));
 
 		InputStream inputStream = doRequest(postMethod);
-		try {
-			LoginByEmailInfo beanInfo = (LoginByEmailInfo) initBeanInfo(
-					LoginByEmailInfo.class, inputStream, "dwr");
-			this.userBean.setCheckId(beanInfo.getCheckId());
-			this.userBean.setAreaId(beanInfo.getServerId());
-			this.userBean.setUserID(beanInfo.getUserId());
-		} catch (Throwable e) {
-			e.printStackTrace();
-		}
+
+		LoginByEmailInfo beanInfo = (LoginByEmailInfo) initBeanInfo(
+				LoginByEmailInfo.class, inputStream, "dwr");
+		this.userBean.setCheckId(beanInfo.getCheckId());
+		// this.userBean.setAreaId(beanInfo.getServerId());
+		this.userBean.setUserID(beanInfo.getUserId());
+
 	}
 
 	private void loginGame() {
@@ -180,16 +184,15 @@ public class LoginTask extends GameTask {
 				.getBatchId() + ""));
 
 		InputStream inputStream = doRequest(postMethod);
-		try {
-			LoginGameInfo beanInfo = decoeLoginGameInfo(inputStream);
-			this.userBean.setLoginGameInfo(beanInfo);
-			this.userBean.setSessionId(beanInfo.getSessionId());
-		} catch (Throwable e) {
-			logger.error("登录服务器异常", e);
-		}
+
+		LoginGameInfo beanInfo = decodeLoginGameInfo(inputStream);
+		logger.info(userBean.getUserName() + "\t" + beanInfo);
+		this.userBean.setLoginGameInfo(beanInfo);
+		this.userBean.setSessionId(beanInfo.getSessionId());
+
 	}
 
-	private LoginGameInfo decoeLoginGameInfo(InputStream inputStream) {
+	private LoginGameInfo decodeLoginGameInfo(InputStream inputStream) {
 		LoginGameInfo loginGameInfo = null;
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
@@ -322,7 +325,7 @@ public class LoginTask extends GameTask {
 		}
 	}
 
-	private void getServerList() {
+	private void getServerList()throws Exception {
 		PostMethod postMethod = new PostMethod(
 				"http://118.26.192.76:8080/VersionServerIOS/dwr//call/plaincall/DwrEntry.getServerList.dwr;jsessionid");
 		postMethod.addRequestHeader("Content-type", "application/octet-stream");
@@ -345,29 +348,27 @@ public class LoginTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("batchId", this.userBean
 				.getBatchId() + ""));
 		InputStream inputStream = doRequest(postMethod);
-		try {
-			BufferedReader br = new BufferedReader(new InputStreamReader(
-					inputStream));
-			String s1 = null;
-			while ((s1 = br.readLine()) != null) {
-				if (s1.startsWith("s")) {
-					int prex = s1.indexOf(".");
-					String areaIdStr = s1.substring(0, prex);
 
-					s1 = s1.replaceAll(areaIdStr + "[.]", "");
-					s1 = s1.replaceAll("[:]", "#");
-					s1 = s1.replaceAll("[=]", ":");
-					s1 = s1.replaceAll("[;]", ",");
-					GameAreaInfo gameArea = (GameAreaInfo) initBeanInfo(
-							GameAreaInfo.class, "{" + s1 + "}");
-					String url = gameArea.getUrl().replaceAll("#", ":");
-					gameArea.setUrl(url);
-					this.userBean.putGameAreaInfo(gameArea);
-				}
+		BufferedReader br = new BufferedReader(new InputStreamReader(
+				inputStream));
+		String s1 = null;
+		while ((s1 = br.readLine()) != null) {
+			if (s1.startsWith("s")) {
+				int prex = s1.indexOf(".");
+				String areaIdStr = s1.substring(0, prex);
+
+				s1 = s1.replaceAll(areaIdStr + "[.]", "");
+				s1 = s1.replaceAll("[:]", "#");
+				s1 = s1.replaceAll("[=]", ":");
+				s1 = s1.replaceAll("[;]", ",");
+				GameAreaInfo gameArea = (GameAreaInfo) initBeanInfo(
+						GameAreaInfo.class, "{" + s1 + "}");
+				String url = gameArea.getUrl().replaceAll("#", ":");
+				gameArea.setUrl(url);
+				this.userBean.putGameAreaInfo(gameArea);
 			}
-		} catch (Throwable e) {
-			logger.error("获取服务列表异常", e);
 		}
+
 	}
 
 	private void clientUpdate() {
@@ -396,13 +397,11 @@ public class LoginTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("batchId", this.userBean
 				.getBatchId() + ""));
 		InputStream inputStream = doRequest(postMethod);
-		try {
-			ClientUpdateInfo clientInfo = (ClientUpdateInfo) initBeanInfo(
-					ClientUpdateInfo.class, inputStream, "dwr");
-			this.userBean.setClientInfo(clientInfo);
-		} catch (Throwable e) {
-			logger.error("客户端更新异常", e);
-		}
+
+		ClientUpdateInfo clientInfo = (ClientUpdateInfo) initBeanInfo(
+				ClientUpdateInfo.class, inputStream, "dwr");
+		this.userBean.setClientInfo(clientInfo);
+
 	}
 
 	private String getClientVersion() {
@@ -439,13 +438,11 @@ public class LoginTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("batchId", this.userBean
 				.getBatchId() + ""));
 		InputStream inputStream = doRequest(postMethod);
-		try {
-			StartChatInfo beanInfo = (StartChatInfo) initBeanInfo(
-					StartChatInfo.class, inputStream, "dwr");
-			this.userBean.setChatSessionId(beanInfo.getSessionId());
-		} catch (Throwable e) {
-			logger.error("获取聊天会话ID异常", e);
-		}
+
+		StartChatInfo beanInfo = (StartChatInfo) initBeanInfo(
+				StartChatInfo.class, inputStream, "dwr");
+		this.userBean.setChatSessionId(beanInfo.getSessionId());
+
 	}
 
 	private void msgIdServerTime() {

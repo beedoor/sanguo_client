@@ -13,6 +13,7 @@ import com.game.sanguo.base.task.CitySearchAndGoldTask;
 import com.game.sanguo.base.task.ContinuousLoginDaysRewardTask;
 import com.game.sanguo.base.task.GameHelper;
 import com.game.sanguo.base.task.GameNotifyTask;
+import com.game.sanguo.base.task.GemDonateTask;
 import com.game.sanguo.base.task.GetTimeZoneTask;
 import com.game.sanguo.base.task.LoginTask;
 import com.game.sanguo.base.task.TaskUnit;
@@ -22,6 +23,7 @@ import com.game.sanguo.base.util.ItemConfig;
 import com.game.sanguo.base.util.PipleLineTask;
 import com.game.sanguo.base.util.ResourceConfig;
 import com.game.sanguo.base.util.UserConfig;
+import com.ibm.icu.util.Calendar;
 
 public class AutoResource {
 
@@ -42,29 +44,58 @@ public class AutoResource {
 		autoFightConfig.loadUserConfig();
 
 		// PipleLineTask pipleLineTask = new PipleLineTask();
-		// UserBean userBean = new UserBean();
-		// userBean.setAreaId(8L);
-		// GameHelper.submit(new TaskUnit(new
-		// LoginOtherPlatformTask(userBean,pipleLineTask),0L,0L,TimeUnit.HOURS));
 
+		logger.info("自动采集任务开启");
+		Calendar cal = Calendar.getInstance();
 		for (FightItem fightItem : autoFightConfig.getFightUserConfig()) {
 			UserBean userBean = new UserBean();
-			userBean.setAreaId(8L);
+//			userBean.setAreaId(8L);
 			userBean.setUserName(fightItem.getName());
 			userBean.setPassword(fightItem.getPassword());
 			userBean.setItemConfig(itemConfig);
+			userBean.setAreaName(fightItem.getArea());
 			userBean.setReLoginTime(60L);
-
-			PipleLineTask pipleLineTask = new PipleLineTask();
-			pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean, pipleLineTask), "0/10 * * * * ?"));
-			pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(userBean, itemConfig, pipleLineTask), "0 0/10 * * * ?"));
-			//pipleLineTask.add(new TaskUnit(new ContinuousLoginDaysRewardTask(userBean, pipleLineTask), "0 0 5 * * ?"));
-			pipleLineTask.add(new TaskUnit(new AutoChoujiangTask(userBean, pipleLineTask), "0 0 0/1 * * ?"));
-
+			userBean.setVipLv(fightItem.getVipLv());
+			userBean.setNotDonate(fightItem.getNotDonate());
 			
-			// 维持会话的获取通知信息惹任务
-			// 此任务立刻执行
-			GameHelper.submitTask(new TaskUnit(new LoginTask(userBean, pipleLineTask)));
+			PipleLineTask pipleLineTask = new PipleLineTask();
+			logger.info("开始处理:"+fightItem.getName());
+			if(fightItem.getIsOnlyLogin() == 0)
+			{		
+				logger.info(fightItem.getName()+" 登陆需保持的任务");
+				pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean, pipleLineTask), "0/10 * * * * ?"));
+				pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(userBean, itemConfig, pipleLineTask), "0 0/10 * * * ?"));
+//				if(fightItem.getIsAutoLqLogin() == 1)
+//				{
+//					logger.info("添加自动领取登陆奖励:"+fightItem.getName());
+//					pipleLineTask.add(new TaskUnit(new ContinuousLoginDaysRewardTask(userBean, pipleLineTask)));
+//				}
+
+				if(fightItem.getNotDonate() == 0)
+				{
+					logger.info("添加自动捐献:"+fightItem.getName());
+					pipleLineTask.add(new TaskUnit(new GemDonateTask(userBean,itemConfig, pipleLineTask)));
+				}
+				GameHelper.submitTask(new TaskUnit(new LoginTask(userBean, pipleLineTask)));
+			}else
+			{
+				logger.info("登陆无需保持的任务");
+				cal.add(Calendar.MINUTE, 1);
+//				if(fightItem.getIsAutoLqLogin() == 1)
+//				{
+//					logger.info("添加自动领取登陆奖励:"+fightItem.getName());
+//					pipleLineTask.add(new TaskUnit(new ContinuousLoginDaysRewardTask(userBean, pipleLineTask)));
+//				}
+				// 维持会话的获取通知信息惹任务
+				// 此任务立刻执行
+				if(fightItem.getNotDonate() == 0)
+				{
+					logger.info("添加自动捐献:"+fightItem.getName());
+					pipleLineTask.add(new TaskUnit(new GemDonateTask(userBean,itemConfig, pipleLineTask)));
+				}
+				GameHelper.submitTask(new TaskUnit(new LoginTask(userBean, pipleLineTask),cal.getTime()));
+			}
+//			pipleLineTask.add(new TaskUnit(new AutoChoujiangTask(userBean, pipleLineTask)));
 			try {
 				TimeUnit.SECONDS.sleep(5);
 			} catch (InterruptedException e) {
