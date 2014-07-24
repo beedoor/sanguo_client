@@ -14,8 +14,7 @@ import com.game.sanguo.base.util.PipleLineTask;
  * 
  */
 public class GameNotifyTask extends GameTask {
-	public GameNotifyTask(UserBean userBean,PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public GameNotifyTask(UserBean userBean) {
 		this.userBean = userBean;
 	}
 

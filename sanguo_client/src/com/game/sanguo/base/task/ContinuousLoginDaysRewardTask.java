@@ -10,8 +10,7 @@ import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.util.PipleLineTask;
 
 public class ContinuousLoginDaysRewardTask extends GameTask {
-	public ContinuousLoginDaysRewardTask(UserBean userBean,PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public ContinuousLoginDaysRewardTask(UserBean userBean) {
 		this.userBean = userBean;
 	}
 

@@ -33,8 +33,7 @@ import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.util.PipleLineTask;
 
 public class LoginTask extends GameTask {
-	public LoginTask(UserBean userBean, PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public LoginTask(UserBean userBean) {
 		this.userBean = userBean;
 	}
 

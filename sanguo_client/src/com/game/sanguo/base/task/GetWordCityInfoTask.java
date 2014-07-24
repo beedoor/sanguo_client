@@ -29,8 +29,8 @@ public class GetWordCityInfoTask extends GameTask {
 
 	private static Lock lock = new java.util.concurrent.locks.ReentrantReadWriteLock().writeLock();
 
-	public GetWordCityInfoTask(UserBean userBean, ResourceConfig resourceConfig, SearchResult searchResult, PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public GetWordCityInfoTask(UserBean userBean, ResourceConfig resourceConfig, SearchResult searchResult) {
+	
 		this.userBean = userBean;
 		this.resourceConfig = resourceConfig;
 		this.searchResult = searchResult;

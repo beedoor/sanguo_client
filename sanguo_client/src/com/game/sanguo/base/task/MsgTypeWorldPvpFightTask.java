@@ -18,8 +18,7 @@ import com.game.sanguo.base.util.PipleLineTask;
 public class MsgTypeWorldPvpFightTask extends GameTask {
 	FightItem	fightItem;
 
-	public MsgTypeWorldPvpFightTask(UserBean userBean, FightItem fightItem, PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public MsgTypeWorldPvpFightTask(UserBean userBean, FightItem fightItem) {
 		this.fightItem = fightItem;
 		this.userBean = userBean;
 	}
@@ -35,7 +34,7 @@ public class MsgTypeWorldPvpFightTask extends GameTask {
 			msgTypeWorldPveFight(hero);
 			sleep(3, TimeUnit.SECONDS);
 			msgIdFightSelectHero(hero);
-			pipleLineTask.addFirst(new TaskUnit(new MsgTypeWorldPvpFightRetreatTask(userBean, pipleLineTask), new Date(System.currentTimeMillis() + (6 * 1000 * 60L))));
+			pipleLineTask.addFirst(new TaskUnit(new MsgTypeWorldPvpFightRetreatTask(userBean), new Date(System.currentTimeMillis() + (6 * 1000 * 60L))));
 			logger.info(String.format("%s对%s本次保护成功", fightItem.getName(), fightItem.getTarget()));
 			return true;
 		} catch (Throwable e) {

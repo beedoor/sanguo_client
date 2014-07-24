@@ -1,5 +1,8 @@
 package com.game.sanguo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,12 +41,14 @@ public class Main {
 		// 加载资源配置
 		userBean.setItemConfig(itemConfig);
 
-		PipleLineTask pipleLineTask = new PipleLineTask();
-		pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean, pipleLineTask), "0/10 * * * * ?"));
-		pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(userBean, itemConfig, pipleLineTask), "0 0/10 * * * ?"));
+		List<TaskUnit> pipleLineTask = new ArrayList<TaskUnit>();
+		pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean), "0/10 * * * * ?"));
+		pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(userBean, itemConfig), "0 0/10 * * * ?"));
 //		pipleLineTask.add(new TaskUnit(new AutoLqSearchAndGoldTaskTest(userBean, null, pipleLineTask)));
 //		pipleLineTask.add(new TaskUnit(new WorldCupTask(userBean,pipleLineTask)));
 		// 此任务立刻执行
-		GameHelper.submitTask(new TaskUnit(new LoginTask(userBean, pipleLineTask)));
+		TaskUnit loginTask = new TaskUnit(new LoginTask(userBean));
+		loginTask.setPipleLineTask(pipleLineTask);
+		GameHelper.submitTask(loginTask);
 	}
 }

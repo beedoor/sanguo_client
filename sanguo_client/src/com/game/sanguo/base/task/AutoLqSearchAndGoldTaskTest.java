@@ -34,8 +34,7 @@ import com.game.sanguo.base.util.PipleLineTask;
 public class AutoLqSearchAndGoldTaskTest extends GameTask {
 	ItemConfig itemConfig;
 
-	public AutoLqSearchAndGoldTaskTest(UserBean userBean, ItemConfig itemConfig,PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public AutoLqSearchAndGoldTaskTest(UserBean userBean, ItemConfig itemConfig) {
 		this.userBean = userBean;
 		this.itemConfig = itemConfig;
 	}

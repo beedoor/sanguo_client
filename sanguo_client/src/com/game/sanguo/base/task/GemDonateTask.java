@@ -18,8 +18,7 @@ import com.game.sanguo.base.util.PipleLineTask;
 
 public class GemDonateTask extends GameTask {
 	ItemConfig itemConfig;
-	public GemDonateTask(UserBean userBean, ItemConfig itemConfig,PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public GemDonateTask(UserBean userBean, ItemConfig itemConfig) {
 		this.userBean = userBean;
 		this.itemConfig = itemConfig;
 	}

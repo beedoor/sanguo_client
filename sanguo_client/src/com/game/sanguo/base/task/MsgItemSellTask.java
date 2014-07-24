@@ -18,8 +18,7 @@ import com.game.sanguo.base.util.PipleLineTask;
 
 public class MsgItemSellTask extends GameTask {
 	ItemConfig itemConfig;
-	public MsgItemSellTask(UserBean userBean, ItemConfig itemConfig,PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public MsgItemSellTask(UserBean userBean, ItemConfig itemConfig) {
 		this.userBean = userBean;
 		this.itemConfig = itemConfig;
 	}

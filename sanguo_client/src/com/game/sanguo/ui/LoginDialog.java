@@ -38,7 +38,7 @@ public class LoginDialog extends Dialog {
 	public LoginDialog(UserBean userBean, Shell parentShell) {
 		super(parentShell);
 		this.userBean = userBean;
-		this.loginTask = new LoginTask(userBean, null);
+		this.loginTask = new LoginTask(userBean);
 	}
 
 	protected Control createDialogArea(Composite parent) {

@@ -33,8 +33,7 @@ import com.game.sanguo.base.util.PipleLineTask;
 public class CitySearchAndGoldTask extends GameTask {
 	ItemConfig itemConfig;
 
-	public CitySearchAndGoldTask(UserBean userBean, ItemConfig itemConfig,PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public CitySearchAndGoldTask(UserBean userBean, ItemConfig itemConfig) {
 		this.userBean = userBean;
 		this.itemConfig = itemConfig;
 	}

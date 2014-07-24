@@ -23,6 +23,7 @@ public class GameHelper {
 		try {
 			sched = sf.getScheduler();
 			sched.start();
+			logger.info("task sched");
 		} catch (SchedulerException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -46,7 +47,8 @@ public class GameHelper {
 		try {
 			JobDataMap jobDataMap = new JobDataMap();
 			jobDataMap.put("task", taskUnit.getTask());
-			JobDetail job = newJob().ofType(TaskUnit.class).setJobData(jobDataMap).build();
+			jobDataMap.put("pipleLineTask", taskUnit.getPipleLineTask());
+			JobDetail job = newJob().ofType(DefaultTaskJob.class).setJobData(jobDataMap).build();
 			Trigger trigger = newTrigger().startAt(taskUnit.getRunDate()).build();
 			sched.scheduleJob(job, trigger);
 		} catch (SchedulerException e) {
@@ -58,7 +60,8 @@ public class GameHelper {
 		try {
 			JobDataMap jobDataMap = new JobDataMap();
 			jobDataMap.put("task", taskUnit.getTask());
-			JobDetail job = newJob().ofType(TaskUnit.class).setJobData(jobDataMap).build();
+			jobDataMap.put("pipleLineTask", taskUnit.getPipleLineTask());
+			JobDetail job = newJob().ofType(DefaultTaskJob.class).setJobData(jobDataMap).build();
 			CronTrigger trigger = newTrigger().withSchedule(cronSchedule(taskUnit.getCornExpress())).build();
 			sched.scheduleJob(job, trigger);
 		} catch (SchedulerException e) {
@@ -70,7 +73,8 @@ public class GameHelper {
 		try {
 			JobDataMap jobDataMap = new JobDataMap();
 			jobDataMap.put("task", taskUnit.getTask());
-			JobDetail job = newJob().ofType(TaskUnit.class).setJobData(jobDataMap).build();
+			jobDataMap.put("pipleLineTask", taskUnit.getPipleLineTask());
+			JobDetail job = newJob().ofType(DefaultTaskJob.class).setJobData(jobDataMap).build();
 			Trigger trigger = newTrigger().startNow().build();
 			sched.scheduleJob(job, trigger);
 		} catch (SchedulerException e) {

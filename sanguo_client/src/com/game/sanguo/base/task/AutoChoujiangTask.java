@@ -11,8 +11,7 @@ import com.game.sanguo.base.util.PipleLineTask;
 
 public class AutoChoujiangTask extends GameTask {
 
-	public AutoChoujiangTask(UserBean userBean, PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public AutoChoujiangTask(UserBean userBean) {
 		this.userBean = userBean;
 	}
 

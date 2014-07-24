@@ -1,5 +1,7 @@
 package com.game.sanguo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.slf4j.Logger;
@@ -52,15 +54,16 @@ public class AutoDefine {
 			userBean.setItemConfig(itemConfig);
 			userBean.setReLoginTime(30L);
 
-			PipleLineTask pipleLineTask = new PipleLineTask();
-			pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean, pipleLineTask), "0/10 * * * * ?"));
-//			pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(userBean, itemConfig, pipleLineTask), "0 30 * * * ?"));
-			pipleLineTask.add(new TaskUnit(new ContinuousLoginDaysRewardTask(userBean, pipleLineTask), "0 0 5 * * ?"));
+			List<TaskUnit> pipleLineTask = new ArrayList<TaskUnit>();
+			pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean), "0/10 * * * * ?"));
 			// 维持会话的获取通知信息惹任务
 
-			pipleLineTask.add(new TaskUnit(new MsgTypeWorldPvpFightTask(userBean, fightItem, pipleLineTask), "0 1 * * * ?"));
+			pipleLineTask.add(new TaskUnit(new MsgTypeWorldPvpFightTask(userBean, fightItem), "0 1 * * * ?"));
 			// 此任务立刻执行
-			GameHelper.submitTask(new TaskUnit(new LoginTask(userBean, pipleLineTask)));
+			TaskUnit loginTask = new TaskUnit(new LoginTask(userBean));
+			loginTask.setPipleLineTask(pipleLineTask);
+			GameHelper.submitTask(loginTask);
+			
 			try {
 				TimeUnit.SECONDS.sleep(5);
 			} catch (InterruptedException e) {

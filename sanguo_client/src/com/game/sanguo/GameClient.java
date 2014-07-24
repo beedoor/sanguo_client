@@ -581,7 +581,7 @@ public class GameClient
         } else if (GameClient.this.userBean.getConfigure().getScanResource().getSolider().longValue() == 1L) {
           tabFolder_2.setSelection(3);
         }
-        GameHelper.submitTask(new TaskUnit(new GetWordCityInfoTask(GameClient.this.userBean, GameClient.this.resourceConfig, GameClient.this.searchResult, null)));
+        GameHelper.submitTask(new TaskUnit(new GetWordCityInfoTask(GameClient.this.userBean, GameClient.this.resourceConfig, GameClient.this.searchResult)));
       }
     });
     btnNewButton.setBounds(217, 56, 63, 24);
@@ -863,13 +863,13 @@ public class GameClient
         int ok = loginDialog.open();
         if (ok == 0)
         {
-          PipleLineTask pipleLineTask = new PipleLineTask();
-          
-          pipleLineTask.add(new TaskUnit(new ContinuousLoginDaysRewardTask(GameClient.this.userBean, pipleLineTask), "0 30 * * * ?"));
-          pipleLineTask.add(new TaskUnit(new MsgItemSellTask(GameClient.this.userBean, GameClient.this.itemConfig, pipleLineTask), "0 40 * * * ?"));
-          pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(GameClient.this.userBean, GameClient.this.itemConfig, pipleLineTask), "0 10 * * * ?"));
-          
-          GameHelper.submitTask(new TaskUnit(new GameNotifyTask(GameClient.this.userBean, pipleLineTask), "0/10 * * * * ?"));
+          List<TaskUnit> pipleLineTask = new ArrayList<TaskUnit>();
+          pipleLineTask.add(new TaskUnit(new ContinuousLoginDaysRewardTask(GameClient.this.userBean), "0 30 * * * ?"));
+          pipleLineTask.add(new TaskUnit(new MsgItemSellTask(GameClient.this.userBean, GameClient.this.itemConfig), "0 40 * * * ?"));
+          pipleLineTask.add(new TaskUnit(new CitySearchAndGoldTask(GameClient.this.userBean, GameClient.this.itemConfig), "0 10 * * * ?"));
+          TaskUnit task = new TaskUnit(new GameNotifyTask(GameClient.this.userBean), "0/10 * * * * ?");
+          task.setPipleLineTask(pipleLineTask);
+          GameHelper.submitTask(task);
         }
       }
     };
@@ -881,7 +881,7 @@ public class GameClient
         RebuildResourceDialog rebuildResource = new RebuildResourceDialog(GameClient.this.userBean, GameClient.this.getParentShell());
         int ok = rebuildResource.open();
         if (ok == 0) {
-          GameHelper.submitTask(new TaskUnit(new GetTimeZoneTask(GameClient.this.userBean,GameClient.this.searchResult,resourceConfig , null)));
+          GameHelper.submitTask(new TaskUnit(new GetTimeZoneTask(GameClient.this.userBean,GameClient.this.searchResult,resourceConfig)));
         }
       }
     };

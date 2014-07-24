@@ -34,8 +34,7 @@ import com.game.sanguo.base.util.GameUtil;
 import com.game.sanguo.base.util.PipleLineTask;
 
 public class LoginOtherPlatformTask extends GameTask {
-	public LoginOtherPlatformTask(UserBean userBean, PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public LoginOtherPlatformTask(UserBean userBean) {
 		this.userBean = userBean;
 	}
 

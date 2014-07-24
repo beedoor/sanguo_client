@@ -25,7 +25,6 @@ import com.game.sanguo.base.util.ResourceConfig;
 public class WorldCupTask extends GameTask {
 
 	public WorldCupTask(UserBean userBean, PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
 		this.userBean = userBean;
 	}
 

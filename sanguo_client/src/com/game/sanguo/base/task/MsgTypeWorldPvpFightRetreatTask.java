@@ -11,8 +11,7 @@ import com.game.sanguo.base.util.PipleLineTask;
  * 
  */
 public class MsgTypeWorldPvpFightRetreatTask extends GameTask {
-	public MsgTypeWorldPvpFightRetreatTask(UserBean userBean, PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public MsgTypeWorldPvpFightRetreatTask(UserBean userBean) {
 		this.userBean = userBean;
 	}
 

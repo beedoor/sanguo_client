@@ -24,9 +24,8 @@ import com.game.sanguo.base.util.ResourceConfig;
 public class GetTimeZoneTask extends GameTask {
 	SearchResult searchResult = null;
 	ResourceConfig resourceConfig=null;
-	public GetTimeZoneTask(UserBean userBean, SearchResult searchResult,ResourceConfig resourceConfig,
-			PipleLineTask pipleLineTask) {
-		super(pipleLineTask);
+	public GetTimeZoneTask(UserBean userBean, SearchResult searchResult,ResourceConfig resourceConfig
+			) {
 		this.resourceConfig = resourceConfig;
 		this.userBean = userBean;
 		this.searchResult = searchResult;

@@ -1,31 +1,37 @@
 package com.game.sanguo.base.task;
 
 import java.util.Date;
+import java.util.List;
 
+import org.apache.commons.lang3.ClassUtils;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class TaskUnit implements Job {
+import com.game.sanguo.base.util.PipleLineTask;
 
-	protected static Logger	logger	= LoggerFactory.getLogger(TaskUnit.class);
+public class TaskUnit {
+
 	private GameTask		task;
-
+	private List<TaskUnit> 	pipleLineTask;
 	private String			cornExpress;
 	
 	private Date runDate;
-	public TaskUnit() {
-		super();
+
+
+	public TaskUnit()
+	{
+		
+	}
+	
+	public List<TaskUnit> getPipleLineTask() {
+		return pipleLineTask;
 	}
 
-	public Date getRunDate() {
-		return runDate;
-	}
-
-	public void setRunDate(Date runDate) {
-		this.runDate = runDate;
+	public void setPipleLineTask(List<TaskUnit> pipleLineTask) {
+		this.pipleLineTask = pipleLineTask;
 	}
 
 	public TaskUnit(GameTask task, Date runDate) {
@@ -40,6 +46,19 @@ public class TaskUnit implements Job {
 		this.cornExpress = cornExpress;
 	}
 
+	public TaskUnit(GameTask task) {
+		super();
+		this.task = task;
+	}
+
+	public Date getRunDate() {
+		return runDate;
+	}
+
+	public void setRunDate(Date runDate) {
+		this.runDate = runDate;
+	}
+	
 	public String getCornExpress() {
 		return cornExpress;
 	}
@@ -48,10 +67,7 @@ public class TaskUnit implements Job {
 		this.cornExpress = cornExpress;
 	}
 
-	public TaskUnit(GameTask task) {
-		super();
-		this.task = task;
-	}
+	
 
 	public GameTask getTask() {
 		return task;
@@ -59,14 +75,5 @@ public class TaskUnit implements Job {
 
 	public void setTask(GameTask task) {
 		this.task = task;
-	}
-
-	@Override
-	public void execute(JobExecutionContext paramJobExecutionContext) throws JobExecutionException {
-		try {
-			task.execute();
-		} catch (Throwable e) {
-			logger.error("", e);
-		}
 	}
 }
