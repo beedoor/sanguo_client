@@ -1,6 +1,7 @@
 package com.game.sanguo.base.task;
 
 import java.io.InputStream;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
@@ -26,6 +27,7 @@ public class ContinuousLoginDaysRewardTask extends GameTask {
 				{
 					msgIdRecvContinuousLoginDaysRewardTask(rewardDay);
 					logger.info(String.format("[%s]开始领取第[%s]天的奖励 ", userBean.getUserName(),rewardDay));
+					TimeUnit.SECONDS.sleep(1);
 					userBean.getLoginGameInfo().setContinuousLoginDays(String.valueOf(loginDays + 1));
 				}
 			}

@@ -66,8 +66,7 @@ public class MsgItemSellTask extends GameTask {
 				}
 			}
 		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("MsgItemSellTask", e);
 		}
 		return true;
 	}

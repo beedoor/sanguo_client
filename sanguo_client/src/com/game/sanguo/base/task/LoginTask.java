@@ -47,6 +47,7 @@ public class LoginTask extends GameTask {
 			logger.info("开始登陆:"+userBean.getUserName()+"\t"+userBean.getAreaName());
 			doLoginGame();
 			doLoginArea();
+			userBean.setSuspend(false);
 			return true;
 		} catch (Throwable e) {
 			logger.error(

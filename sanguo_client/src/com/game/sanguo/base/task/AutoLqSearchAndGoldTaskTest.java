@@ -41,10 +41,7 @@ public class AutoLqSearchAndGoldTaskTest extends GameTask {
 
 	public boolean doAction() {
 		try {
-			
-				msgIdGetGold();
-				msgIdGetGold();
-				msgIdGetGold();
+			msgIdGetGold();
 			return true;
 		} catch (Throwable e) {
 			logger.error("定时搜索资源任务异常", e);
@@ -92,11 +89,6 @@ public class AutoLqSearchAndGoldTaskTest extends GameTask {
 				+ userBean.getBatchId()));
 		InputStream inputStream = doRequest(postMethod);
 
-		try {
-			System.out.println(GameUtil.convertStr(inputStream));
-		} catch (Throwable e) {
-			logger.error("转换异常", e);
-		}
 	}
 
 	

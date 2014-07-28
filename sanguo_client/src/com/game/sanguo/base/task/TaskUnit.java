@@ -26,6 +26,7 @@ public class TaskUnit {
 		
 	}
 	
+
 	public List<TaskUnit> getPipleLineTask() {
 		return pipleLineTask;
 	}

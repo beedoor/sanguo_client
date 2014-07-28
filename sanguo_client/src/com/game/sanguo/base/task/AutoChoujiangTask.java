@@ -16,7 +16,11 @@ public class AutoChoujiangTask extends GameTask {
 	}
 
 	public boolean doAction() {
+		try {
 			doChoujiang();
+		} catch (Throwable e) {
+			logger.error("AutoChoujiangTask error");
+		}
 		return true;
 	}
 

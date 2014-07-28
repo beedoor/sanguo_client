@@ -38,7 +38,11 @@ public class GetWordCityInfoTask extends GameTask {
 
 	public boolean doAction() {
 		if (lock.tryLock()) {
-			doRealySearch();
+			try {
+				doRealySearch();
+			} catch (Exception e) {
+				logger.error("GetWordCityInfoTask 异常");
+			}
 			lock.unlock();
 		}
 		return true;

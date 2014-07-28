@@ -32,29 +32,33 @@ public class GetTimeZoneTask extends GameTask {
 	}
 
 	public boolean doAction() {
-		this.searchResult.clearAllResourceList();
+		try {
+			this.searchResult.clearAllResourceList();
 
-		this.searchResult.clearGoldList();
-		this.searchResult.clearMarketList();
-		this.searchResult.clearSoliderList();
-		this.searchResult.clearTreasureList();
-		long xPosEnd = this.userBean.getConfigure().getScanResource()
-				.getAllResourceConfig().getxPosEnd().longValue();
-		long yPosEnd = this.userBean.getConfigure().getScanResource()
-				.getAllResourceConfig().getyPosEnd().longValue();
-		for (int i = 0; i < xPosEnd; i++) {
-			for (int j = 0; j < yPosEnd; j++) {
-				try {
-					msgIdGetZoneInfo(i, j);
-					sleep(this.userBean.getConfigure().getScanResource()
-							.getWaitTime().longValue(), TimeUnit.MILLISECONDS);
-				} catch (Throwable e) {
-					e.printStackTrace();
+			this.searchResult.clearGoldList();
+			this.searchResult.clearMarketList();
+			this.searchResult.clearSoliderList();
+			this.searchResult.clearTreasureList();
+			long xPosEnd = this.userBean.getConfigure().getScanResource()
+					.getAllResourceConfig().getxPosEnd().longValue();
+			long yPosEnd = this.userBean.getConfigure().getScanResource()
+					.getAllResourceConfig().getyPosEnd().longValue();
+			for (int i = 0; i < xPosEnd; i++) {
+				for (int j = 0; j < yPosEnd; j++) {
+					try {
+						msgIdGetZoneInfo(i, j);
+						sleep(this.userBean.getConfigure().getScanResource()
+								.getWaitTime().longValue(), TimeUnit.MILLISECONDS);
+					} catch (Throwable e) {
+						e.printStackTrace();
+					}
 				}
 			}
+			doExport();
+			resourceConfig.loadResourceConfig();
+		} catch (Exception e) {
+			logger.error("GetTimeZoneTask 异常");
 		}
-		doExport();
-		resourceConfig.loadResourceConfig();
 		return true;
 	}
 

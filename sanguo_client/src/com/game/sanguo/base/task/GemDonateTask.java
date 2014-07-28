@@ -36,8 +36,7 @@ public class GemDonateTask extends GameTask {
 				doDonate(100);
 			}
 		} catch (Throwable e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("GemDonateTask 异常");
 		}
 		return true;
 	}

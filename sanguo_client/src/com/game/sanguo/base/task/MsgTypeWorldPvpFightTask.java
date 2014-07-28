@@ -38,7 +38,7 @@ public class MsgTypeWorldPvpFightTask extends GameTask {
 			logger.info(String.format("%s对%s本次保护成功", fightItem.getName(), fightItem.getTarget()));
 			return true;
 		} catch (Throwable e) {
-			logger.error("获取通知信息异常", e);
+			logger.error("MsgTypeWorldPvpFightTask", e);
 		}
 		return false;
 	}
