@@ -22,10 +22,16 @@ public class ResourceSearchTableLabelProvider
     case 3:
     	 return getBattleStatus(itemInfo.getStatusAsInt());
     case 4: 
-      return GameUtil.parseDate(itemInfo.getEndTime());
+      return getInfo(itemInfo);
     }
     return "";
   }
+  
+  private String getInfo(CityInfo itemInfo)
+  {
+	  return itemInfo.getHerosInfo() == null?"":itemInfo.getHerosInfo();
+  }
+  
   
   private String getBattleStatus(Long status)
   {

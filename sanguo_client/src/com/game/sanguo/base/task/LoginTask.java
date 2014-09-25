@@ -142,7 +142,7 @@ public class LoginTask extends GameTask {
 		LoginByEmailInfo beanInfo = (LoginByEmailInfo) initBeanInfo(
 				LoginByEmailInfo.class, inputStream, "dwr");
 		this.userBean.setCheckId(beanInfo.getCheckId());
-		// this.userBean.setAreaId(beanInfo.getServerId());
+		this.userBean.setAreaId(beanInfo.getServerId());
 		this.userBean.setUserID(beanInfo.getUserId());
 
 	}

@@ -20,7 +20,7 @@ public class ContinuousLoginDaysRewardTask extends GameTask {
 			// 计算是领取哪天的礼包
 			Long loginDays = userBean.getLoginGameInfo().getContinuousLoginDays();
 			
-			if(loginDays == 7)
+			if(loginDays %7 ==0)
 			{
 				//更改为每到周五下午开始领取
 				for(int rewardDay=1;rewardDay<=7;rewardDay++)

@@ -35,7 +35,19 @@ public class UserBean
   private String scanExclude;
   private long notDonate;
   
-  public long getNotDonate() {
+  private EneminesInfo eneminesInfo;
+  
+
+
+public EneminesInfo getEneminesInfo() {
+	return eneminesInfo;
+}
+
+public void setEneminesInfo(EneminesInfo eneminesInfo) {
+	this.eneminesInfo = eneminesInfo;
+}
+
+public long getNotDonate() {
 	return notDonate;
 }
 

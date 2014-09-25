@@ -27,8 +27,18 @@ public class CityInfo
   Long zoneId = Long.valueOf(0L);
   Date endTime;
   Long vipLv = Long.valueOf(0L);
+   String herosInfo ;
   
-  public Long getVipLv()
+  
+  public String getHerosInfo() {
+	return herosInfo;
+}
+
+public void setHerosInfo(String herosInfo) {
+	this.herosInfo = herosInfo;
+}
+
+public Long getVipLv()
   {
     return this.vipLv;
   }

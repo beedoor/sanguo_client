@@ -29,6 +29,7 @@ import com.game.sanguo.ui.ResourceSearchTableContentProvider;
 import com.game.sanguo.ui.ResourceSearchTableLabelProvider;
 import com.game.sanguo.ui.ShowExportResultDialog;
 import com.game.sanguo.ui.TableLabelProvider;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -36,6 +37,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
 import org.eclipse.core.databinding.DataBindingContext;
 import org.eclipse.core.databinding.beans.BeanProperties;
 import org.eclipse.core.databinding.beans.BeansObservables;
@@ -581,7 +583,7 @@ public class GameClient
         } else if (GameClient.this.userBean.getConfigure().getScanResource().getSolider().longValue() == 1L) {
           tabFolder_2.setSelection(3);
         }
-        GameHelper.submitTask(new TaskUnit(new GetWordCityInfoTask(GameClient.this.userBean, GameClient.this.resourceConfig, GameClient.this.searchResult)));
+        GameHelper.submitTask(new TaskUnit(new GetWordCityInfoTask(GameClient.this.userBean, GameClient.this.resourceConfig, GameClient.this.searchResult,GameClient.this.itemConfig)));
       }
     });
     btnNewButton.setBounds(217, 56, 63, 24);
@@ -745,10 +747,10 @@ public class GameClient
   
   protected void showStr()
   {
-    Map<String, List<String>> goldMap = processOne(this.searchResult.getGoldList());
-    Map<String, List<String>> soliderMap = processOne(this.searchResult.getSoliderList());
-    Map<String, List<String>> marketMap = processOne(this.searchResult.getMarketList());
-    Map<String, List<String>> treasureMap = processOne(this.searchResult.getTreasureList());
+    Map<String, List<CityInfo>> goldMap = processOne(this.searchResult.getGoldList());
+    Map<String, List<CityInfo>> soliderMap = processOne(this.searchResult.getSoliderList());
+    Map<String, List<CityInfo>> marketMap = processOne(this.searchResult.getMarketList());
+    Map<String, List<CityInfo>> treasureMap = processOne(this.searchResult.getTreasureList());
     
     StringBuffer strb = new StringBuffer();
     extendOne("山", treasureMap, strb);
@@ -760,7 +762,7 @@ public class GameClient
     int ok = showExportResultDialog.open();
   }
   
-  private void extendOne(String tips, Map<String, List<String>> map, StringBuffer strb)
+  private void extendOne(String tips, Map<String, List<CityInfo>> map, StringBuffer strb)
   {
     if (map.isEmpty()) {
       return;
@@ -770,32 +772,60 @@ public class GameClient
     while (ite.hasNext())
     {
       String usreName = (String)ite.next();
-      List<String> resourceList = (List)map.get(usreName);
+      List<CityInfo> resourceList = (List)map.get(usreName);
       if ((resourceList != null) && (!resourceList.isEmpty()))
       {
-        String sss = Arrays.toString(resourceList.toArray());
-        strb.append("     ").append(usreName).append(": ").append(sss.substring(1, sss.length() - 1)).append("\r\n");
+        strb.append("\t\t").append(usreName).append(": ");
+        for(CityInfo ss:resourceList)
+        {
+        	if(ss.getHerosInfo() == null || "".equals(ss.getHerosInfo()))
+        	{
+        		strb.append(ss.getId()).append(getBattleStatus(ss.getStatusAsInt())).append(",");
+        	}else
+        	{
+        		strb.append(ss.getId()).append("\r\n").append("\r\n").append(ss.getHerosInfo());
+        	}
+        }
+        strb.append("\r\n");
       }
     }
   }
   
-  private Map<String, List<String>> processOne(List<CityInfo> cityInfoList)
+  private Map<String, List<CityInfo>> processOne(List<CityInfo> cityInfoList)
   {
-    Map<String, List<String>> resultMap = new HashMap();
+    Map<String, List<CityInfo>> resultMap = new HashMap();
     for (CityInfo city : cityInfoList) {
-      if ((this.userBean.getScanExclude() == null) || (this.userBean.getScanExclude().indexOf(city.getUnionName()) != -1))
-      {
-        String occupierName = (city.getOccupierName() == null) || (city.getOccupierName().equals("null")) ? "空资源" : city.getOccupierName();
-        if (!resultMap.containsKey(occupierName)) {
-          resultMap.put(occupierName, new ArrayList());
-        }
-        ((List)resultMap.get(occupierName)).add(city.getId() + getBattleStatus(city.getStatusAsInt()));
-      }
+    	if(userBean.getScanExclude() != null )
+    	{
+    		if(city.getUnionName() != null)
+    		{
+    			if(userBean.getScanExclude().indexOf(city.getUnionName()) != -1)
+    			{
+    				add(resultMap,city);
+    			}
+    		}else
+    		{
+    			add(resultMap,city);
+    		}
+    	}else
+    	{
+    		add(resultMap,city);
+    	}
+    
     }
     return resultMap;
   }
   
-  private String getBattleStatus(Long status)
+  private void add(Map<String, List<CityInfo>> resultMap, CityInfo city) {
+	String occupierName = (city.getOccupierName() == null) || (city.getOccupierName().equals("null")) ? "空资源" : city.getOccupierName();
+	  if (!resultMap.containsKey(occupierName)) {
+          resultMap.put(occupierName, new ArrayList());
+        }
+       resultMap.get(occupierName).add(city);
+       
+}
+
+private String getBattleStatus(Long status)
   {
     if (status.longValue() == 4L) {
       return " （战斗中）";

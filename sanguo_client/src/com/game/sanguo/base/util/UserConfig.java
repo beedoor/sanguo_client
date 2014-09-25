@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 import com.game.sanguo.base.domain.Configure;
+import com.game.sanguo.base.domain.EneminesInfo;
 import com.game.sanguo.base.domain.ScanResource;
 import com.game.sanguo.base.domain.SellConfig;
 import com.game.sanguo.base.domain.UserBean;
@@ -67,12 +68,16 @@ public class UserConfig {
 	private void addRule(Digester digester) {
 		digester.addObjectCreate("configuration/users/user", UserBean.class);// 创建节点的实例
 		digester.addObjectCreate("configuration/users/user/configure",Configure.class);
+		digester.addObjectCreate("configuration/users/user/eneminesInfo",EneminesInfo.class);
 		digester.addObjectCreate("configuration/users/user/configure/scanResource",ScanResource.class);
 		digester.addObjectCreate("configuration/users/user/configure/autoSell",SellConfig.class);
 		digester.addCallMethod("configuration/users/user/userName", "setUserName",0);
 		digester.addCallMethod("configuration/users/user/password", "setPassword",0);
 		digester.addCallMethod("configuration/users/user/reLoginTime", "setReLoginTime",0,new Class[]{Long.class});
 		digester.addCallMethod("configuration/users/user/areaName", "setAreaName",0,new Class[]{String.class});
+		
+		digester.addCallMethod("configuration/users/user/eneminesInfo/eneminesHero","setEneminesHero",0,new Class[]{String.class});
+		digester.addCallMethod("configuration/users/user/eneminesInfo/eneminesUnion","setEneminesUnion",0,new Class[]{String.class});
 		//设置扫描间隔
 //		digester.addSetProperties("configuration/users/user/configure/scanResource","waitTime","waitTime");
 //		digester.addCallMethod("configuration/users/user/configure/scanResource/gold","setGold",0,new Class[]{Long.class});
@@ -84,6 +89,7 @@ public class UserConfig {
 		digester.addCallMethod("configuration/users/user/configure/autoSell/sell","setSell",0,new Class[]{Long.class});
 		digester.addCallMethod("configuration/users/user/configure/autoSell/level","setLevel",0,new Class[]{Long.class});
 		
+		digester.addSetNext("configuration/users/user/eneminesInfo","setEneminesInfo");
 		digester.addSetNext("configuration/users/user/configure","setConfigure");
 		digester.addSetNext("configuration/users/user/configure/scanResource","setScanResource");
 		digester.addSetNext("configuration/users/user/configure/autoSell","setSellConfig");

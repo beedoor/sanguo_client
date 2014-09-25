@@ -93,8 +93,8 @@ public class LoginDialog extends Dialog {
 					int select = 0;
 					for (int i = 0; i < gInfoList.size(); i++) {
 						s[i] = ((GameAreaInfo) gInfoList.get(i)).getName();
-						if (((GameAreaInfo) gInfoList.get(i)).getId() == LoginDialog.this.userBean
-								.getAreaId()) {
+						if (((GameAreaInfo) gInfoList.get(i)).getName().equals(LoginDialog.this.userBean
+								.getAreaName())) {
 							select = i;
 						}
 					}
@@ -138,12 +138,12 @@ public class LoginDialog extends Dialog {
 		bindingContext.bindValue(observeTextText_1ObserveWidget,
 				passwordUserBeanObserveValue, null, null);
 
-		IObservableValue observeTextComboObserveWidget = WidgetProperties
-				.text().observe(this.combo);
-		IObservableValue areaNameUserBeanObserveValue = BeanProperties.value(
-				"areaName").observe(this.userBean);
-		bindingContext.bindValue(observeTextComboObserveWidget,
-				areaNameUserBeanObserveValue, null, null);
+//		IObservableValue observeTextComboObserveWidget = WidgetProperties
+//				.text().observe(this.combo);
+//		IObservableValue areaNameUserBeanObserveValue = BeanProperties.value(
+//				"areaName").observe(this.userBean);
+//		bindingContext.bindValue(observeTextComboObserveWidget,
+//				areaNameUserBeanObserveValue, null, null);
 
 		return bindingContext;
 	}

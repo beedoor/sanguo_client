@@ -2,15 +2,20 @@
 <configuration>
 	<users>
 		<user>
- 			<userName>xinyuanalex@sohu.com</userName>
- 			<password>123456</password> 
+ 			<userName>sanguo10001@126.com</userName>
+ 			<password>123123</password> 
 			<areaName>西凉</areaName>
+			<eneminesInfo>
+				<eneminesHero>风侠云天霸</eneminesHero>
+				<eneminesUnion></eneminesUnion>
+			</eneminesInfo>
+			
 			<reLoginTime desc="断线重新登录时间间隔,以分钟记，120分即2小时">120</reLoginTime>
 			<configure>
 				<!--sortType :byName 按名字排序，byTime 按时间排序-->
 				<scanResource desc="自动扫描资源" waitTime="500" sortType="byName">
 					<gold desc="金矿">0</gold>
-					<treasure desc="元宝山">0</treasure>
+					<treasure desc="元宝山">1</treasure>
 					<market desc="黑市">0</market>
 					<solider desc="兵营">0</solider>
 				</scanResource>

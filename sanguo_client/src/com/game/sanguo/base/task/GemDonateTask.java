@@ -26,22 +26,15 @@ public class GemDonateTask extends GameTask {
 	@Override
 	protected boolean doAction() {
 		try {
-			if(userBean.getLoginGameInfo().getVipLv() >=3)
-			{
-				logger.info(userBean.getUserName()+"\t捐献:"+1000);
-				doDonate(1000);
-			}else if(userBean.getLoginGameInfo().getVipLv() >0)
-			{
 				logger.info(userBean.getUserName()+"\t捐献:"+100);
 				doDonate(100);
-			}
 		} catch (Throwable e) {
 			logger.error("GemDonateTask 异常");
 		}
 		return true;
 	}
 
-	private void doDonate(long donate) {
+	private void doDonate(long donate)throws Exception {
 		PostMethod postMethod = new PostMethod(String.format("%s/hero/dwr/call/plaincall/DwrGameWorld.setMsg.dwr;jsessionid=%s;mid=%s", userBean.getUrlPrx(), userBean.getSessionId(),
 				userBean.getSessionId()));
 		postMethod.addRequestHeader("Content-type", "application/octet-stream");
@@ -66,6 +59,7 @@ public class GemDonateTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("c0-e4", "string:2,"+donate));
 		postMethod.addParameter(new NameValuePair("c0-param1", "Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
 		postMethod.addParameter(new NameValuePair("batchId", "" + userBean.getBatchId()));
-		InputStream inputStream=doRequest(postMethod);
+		doRequest(postMethod);
+//		logger.info(userBean.getUserName()+"捐献结果:"+postMethod.getResponseBodyAsString());
 	}
 }

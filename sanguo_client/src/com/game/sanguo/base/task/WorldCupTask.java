@@ -24,12 +24,12 @@ import com.game.sanguo.base.util.ResourceConfig;
 
 public class WorldCupTask extends GameTask {
 
-	public WorldCupTask(UserBean userBean, PipleLineTask pipleLineTask) {
+	public WorldCupTask(UserBean userBean) {
 		this.userBean = userBean;
 	}
 
 	public boolean doAction() {
-		int times = 2;
+		int times = 5;
 		for (int i = 0; i < times; i++) {
 			doBuy();
 		}
@@ -56,13 +56,18 @@ public class WorldCupTask extends GameTask {
 		postMethod.addParameter(new NameValuePair("c0-id", "0"));
 		postMethod.addParameter(new NameValuePair("c0-param0", "" + userBean.getNumberId()));
 		postMethod.addParameter(new NameValuePair("c0-e1", "number:0"));
-		postMethod.addParameter(new NameValuePair("c0-e2", "string:msgTypeWorldCup"));
-		postMethod.addParameter(new NameValuePair("c0-e3", "string:msgIdUseWorldCupItem"));
-		postMethod.addParameter(new NameValuePair("c0-e4", "number:15016965"));
+		postMethod.addParameter(new NameValuePair("c0-e2", "string:msgTypeGiftCode"));
+		postMethod.addParameter(new NameValuePair("c0-e3", "string:msgIdVipRewardGet"));
+		postMethod.addParameter(new NameValuePair("c0-e4", "string:"));
 		postMethod.addParameter(new NameValuePair("c0-param1", "Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
 		postMethod.addParameter(new NameValuePair("batchId", "" + userBean.getBatchId()));
 		InputStream inputStream=doRequest(postMethod);
-		
+		try {
+			System.out.println(postMethod.getResponseBodyAsString());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 

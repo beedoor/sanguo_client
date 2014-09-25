@@ -57,13 +57,14 @@ public class LoginGameInfo {
 	private String worldInfo;
 
 	private String guideProgress;
-	
+	private String piece;
 	private Long hun;
 
 	List<PlayerCitysInfo> playerCitysInfoList = new ArrayList<PlayerCitysInfo>();
 	List<PlayerHerosInfo> playerHerosInfoList = new ArrayList<PlayerHerosInfo>();
 	List<PlayerItemsInfo> playerItemsInfoList = new ArrayList<PlayerItemsInfo>();
 
+	
 	private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(
 			this);
 	public void addPropertyChangeListener(String propertyName,
@@ -117,6 +118,16 @@ public class LoginGameInfo {
 
 	public void setHun(String hun) {
 		this.hun = Long.parseLong(hun);
+	}
+
+
+	public String getPiece() {
+		return piece;
+	}
+
+
+	public void setPiece(String piece) {
+		this.piece = piece;
 	}
 
 

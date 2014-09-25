@@ -1,23 +1,38 @@
 package com.game.sanguo.base.task;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.httpclient.NameValuePair;
 import org.apache.commons.httpclient.methods.PostMethod;
 
 import com.game.sanguo.base.domain.CityInfo;
+import com.game.sanguo.base.domain.ContinuousLoginDaysRewardInfo;
+import com.game.sanguo.base.domain.LoginGameInfo;
+import com.game.sanguo.base.domain.OuppurHeroInfo;
+import com.game.sanguo.base.domain.PlayerCitysInfo;
+import com.game.sanguo.base.domain.PlayerHerosInfo;
+import com.game.sanguo.base.domain.PlayerItemsInfo;
+import com.game.sanguo.base.domain.PveFightResultInfo;
 import com.game.sanguo.base.domain.ResourceType;
 import com.game.sanguo.base.domain.ScanResource;
 import com.game.sanguo.base.domain.SearchResult;
 import com.game.sanguo.base.domain.UserBean;
 import com.game.sanguo.base.util.GameUtil;
+import com.game.sanguo.base.util.ItemConfig;
 import com.game.sanguo.base.util.PipleLineTask;
 import com.game.sanguo.base.util.ResourceConfig;
 import com.game.sanguo.base.util.UserConfig;
@@ -26,14 +41,16 @@ public class GetWordCityInfoTask extends GameTask {
 	ResourceConfig resourceConfig = null;
 	UserConfig userConfig = null;
 	SearchResult searchResult = null;
+	ItemConfig itemConfig;
 
 	private static Lock lock = new java.util.concurrent.locks.ReentrantReadWriteLock().writeLock();
 
-	public GetWordCityInfoTask(UserBean userBean, ResourceConfig resourceConfig, SearchResult searchResult) {
+	public GetWordCityInfoTask(UserBean userBean, ResourceConfig resourceConfig, SearchResult searchResult,ItemConfig itemConfig) {
 	
 		this.userBean = userBean;
 		this.resourceConfig = resourceConfig;
 		this.searchResult = searchResult;
+		this.itemConfig = itemConfig;
 	}
 
 	public boolean doAction() {
@@ -89,6 +106,7 @@ public class GetWordCityInfoTask extends GameTask {
 				if (!zuobiao.equals("")) {
 					CityInfo ciInfo = msgIdWorldCityInfo(zuobiao);
 					if (null != ciInfo) {
+						initEneminesInfo(ciInfo);
 						addCityInfo(resultType, ciInfo);
 					}
 					sleep(userBean.getConfigure().getScanResource().getWaitTime(), TimeUnit.MILLISECONDS);
@@ -97,7 +115,43 @@ public class GetWordCityInfoTask extends GameTask {
 		}
 	}
 
+	private void initEneminesInfo(CityInfo ciInfo) {
+		boolean isNeedToFindHero = false;
+		if(userBean.getEneminesInfo() != null)
+		{
+			if(userBean.getEneminesInfo().getEneminesHero() != null)
+			{
+				if(userBean.getEneminesInfo().getEneminesHero().indexOf(ciInfo.getOccupierName()) != -1)
+				{
+					isNeedToFindHero =true;
+				}
+			}
+			if(!isNeedToFindHero)
+			{
+				if(userBean.getEneminesInfo().getEneminesUnion() != null)
+				{
+					if(ciInfo.getUnionName() != null && !ciInfo.getUnionName().equals("") && userBean.getEneminesInfo().getEneminesUnion().indexOf(ciInfo.getUnionName()) != -1)
+					{
+						isNeedToFindHero =true;
+					}
+				}
+			}
+		}
+		
+		if(isNeedToFindHero)
+		{
+			if(ciInfo.getStatusAsInt() != 4)
+			{
+				//查找英雄信息
+				find(ciInfo);
+			}
+			
+		}
+		
+	}
+
 	private void addCityInfo(ResourceType resultType, CityInfo cityInfo) {
+	
 		if (resultType == ResourceType.MARKET) {
 			searchResult.addMarketInfo(cityInfo);
 		} else if (resultType == ResourceType.TREASURE) {
@@ -148,6 +202,7 @@ public class GetWordCityInfoTask extends GameTask {
 		InputStream inputStream = doRequest(postMethod);
 		CityInfo cityInfo = null;
 		try {
+			logger.info(postMethod.getResponseBodyAsString());
 			cityInfo = convert(inputStream);
 			cityInfo.setEndTime(generateEndTime(cityInfo.getOccupyTime(), cityInfo.getOccupierVipLv()));
 			logCityInfo(cityInfo);
@@ -235,5 +290,172 @@ public class GetWordCityInfoTask extends GameTask {
 		s1 = s1.replaceAll("s0[.]", "");
 		cityInfo = initBeanInfo(CityInfo.class, s1, ';', '=');
 		return cityInfo;
+	}
+	
+	public void find(CityInfo cityInfo) {
+		try {
+			String hero = null;
+			for (PlayerHerosInfo p : userBean.getLoginGameInfo().getPlayerHerosInfoList()) {
+				if (p.getCityId() < 10000) {
+					hero = p.getId() + "";
+					break;
+				}
+			}
+			PveFightResultInfo pv = msgTypeWorldPveFight(hero,cityInfo.getId());
+			if(pv.getPvpOccupyTime() != 0)
+			{
+				return;
+			}
+			sleep(1000, TimeUnit.MICROSECONDS);
+			msgIdFightSelectHero(cityInfo,hero);
+			sleep(3000, TimeUnit.MICROSECONDS);
+			msgIdRetreat();
+		} catch (Throwable e) {
+			logger.error("get HeroInfo", e);
+		}
+	}
+	private PveFightResultInfo msgTypeWorldPveFight(String hero,long areaID)throws Exception  {
+		PveFightResultInfo pv = null;
+		PostMethod postMethod = new PostMethod(String.format("%s/hero/dwr/call/plaincall/DwrGameWorld.setMsg.dwr;jsessionid=%s;mid=%s", userBean.getUrlPrx(), userBean.getSessionId(),
+				userBean.getSessionId()));
+		postMethod.addRequestHeader("Content-type", "application/octet-stream");
+		postMethod.addRequestHeader("Cache-Control", "no-cache");
+		postMethod.addRequestHeader("Pragma", "no-cache");
+		postMethod.addRequestHeader("Accept-Encoding", "gzip");
+		postMethod.addRequestHeader("User-Agent", "Dalvik/1.4.0 (Linux; U; Android 2.3.4; GT-I9100 Build/GRJ22)");
+		postMethod.addRequestHeader("Connection", "Keep-Alive");
+		// 使用系统提供的默认的恢复策略
+		postMethod.addParameter(new NameValuePair("callCount", "1"));
+		postMethod.addParameter(new NameValuePair("page", ""));
+		postMethod.addParameter(new NameValuePair("httpSessionId", userBean.getSessionId()));
+		postMethod.addParameter(new NameValuePair("scriptSessionId", "51A0434AF2250025CA28BCB7B4E55E900"));
+		postMethod.addParameter(new NameValuePair("c0-scriptName", "DwrGameWorld"));
+		postMethod.addParameter(new NameValuePair("c0-methodName", "setMsg"));
+		postMethod.addParameter(new NameValuePair("c0-id", "0"));
+		postMethod.addParameter(new NameValuePair("c0-param0", "number:" + userBean.getNumberId()));
+		postMethod.addParameter(new NameValuePair("c0-e1", "number:" + areaID));
+		postMethod.addParameter(new NameValuePair("c0-e2", "string:msgTypeWorldPveFight"));
+		postMethod.addParameter(new NameValuePair("c0-e3", "string:msgIdFightSelectHero"));
+		postMethod.addParameter(new NameValuePair("c0-e4", "string:" + hero + "," + hero));
+		postMethod.addParameter(new NameValuePair("c0-param1", "Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
+		postMethod.addParameter(new NameValuePair("batchId", "" + userBean.getBatchId()));
+		doRequest(postMethod);
+		CityInfo cityInfo = null;
+		try {
+			 pv = initBeanInfo(PveFightResultInfo.class, postMethod.getResponseBodyAsStream(), "dwr");
+		} catch (Throwable e) {
+			logger.error("转换异常", e);
+		}
+		
+		return pv;
+	}
+
+	private void msgIdFightSelectHero(CityInfo ciInfo,String hero)throws Exception  {
+		PostMethod postMethod = new PostMethod(String.format("%s/hero/dwr/call/plaincall/DwrGameWorld.setMsg.dwr;jsessionid=%s;mid=%s", userBean.getUrlPrx(), userBean.getSessionId(),
+				userBean.getSessionId()));
+		postMethod.addRequestHeader("Content-type", "application/octet-stream");
+		postMethod.addRequestHeader("Cache-Control", "no-cache");
+		postMethod.addRequestHeader("Pragma", "no-cache");
+		postMethod.addRequestHeader("Accept-Encoding", "gzip");
+		postMethod.addRequestHeader("User-Agent", "Dalvik/1.4.0 (Linux; U; Android 2.3.4; GT-I9100 Build/GRJ22)");
+		postMethod.addRequestHeader("Connection", "Keep-Alive");
+		// 使用系统提供的默认的恢复策略
+		postMethod.addParameter(new NameValuePair("callCount", "1"));
+		postMethod.addParameter(new NameValuePair("page", ""));
+		postMethod.addParameter(new NameValuePair("httpSessionId", userBean.getSessionId()));
+		postMethod.addParameter(new NameValuePair("scriptSessionId", "51A0434AF2250025CA28BCB7B4E55E900"));
+		postMethod.addParameter(new NameValuePair("c0-scriptName", "DwrGameWorld"));
+		postMethod.addParameter(new NameValuePair("c0-methodName", "setMsg"));
+		postMethod.addParameter(new NameValuePair("c0-id", "0"));
+		postMethod.addParameter(new NameValuePair("c0-param0", "number:" + userBean.getNumberId()));
+		postMethod.addParameter(new NameValuePair("c0-e1", "number:" + ciInfo.getId()));
+		postMethod.addParameter(new NameValuePair("c0-e2", "string:msgTypeWorldPvpFight"));
+		postMethod.addParameter(new NameValuePair("c0-e3", "string:msgIdFightSelectHero"));
+		postMethod.addParameter(new NameValuePair("c0-e4", "string:1," + hero + "," + hero));
+		postMethod.addParameter(new NameValuePair("c0-param1", "Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
+		postMethod.addParameter(new NameValuePair("batchId", "" + userBean.getBatchId()));
+		doRequest(postMethod);
+		List<OuppurHeroInfo> result = decodeHeroInfo(postMethod.getResponseBodyAsStream());
+		ciInfo.setHerosInfo(decodeHerosInfo(result));
+		logger.info("string:msgIdRetreat:"+postMethod.getResponseBodyAsString());
+	}
+	
+	private String decodeHerosInfo(List<OuppurHeroInfo> result) {
+		if(!result.isEmpty())
+		{
+			String s1 = "";
+			for(OuppurHeroInfo o1:result)
+			{
+				itemConfig.decodeHero(Long.parseLong(o1.getSourceId()));
+//				s1+="\t\t\t\t"+itemConfig.decodeHero(Long.parseLong(o1.getSourceId())).getName()+"/等级:"+o1.getLevel()+"/血:"+o1.getHeroHp()+"/蓝:"+o1.getHeroMp()+"/智力:"+o1.getHeroIq()+"/兵:"+o1.getHeroSoliderNum()+"\r\n";
+				s1+="\t\t\t\t"+itemConfig.decodeHero(Long.parseLong(o1.getSourceId())).getName()+" 血:"+o1.getHeroHp()+" 智力:"+o1.getHeroIq()+"\r\n";
+			}
+			return s1;
+		}
+		return "";
+	}
+
+	private void msgIdRetreat()throws Exception {
+		PostMethod postMethod = new PostMethod(String.format("%s/hero/dwr/call/plaincall/DwrGameWorld.setMsg.dwr;jsessionid=%s;mid=%s", userBean.getUrlPrx(), userBean.getSessionId(),
+				userBean.getSessionId()));
+		postMethod.addRequestHeader("Content-type", "application/octet-stream");
+		postMethod.addRequestHeader("Cache-Control", "no-cache");
+		postMethod.addRequestHeader("Pragma", "no-cache");
+		postMethod.addRequestHeader("Accept-Encoding", "gzip");
+		postMethod.addRequestHeader("User-Agent", "Dalvik/1.4.0 (Linux; U; Android 2.3.4; GT-I9100 Build/GRJ22)");
+		postMethod.addRequestHeader("Connection", "Keep-Alive");
+		// 使用系统提供的默认的恢复策略
+		postMethod.addParameter(new NameValuePair("callCount", "1"));
+		postMethod.addParameter(new NameValuePair("page", ""));
+		postMethod.addParameter(new NameValuePair("httpSessionId", userBean.getSessionId()));
+		postMethod.addParameter(new NameValuePair("scriptSessionId", "51A0434AF2250025CA28BCB7B4E55E900"));
+		postMethod.addParameter(new NameValuePair("c0-scriptName", "DwrGameWorld"));
+		postMethod.addParameter(new NameValuePair("c0-methodName", "setMsg"));
+		postMethod.addParameter(new NameValuePair("c0-id", "0"));
+		postMethod.addParameter(new NameValuePair("c0-param0", "number:" + userBean.getNumberId()));
+		postMethod.addParameter(new NameValuePair("c0-e1", "number:0"));
+		postMethod.addParameter(new NameValuePair("c0-e2", "string:msgTypeWorldPvpFight"));
+		postMethod.addParameter(new NameValuePair("c0-e3", "string:msgIdRetreat"));
+		postMethod.addParameter(new NameValuePair("c0-e4", "string:"));
+		postMethod.addParameter(new NameValuePair("c0-param1", "Object_Object:{instanceId:reference:c0-e1, messageType:reference:c0-e2, messageId:reference:c0-e3, message:reference:c0-e4}"));
+		postMethod.addParameter(new NameValuePair("batchId", "" + userBean.getBatchId()));
+		doRequest(postMethod);
+	}
+	
+	private List<OuppurHeroInfo> decodeHeroInfo(InputStream inputStream) {
+		List<OuppurHeroInfo> result = new ArrayList<OuppurHeroInfo>();
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader(
+					inputStream));
+			Pattern itemsContentPattern = Pattern.compile("(s[\\d]{1,})[.]");
+			for (String s1 = null; (s1 = br.readLine()) != null;) {
+				Matcher m = itemsContentPattern.matcher(s1);
+				if (m.find()) {
+					String keyName = m.group(1);
+					String tempStr = m.replaceAll("");
+					OuppurHeroInfo gp = initBeanInfo(OuppurHeroInfo.class, tempStr,';', '=');
+					result.add(gp);
+				}
+			}
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public static void main(String args[])
+	{
+		List<OuppurHeroInfo> result = new ArrayList<OuppurHeroInfo>();
+		String s1 ="s5.currentLineup=4;s5.errCode=0;s5.errMsg=\"successful\";s5.heroHp=1808;s5.heroIq=1748;s5.heroLoyal=87;s5.heroMp=708;s5.heroSoliderNum=42;s5.heroStrength=2165;s5.id=1950432;s5.level=148;s5.soldierType=8;s5.sourceId=310;";
+		Pattern itemsContentPattern = Pattern.compile("(s[\\d]{1,})[.]");
+			Matcher m = itemsContentPattern.matcher(s1);
+			if (m.find()) {
+				String keyName = m.group(1);
+				String tempStr = m.replaceAll("");
+				OuppurHeroInfo gp = initBeanInfo(OuppurHeroInfo.class, tempStr,';', '=');
+				result.add(gp);
+			}
+		
 	}
 }
