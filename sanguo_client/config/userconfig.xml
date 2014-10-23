@@ -2,12 +2,13 @@
 <configuration>
 	<users>
 		<user>
- 			<userName>sanguo10001@126.com</userName>
+ 			<userName>1727047202@qq.com</userName>
  			<password>123123</password> 
-			<areaName>西凉</areaName>
+			<areaName>云南</areaName>
 			<eneminesInfo>
 				<eneminesHero>风侠云天霸</eneminesHero>
 				<eneminesUnion></eneminesUnion>
+				<skip></skip>
 			</eneminesInfo>
 			
 			<reLoginTime desc="断线重新登录时间间隔,以分钟记，120分即2小时">120</reLoginTime>

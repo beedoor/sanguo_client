@@ -103,13 +103,16 @@ public class GetWordCityInfoTask extends GameTask {
 		if (zuobiaoList != null) {
 			logger.info("共有 " + zuobiaoList.size() + " 个资源信息");
 			for (String zuobiao : zuobiaoList) {
-				if (!zuobiao.equals("")) {
-					CityInfo ciInfo = msgIdWorldCityInfo(zuobiao);
-					if (null != ciInfo) {
-						initEneminesInfo(ciInfo);
-						addCityInfo(resultType, ciInfo);
+				if(userBean.getEneminesInfo().getSkip().indexOf(zuobiao+",") == -1)
+				{
+					if (!zuobiao.equals("")) {
+						CityInfo ciInfo = msgIdWorldCityInfo(zuobiao);
+						if (null != ciInfo) {
+							initEneminesInfo(ciInfo);
+							addCityInfo(resultType, ciInfo);
+						}
+						sleep(userBean.getConfigure().getScanResource().getWaitTime(), TimeUnit.MILLISECONDS);
 					}
-					sleep(userBean.getConfigure().getScanResource().getWaitTime(), TimeUnit.MILLISECONDS);
 				}
 			}
 		}

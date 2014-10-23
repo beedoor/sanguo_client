@@ -12,6 +12,7 @@ import com.game.sanguo.base.task.AutoLqSearchAndGoldTaskTest;
 import com.game.sanguo.base.task.CitySearchAndGoldTask;
 import com.game.sanguo.base.task.GameHelper;
 import com.game.sanguo.base.task.GameNotifyTask;
+import com.game.sanguo.base.task.GemDonateTask;
 import com.game.sanguo.base.task.GetTimeZoneTask;
 import com.game.sanguo.base.task.GetWordCityInfoTask;
 import com.game.sanguo.base.task.LoginTask;
@@ -46,7 +47,8 @@ public class Main {
 		SearchResult searchResult = new SearchResult("byName");
 		List<TaskUnit> pipleLineTask = new ArrayList<TaskUnit>();
 		pipleLineTask.add(new TaskUnit(new GameNotifyTask(userBean), "0/10 * * * * ?"));
-		pipleLineTask.add(new TaskUnit(new GetWordCityInfoTask(userBean, resourceConfig, searchResult,itemConfig)));
+		//pipleLineTask.add(new TaskUnit(new GetWordCityInfoTask(userBean, resourceConfig, searchResult,itemConfig)));
+		pipleLineTask.add(new TaskUnit(new GemDonateTask(userBean, itemConfig)));
 		// 此任务立刻执行
 		TaskUnit loginTask = new TaskUnit(new LoginTask(userBean));
 		loginTask.setPipleLineTask(pipleLineTask);

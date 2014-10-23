@@ -4,6 +4,14 @@ public class EneminesInfo {
 
 	private String eneminesHero;
 	private String eneminesUnion;
+	private String skip;
+	
+	public String getSkip() {
+		return skip;
+	}
+	public void setSkip(String skip) {
+		this.skip = skip;
+	}
 	public String getEneminesHero() {
 		return eneminesHero;
 	}

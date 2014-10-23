@@ -635,7 +635,7 @@ public class GameClient
     
     this.combo = new Combo(grpResource, 0);
     this.combo.setToolTipText("扫描间隔：1000为一秒，500为半秒");
-    this.combo.setItems(new String[] { "1000", "500", "100" });
+    this.combo.setItems(new String[] {"3000","2000", "1000", "500", "100" });
     this.combo.setBounds(140, 56, 63, 20);
     this.combo.setText("1000");
     this.combo.select(0);

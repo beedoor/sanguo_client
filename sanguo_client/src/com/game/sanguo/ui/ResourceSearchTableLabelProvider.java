@@ -15,7 +15,7 @@ public class ResourceSearchTableLabelProvider
       return itemInfo.getId()+"";
     case 1: 
       return 
-        (isNull(itemInfo.getOccupierName()) ? "空资源" : itemInfo.getOccupierName());
+        (isNull(itemInfo.getOccupierName()) ? "空资源" : itemInfo.getOccupierName()+" " +itemInfo.getOccupierVipLv());
     case 2: 
       return isNull(itemInfo.getUnionName()) ? "" : itemInfo
         .getUnionName();

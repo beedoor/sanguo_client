@@ -78,6 +78,8 @@ public class UserConfig {
 		
 		digester.addCallMethod("configuration/users/user/eneminesInfo/eneminesHero","setEneminesHero",0,new Class[]{String.class});
 		digester.addCallMethod("configuration/users/user/eneminesInfo/eneminesUnion","setEneminesUnion",0,new Class[]{String.class});
+		digester.addCallMethod("configuration/users/user/eneminesInfo/skip","setSkip",0,new Class[]{String.class});
+
 		//设置扫描间隔
 //		digester.addSetProperties("configuration/users/user/configure/scanResource","waitTime","waitTime");
 //		digester.addCallMethod("configuration/users/user/configure/scanResource/gold","setGold",0,new Class[]{Long.class});
