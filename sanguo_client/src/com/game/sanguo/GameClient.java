@@ -799,13 +799,28 @@ public class GameClient
     	{
     		if(city.getUnionName() != null)
     		{
-    			if(userBean.getScanExclude().indexOf(city.getUnionName()) != -1)
+    			if(this.userBean.getScanExclude().length() > 1)
+    			{
+	    			if(userBean.getScanExclude().indexOf(city.getUnionName()) != -1 || userBean.getScanExclude().indexOf(city.getOccupierName()) != -1)
+	    			{
+	    				add(resultMap,city);
+	    			}
+    			}else
     			{
     				add(resultMap,city);
     			}
     		}else
     		{
-    			add(resultMap,city);
+    			if(this.userBean.getScanExclude().length() > 1)
+    			{
+	    			if(userBean.getScanExclude().indexOf(city.getOccupierName()) != -1)
+	    			{
+	    				add(resultMap,city);
+	    			}
+    			}else
+    			{
+    				add(resultMap,city);
+    			}
     		}
     	}else
     	{

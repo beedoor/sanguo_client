@@ -186,6 +186,7 @@ public class GetTimeZoneTask extends GameTask {
 					String contentStr = m.replaceAll("");
 					CityInfo cityInfo = (CityInfo) initBeanInfo(CityInfo.class,
 							contentStr, ';', '=');
+					logger.info(cityInfo.toString());
 					if (cityInfo.getTypeAsInt().longValue() == 2L) {
 						this.searchResult.addGoIdnfo(cityInfo);
 					} else if (cityInfo.getTypeAsInt().longValue() == 3L) {

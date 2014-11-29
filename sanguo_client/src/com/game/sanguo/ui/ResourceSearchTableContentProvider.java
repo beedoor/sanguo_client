@@ -32,7 +32,7 @@ public class ResourceSearchTableContentProvider
         return cityInfoList.toArray();
       }
       for (CityInfo obj : cityInfoList) {
-        if (this.userBean.getScanExclude().indexOf(obj.getUnionName()) != -1) {
+        if (this.userBean.getScanExclude().length() > 1 && this.userBean.getScanExclude().indexOf(obj.getUnionName()) != -1 || this.userBean.getScanExclude().indexOf(obj.getOccupierName()) != -1) {
           filterObject.add(obj);
         }
       }
